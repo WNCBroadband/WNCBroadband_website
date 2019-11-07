@@ -1,0 +1,153 @@
+html, body{
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	position: relative;
+}
+
+
+.parallax {
+background-image: url(../img/asheville.jpg);
+height: 100%; 
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
+}
+
+#content{
+    height: 500px;
+    background-color:#3e3d64;
+}
+
+
+#head{
+	background-image: url(../img/blue-ridge.jpg)
+}
+
+header {
+	text-align: center;
+	width: 100%;
+	height: 60%;
+	background-size: cover;
+	background-attachment: fixed;
+	position: relative;
+	overflow: hidden;
+}
+
+footer, section, main{
+	margin: 0 auto;
+	width: 100%;
+	height: 100vh; /*vh means percentage of viewport height*/
+	display: flex;
+	position: relative;
+	text-align: center;
+	align-items: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed; /*images don't scroll w/ page*/
+	justify-content: center;
+	z-index: 2;
+}
+
+p, h1, h2, h3, h4, h5, h6{
+	font-family: 'Montserrat', sans-serif;
+	color:black;
+	/*background-color: black;*/
+	text-shadow: .05em .05em #440022;
+	text-align: center;
+	z-index: 0;
+}
+
+h1, h2, h3, h4, h5, h6{
+	/*text-align: center;*/
+}
+
+h1{
+	font-size: 3em;
+}
+
+header h2{
+	  font-size: 32px;
+    color: white;
+    text-shadow: 2px 2px green;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #3e3d64;
+  overflow: hidden;
+    
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: left;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+
+#mapid{
+	position: relative;
+	z-index: -1;
+	height: 100vh;
+}
+
+.mapinfo{
+	background-color: #555555;
+	width: 33%;
+}
+
+#infoselect{
+	position: relative;
+	justify-content: center;
+	margin: 0 auto;
+	width: 87%;
+	background-size: cover;
+	background-color: #A4A4A4;
+}
+
+#mapSearchContainer{
+  position:fixed;
+  top:20px;
+  right: 40px;
+  height:30px;
+  width:180px;
+  z-index:110;
+  font-size:10pt;
+  color:#5d5d5d;
+  border:solid 1px #bbb;
+  background-color:#f8f8f8;
+}
+.pointer{
+  position:absolute;
+  top:86px;
+  left:60px;
+  z-index:99999;
+}
+
+
+
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bg {
+        background-attachment: scroll;
+    }
+}
+

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>WestNGN Survey</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+  <!-- Custom styles for this template -->
+  <link href="/css/landing-page.min.css" rel="stylesheet">
+  <!-- Bootstrap Javascript -->
+  <script src="/js/bootstrap.min.js"></script>  
+  <!-- JQuery -->
+  <script src="/js/jquery-3.4.1.min.js"></script>
+  <!-- Javascript for the Survey	-->
+	<!--  <script src="/js/survey.js"></script>-->
+
+	
+</head>
+
+<body>
+	
+  <!-- Navigation -->
+  <nav class="navbar navbar-light bg-primary fixed-top">
+    <div class="container">
+		<a class="btn btn-info" href="/index.html">
+            <img src="/img/West_NGN_logo.png" width="100" height="50" alt="WestNGN Logo Image and Link">
+		</a>
+		<div class="droupdown" id="dropdownContainer_about">
+			<a class="btn btn-info dropdown-toggle" href="#" role="button" id="dropdownMenuLink_about" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About
+			</a>	  	
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+				<a class="dropdown-item" href="/aboutWestNGN.html">WestNGN</a>
+				<a class="dropdown-item" href="/aboutBiltmoreLake.html">Biltmore Lake</a>
+			</div>
+		</div>
+        <a class="btn btn-info" href="/contact.html">Contact</a>
+		<a class="btn btn-info" href="/faq.html">FAQ</a>		
+		<a class="btn btn-info" href="/broadband101.html">Broadband 101</a>
+		<a class="btn btn-info" href="/map.html">Map</a>
+		<div class="dropdown" id="dropdownContainer_area">
+			<a class="btn btn-info dropdown-toggle" href="#" role="button" id="dropdownMenuLink_area" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Area
+			</a>
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+				<a class="dropdown-item" href="/#">Biltmore Lake</a>
+			</div>
+		</div>
+	</div>
+  </nav>
+	
+	<section class="showcase">
+		<div id="survey-bg" class="container-fluid p-0 no-gutters survey-bg row">
+		    <div class="my-auto showcase-text offset-lg-2 survey-bg col-lg-8">
+		   	 </div>
+		  <div class="my-auto showcase-text offset-lg-2 survey-cont col-lg-8">
+				  <h2>Please answer the following 10 questions. It should only take about 5 minutes.</h2><br>
+				<div class="form-group">
+		 		  <form id="fullsurvey" class="form" onSubmit="survey-end.html"> 
+
+					<h3>1&#41; Generally, how satisfied are you with your current internet service?</h3>
+		  					<div id="generalsatisfaction" name="generalsatisfaction">
+								<input required type="radio" name="gensat" value="vunsatisfied">Very Unsatisfied<br>
+								<input required type="radio" name="gensat" value="unsatisfied">Unsatisfied<br>
+								<input required type="radio" name="gensat" value="satisfied">Satisfied<br>
+								<input required type="radio" name="gensat" value="vsatisfied">Very Satisfied
+							</div>
+					<br><div class="q-break"></div><br>
+					
+					  <h3>2&#41; How do you rate the following characteristics of your internet service?</h3>
+							Download Speed:
+								<select required id="rating-downspeed" name="rating-downspeed">
+									<option disabled selected value>Please Select a Rating</option>
+									<option value="vpoor">Very Poor</option>
+									<option value="poor">Poor</option>
+									<option value="avg">Average</option>
+									<option value="good">Good</option>
+									<option value="excellent">Excellent</option>
+									<option value="unsure">Unsure</option>
+								</select>
+							<br>
+							<br>
+
+							Upload Speed:
+								<select required id="rating-upspeed" name="rating-upspeed">
+									<option disabled selected value>Please Select a Rating</option>
+									<option value="vpoor">Very Poor</option>
+									<option value="poor">Poor</option>
+									<option value="avg">Average</option>
+									<option value="good">Good</option>
+									<option value="excellent">Excellent</option>
+									<option value="unsure">Unsure</option>
+								</select>
+							<br>
+							<br>
+
+							Service Reliability:
+								<select required id="rating-reliability" name="rating-reliablility">
+									<option disabled selected value>Please Select a Rating</option>
+									<option value="vpoor">Very Poor</option>
+									<option value="poor">Poor</option>
+									<option value="avg">Average</option>
+									<option value="good">Good</option>
+									<option value="excellent">Excellent</option>
+									<option value="unsure">Unsure</option>					
+								</select>
+							<br>
+							<br>
+
+							Speed Consistency:					
+								<select required id="rating-speedconsistency" name="rating-speedconsistency">
+									<option disabled selected value>Please Select a Rating</option>									
+									<option value="vpoor">Very Poor</option>
+									<option value="poor">Poor</option>
+									<option value="avg">Average</option>
+									<option value="good">Good</option>
+									<option value="excellent">Excellent</option>			<option value="unsure">Unsure</option>
+								</select>
+							<br>
+							<br>
+
+							Technical Support:
+								<select required id="rating-techsupport" name="rating-techsupport">
+								  <option disabled selected value>Please Select a Rating</option>								
+									<option value="vpoor">Very Poor</option>
+									<option value="poor">Poor</option>
+									<option value="avg">Average</option>
+									<option value="good">Good</option>
+									<option value="excellent">Excellent</option>
+									<option value="unsure">Unsure</option>
+								</select>
+					<br>
+					<br><div class="q-break"></div><br>
+					  <h3>3&#41; Do you feel like you pay a fair price for your internet speed?</h3><br>
+							<input required name="pricevalue" type="radio">Yes
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<input required name="pricevalue" type="radio">No
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<input required name="pricevalue" type="radio">Unsure
+					<br>
+					<br><div class="q-break"></div><br>
+					  <h3>4&#41; If additional internet service options were available in your area, and if they were affordable, would you be interested in purchasing or subscribing to one of these services?</h3><br>
+							<input required name="underserved" type="radio">Definitely Yes
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<input required name="underserved" type="radio">Probably Yes
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<input required name="underserved" type="radio">No
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<input required name="underserved" type="radio">Depends
+					<br>
+					<br><div class="q-break"></div><br>
+					  <h3>5&#41; Do you use internet for any of the following (check all that apply):</h3><br>
+							<input name="internetuse" type="checkbox">Employment related tasks  including teleconferencing and other high bandwith needed services<br>								
+							<input name="internetuse" type="checkbox">Streaming TV, Videos, and Movies<br>
+							<input name="internetuse" type="checkbox">Medical Information and Counseling<br>
+							<input name="internetuse" type="checkbox">Selling products or services online (home based business)<br>
+							<input name="internetuse" type="checkbox">"Smart Home" applications such as security or remote monitoring systems<br>
+							<input name="internetuse" type="checkbox">Educational purposes such as classwork, research, and college courses<br>
+							<input name="internetuse" type="checkbox">Email, Twitter, Facebook and other communication programs<br>
+							<input name="internetuse" type="checkbox">Online Video Games<br>
+							<input id="internetuse-other" name="internetuse" type="checkbox">Other Uses:<input name="internetuse-other" type="text">
+					<br>
+					<br><div class="q-break"></div><br>
+						<h3>6&#41; As you think about the Internet Service in your neighborhood, what are the top two advocacy priorities you would like your local leaders to work on? (Select 2)</h3><br>
+					  		<input name="advocacypriority" class="limited-checkbox" type="checkbox">More Service Providers<br>
+					  		<input name="advocacypriority" class="limited-checkbox" type="checkbox">Faster Available Speeds (download and upload)<br>
+					  		<input name="advocacypriority" class="limited-checkbox" type="checkbox">Greater Reliability of Service and Speeds<br>
+					  		<input name="advocacypriority" class="limited-checkbox" type="checkbox">Less expensive Internet service<br>
+					  		<input id="advocacypriority-other" class="limited-checkbox" name="advocacypriority" type="checkbox">Other Priority:<input name="advocacypriority-other" type="text"><br>
+							<input name="advocacypriority" class="limited-checkbox" type="checkbox">Nothing, the Internet Service is fine the way it is
+					<br>
+					<br><div class="q-break"></div><br>						
+					  <h3>7&#41; What speed do you pay for?</h3><br>
+					  		<input required name="expectedspeed" type="radio"> &lt; 5 Megabits per second<br>
+					  		<input required name="expectedspeed" type="radio">5 to &lt; 25 Megabits per second<br>
+					  		<input required name="expectedspeed" type="radio">25 to &lt; 100 Megabits per second<br>
+					  		<input required name="expectedspeed" type="radio">100 to &lt; 1,000 Megabits per second<br>
+							<input required name="expectedspeed" type="radio">1,000 or more Megabits per second 
+					<br>
+					<br><div class="q-break"></div><br>
+						<h3>8&#41; We are constructing a map of broadband speeds in the neighborhood. Is it ok for us to display the speed of your internet service? (We will not sell your data.)</h3><br>
+					  		<input required name="permission" type="radio">Yes
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<input required name="permission" type="radio">No
+					<br>
+					<br><div class="q-break"></div><br>
+						<h3>9&#41; There are major issues in broadband delivery concerning where broadband is available and what the actual speeds are delivered by providers. Please click on the button to run a speed test.</h3><br>
+					  		<button type="button" href="openSpeedTest()">Start Speedtest!</button>
+					<br>
+					<br><div class="q-break"></div><br>
+						<h3>10&#41; If you have any additional comments, or if you are interested in being contacted about this projects developments and would like to leave your name and address, please do so below.</h3><br>
+					 	<textarea id="comments" name="comments" cols="70" rows="6"></textarea>
+					<br>
+					<br><div class="q-break"></div><br>
+						<h3>Thank you for participating in this survey. Once you are finished, please click "Submit" below to submit your responses!</h3><br>
+					  	<input required name="submit" id="submit" type="submit">
+			
+				  </form>
+		      </div>
+		    </div>
+			<div class="my-auto showcase-text offset-lg-2 survey-bg col-lg-8">
+			</div>
+		</div>	
+	</section>
+	
+	  <!-- Footer -->
+	<footer class="footer bg-info">
+	<div class="container">
+	  <div class="row">
+		<div class="col-lg-6 h-100 text-center text-m-left my-auto">
+		  <ul class="list-inline mb-2">
+			<!-- Legalstuffz -->
+			  <br><br><br>
+
+			<li class="list-inline-item">
+			  <a href="/#">Contact</a>
+			</li>
+			<li class="list-inline-item">&sdot;</li>
+			<li class="list-inline-item">
+			  <a href="/#">Terms of Use</a>
+			</li>
+			<li class="list-inline-item">&sdot;</li>
+			<li class="list-inline-item">
+			  <a href="/#">Privacy Policy</a>
+			</li>
+		  </ul>
+		</div>
+
+
+		</div>
+	  </div>
+	</footer>
+
+  <!-- Script for only allowing two check boxes for Question 6 -->
+  <script>
+		var limit = 3;
+	$('input.limited-checkbox').on('change', function(evt) {
+	   if($(".limited-checkbox:checked").length >= limit) {
+		   this.checked = false;
+	   }
+	});
+  </script>
+
+</body>
+</html>
