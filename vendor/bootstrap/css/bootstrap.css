@@ -391,8 +391,8 @@ h6, .h6 {
 }
 
 .lead {
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 1.25rem;
+  font-weight: 300;
 }
 
 .display-1 {
@@ -2488,7 +2488,7 @@ fieldset:disabled a.btn {
 }
 
 .btn-success {
-  color: darkblue;
+  color: #fff;
   background-color: #28a745;
   border-color: #28a745;
 }
@@ -2523,8 +2523,8 @@ fieldset:disabled a.btn {
 
 .btn-info {
   color: #fff;
-  background-color: darkblue;
-
+  background-color: #17a2b8;
+  border-color: #17a2b8;
 }
 
 .btn-info:hover {
@@ -6508,8 +6508,7 @@ a.close.disabled {
 }
 
 .bg-primary {
-  background-color: darkblue!important;
- opacity: .8;
+  background-color: #007bff !important;
 }
 
 a.bg-primary:hover, a.bg-primary:focus,
@@ -6539,7 +6538,7 @@ button.bg-success:focus {
 }
 
 .bg-info {
-  background-color: darkblue!important;
+  background-color: #17a2b8 !important;
 }
 
 a.bg-info:hover, a.bg-info:focus,
