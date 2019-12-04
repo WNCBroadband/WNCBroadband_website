@@ -199,8 +199,8 @@ function showPosition(position) {
             </li><br>
           </ul>
         </div>
-        <div class="row">
-        <p>&copy;2019 WestNGN | All Rights Reserved</p>
+        <div class="col-12 text-center">
+        <p>&copy; 2019 WestNGN | <a href="../privacypolicy.html"> Privacy Policy</a></p>
         </div>
       </div>
     </div>
