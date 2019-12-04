@@ -158,7 +158,7 @@ function showPosition(position) {
           <br>
           <br><div class="q-break"></div><br>
             <h4>9&#41; There are major issues in broadband delivery concerning where broadband is available and what the actual speeds are delivered by providers. Please click on the button to run a speed test.</h4><br>
-              <button class="btn btn-primary mt-auto mb-5" type="button" href="openSpeedTest()">Start Speedtest</button>
+              <a class="btn btn-primary mt-auto" href="https://speed.measurementlab.net/" target="_blank"> Start Speedtest </a>
           <br>
           <br><div class="q-break"></div><br>
             <h4>10&#41; If you have any additional comments, or if you are interested in being contacted about this projects developments and would like to leave your name and address, please do so below.</h4><br>
