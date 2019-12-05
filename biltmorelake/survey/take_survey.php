@@ -165,7 +165,7 @@ function showPosition(position) {
             <textarea id="comments" name="comments" cols="70" rows="6"></textarea>
           <br>
           <br><div class="q-break"></div><br>
-            <h4>Thank you for participating in this survey. Once you are finished, please click "Submit" below to submit your responses!</h4><br>
+            <h4>Thank you for participating in this survey. Once you are finished, please click "Submit" below to submit your responses.</h4><br>
               <input required name="submit" id="submit" class="btn btn-primary mt-auto mb-5" type="submit">
       
           </form>
