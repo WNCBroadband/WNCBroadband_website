@@ -1,6 +1,58 @@
 <?
+include('../../db.php');
 
-print_r($_POST)
+#print_r($_POST);
+if(!empty($_POST['survey_id'])){
+
+    $survey_id = intval($_POST['survey_id']);
+
+    $sql1 = "insert into Responses (survey_id, geoip_latitude, geoip_longitude, home_address_street, home_address_city, home_address_state, home_address_zip, ip_address, comments) values(?,?,?,?,?,?,?,?,?)";
+    $stmt = $conn->prepare($sql1);
+    if(!$stmt){
+        echo "DB Error inserting response: ".$conn->error."<BR>";
+        exit;
+    }
+    $stmt->bind_param("issssssss", $survey_id, $_POST['geoip_latitude'], $_POST['geoip_longitude'], $_POST['street_address'], $_POST['city_address'], $_POST['state_address'], $_POST['zip_address'], $_SERVER['REMOTE_ADDR'], $_POST['comments']);
+    $stmt->execute();
+    if ($conn->error) {
+        echo "DB Error inserting response: ".$conn->error."<BR>";
+        exit;
+    }
+    $response_id = $conn->insert_id;
+
+
+    $sql2 = "
+    SELECT q.id as 'id', q.name as 'name'
+    FROM Question q, Survey s, Survey_Questions sq
+    WHERE s.id = ?
+      AND sq.survey_id = s.id
+      AND sq.question_id = q.id
+    ORDER BY sq.display_order asc
+    ";
+    $stmt2 = $conn->prepare($sql2);
+    $stmt2->bind_param("i",$survey_id);
+    $stmt2->execute();
+    $result = $stmt2->get_result();
+    if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+            if(!empty($_POST[$row['name']])){
+                #echo "Inserting into Survey_Questions_Responses: (name=".$row['name'].") ";
+                #echo "$survey_id, ".$row['id'].", $response_id, ".$_POST[$row['name']];
+                #echo "<BR>";
+                $sql3 = "insert into Survey_Questions_Responses (survey_id, question_id, response_id, answer) values(?,?,?,?)";
+                $stmt3 = $conn->prepare($sql3);
+                $stmt3->bind_param("iiis",$survey_id, $row['id'], $response_id, $_POST[$row['name']]);
+                $stmt3->execute();
+                if($conn->error){
+                    echo "DB Error inserting survey_quesions_response: ".$conn->error."<BR>";
+                    exit;
+                }
+            }
+        }
+    }
+}
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
