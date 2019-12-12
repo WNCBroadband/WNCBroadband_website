@@ -130,7 +130,7 @@ $conn->close();
 ?>
 <br>
           <br><div class="q-break"></div><br>
-            <h4>8&#41; We are constructing a map of broadband speeds in the neighborhood. Is it ok for us to display the speed of your internet service? (We will not sell any data.)</h4><br>
+            <h4>8&#41; We are constructing a map of broadband speeds in the neighborhood. Would you be willing to provide your address for us to display the speed of your internet service on the map? (We will not sell any data).</h4><br>
 <script>
 function getLocation() {
   if (navigator.geolocation) {
