@@ -39,7 +39,10 @@ map.addLayer(markers);
 
 console.log(markers);
 
-  searchControl.on('results', function(data){
+//implentation of the search function
+var searchControl = new L.esri.Controls.Geosearch().addTo(map);
+var results = new L.LayerGroup().addTo(map);
+searchControl.on('results', function(data){
     results.clearLayers();
     for (var i = data.results.length - 1; i >= 0; i--) {
       results.addLayer(L.marker(data.results[i].latlng));
