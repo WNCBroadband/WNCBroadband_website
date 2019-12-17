@@ -40,28 +40,31 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
 		var uuid = uuidv4();
 
 //		Sends the updated results on every change
-		function save_question(this) {
+		function save_question(something) {
+			console.log("save_question called " +something);
 		  var xhttp = new XMLHttpRequest();
 		  xhttp.onreadystatechange = function() {
 			if (this.readyState == 4 && this.status == 200) {
 			  console.log(this.responseText);
 			}
 		  };
-		  xhttp.open("GET", "save_question.php?uuid="+uuid+"&name="+this.name+"&value="+this.value,true);
+		  xhttp.open("GET", "save_question.php?uuid="+uuid+"&name="+this.name+"&value="+this.value+"&survey_id=1",true);
 		  xhttp.send();
 		}
 		
-		function createOnLoads(){
-			for(i=0;
-				){
-					//Every input element
+		//create an OnChange() for every input element
+		function createOnLoad(){
+			var form_e = document.getElementById("fullsurvey");
+			for(var i=0; i < form_e.length; i++) {
+				   form_e[i].onchange=save_question;
+					console.log("changed "+form_e[i].name);
 				}
 				
 		}
 	</script>
 </head>
 
-<body>
+<body onLoad="createOnLoad()">
 
    <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dblue fixed-top stroke">
@@ -236,9 +239,6 @@ function showPosition(position) {
       </div>
     </div>
   </footer>
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.slim.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Script for only allowing two check boxes for Question 6 -->
   <script>
