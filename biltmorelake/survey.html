@@ -23,6 +23,31 @@
 </head>
 
 <body>
+	
+<!--	Setting Up Auto-Update Funtionality-->
+	<script>
+//		Apply a Unique identifier for this page
+		function uuidv4() {
+		  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+			var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+			return v.toString(16);
+		  });
+		}
+		var uuid = uuidv4();
+
+//		Sends the updated results on every change
+		function save_question(this) {
+		  var xhttp = new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+			  //noop
+			}
+		  };
+		  xhttp.open("GET", "save_question.php?uuid="+uuid+"&name="+this.name+"&value="+this.value,true);
+		  xhttp.send();
+		}
+	</script>
+
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dblue fixed-top stroke">
@@ -81,7 +106,6 @@
         <p>Here you will take a short survey consisting of two preliminary questions followed by short 10 question survey. Your answers will be used to create accurate map of the surveyed area. Your exact address location will not be displayed, and we will not sell any data.</p>
        <a class="btn btn-primary mt-auto mb-5" href="survey/q1.html"> Take Survey &gt;</a>
     </div>
-  </div>
 </section>
 
 <div class="separate"></div>
