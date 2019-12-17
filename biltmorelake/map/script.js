@@ -33,6 +33,7 @@ for (var i = 0; i < markers.length; i++) {
 		var marker = L.marker(L.latLng(a[0], a[1]), { properties: properties });
 		marker.bindPopup("properties");
 		markers.addLayer(marker);
+	console.log("interation" + i)
 }
 
 map.addLayer(markers);
