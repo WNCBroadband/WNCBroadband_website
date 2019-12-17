@@ -28,6 +28,37 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
   <!--Site Stylesheet-->
   <link href="../css/style.css" rel="stylesheet" type="text/css">
+	
+	<script>
+//		Apply a Unique identifier for this page
+		function uuidv4() {
+		  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+			var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+			return v.toString(16);
+		  });
+		}
+		var uuid = uuidv4();
+
+//		Sends the updated results on every change
+		function save_question(this) {
+		  var xhttp = new XMLHttpRequest();
+		  xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+			  console.log(this.responseText);
+			}
+		  };
+		  xhttp.open("GET", "save_question.php?uuid="+uuid+"&name="+this.name+"&value="+this.value,true);
+		  xhttp.send();
+		}
+		
+		function createOnLoads(){
+			for(i=0;
+				){
+					//Every input element
+				}
+				
+		}
+	</script>
 </head>
 
 <body>
