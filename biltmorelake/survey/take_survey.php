@@ -39,16 +39,24 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
 		}
 		var uuid = uuidv4();
 
+    var checkbox_limit = 3;
 //		Sends the updated results on every change
-		function save_question(something) {
-			console.log("save_question called " +something);
+		function save_question(evt) {
+          //console.log(this.className);
+          if(this.className.includes('limited-checkbox')){
+             if($(".limited-checkbox:checked").length >= checkbox_limit) {
+               this.checked = false;
+               return false;
+             }
+          }
+
 		  var xhttp = new XMLHttpRequest();
 		  xhttp.onreadystatechange = function() {
 			if (this.readyState == 4 && this.status == 200) {
 			  console.log(this.responseText);
 			}
 		  };
-		  xhttp.open("GET", "save_question.php?uuid="+uuid+"&name="+this.name+"&value="+this.value+"&survey_id=1",true);
+		  xhttp.open("GET", "save_question.php?uuid="+uuid+"&name="+this.name+"&value="+this.value+"&survey_id=1&type="+this.type,true);
 		  xhttp.send();
 		}
 		
@@ -123,6 +131,9 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
           <h2>Please answer the following 10 questions. It should only take about 5 minutes.</h2><br>
         <div class="form-group">
           <form id="fullsurvey" class="form" method="POST" action="save_survey.php"> 
+          <SCRIPT>
+          document.write('<INPUT TYPE="hidden" name="uuid" value="'+uuid+'">');
+          </SCRIPT>
 <?
 $servername = "138.68.228.126";
 $username = "drawertl_westngn";
@@ -176,6 +187,16 @@ function getLocation() {
 function showPosition(position) {
   document.getElementById('geoip_latitude').value = position.coords.latitude;
   document.getElementById('geoip_longitude').value = position.coords.longitude;
+
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      console.log(this.responseText);
+    }
+  };
+  xhttp.open("GET", "save_question.php?uuid="+uuid+"&survey_id=1&geoip_latitude="+position.coords.latitude+"&geoip_longitude="+position.coords.longitude,true);
+  xhttp.send();
+
 }
 </script>
                 <input required name="permission" type="radio" onclick="getLocation()">&nbsp;&nbsp;Yes
@@ -242,12 +263,16 @@ function showPosition(position) {
 
   <!-- Script for only allowing two check boxes for Question 6 -->
   <script>
+   /*
+   //This was integrated with the  onchange function defined above.
     var limit = 3;
   $('input.limited-checkbox').on('change', function(evt) {
      if($(".limited-checkbox:checked").length >= limit) {
        this.checked = false;
+       return false;
      }
   });
+  */
   </script>
 
 </body>

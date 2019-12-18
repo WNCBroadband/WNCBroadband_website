@@ -1,22 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
 <?
 include('../../db.php');
 
-#print_r($_POST);
-if(!empty($_POST['survey_id'])){
 
+
+function save_survey(){
+    global $conn;
     $survey_id = intval($_POST['survey_id']);
 
-    $sql1 = "insert into Responses (survey_id, geoip_latitude, geoip_longitude, home_address_street, home_address_city, home_address_state, home_address_zip, ip_address, comments) values(?,?,?,?,?,?,?,?,?)";
+    $sql1 = "insert into Responses (survey_id, geoip_latitude, geoip_longitude, home_address_street, home_address_city, home_address_state, home_address_zip, ip_address, comments,uuid) values(?,?,?,?,?,?,?,?,?,?)";
     $stmt = $conn->prepare($sql1);
     if(!$stmt){
         echo "DB Error inserting response: ".$conn->error."<BR>";
-        exit;
+        return;
     }
-    $stmt->bind_param("issssssss", $survey_id, $_POST['geoip_latitude'], $_POST['geoip_longitude'], $_POST['street_address'], $_POST['city_address'], $_POST['state_address'], $_POST['zip_address'], $_SERVER['REMOTE_ADDR'], $_POST['comments']);
+    $stmt->bind_param("isssssssss", $survey_id, $_POST['geoip_latitude'], $_POST['geoip_longitude'], $_POST['street_address'], $_POST['city_address'], $_POST['state_address'], $_POST['zip_address'], $_SERVER['REMOTE_ADDR'], $_POST['comments'],$_POST['uuid']);
     $stmt->execute();
     if ($conn->error) {
         echo "DB Error inserting response: ".$conn->error."<BR>";
-        exit;
+        return;
     }
     $response_id = $conn->insert_id;
 
@@ -45,18 +49,20 @@ if(!empty($_POST['survey_id'])){
                 $stmt3->execute();
                 if($conn->error){
                     echo "DB Error inserting survey_quesions_response: ".$conn->error."<BR>";
-                    exit;
+                    return;
                 }
             }
         }
     }
 }
 
+#print_r($_POST);
+if(!empty($_POST['survey_id'])){
+    save_survey();
+}
 
 ?>
-<!DOCTYPE html>
-<html lang="en">
-
+-->
 <head>
 
   <meta charset="utf-8">
