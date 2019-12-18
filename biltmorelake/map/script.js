@@ -16,29 +16,14 @@ survey_results = L.tileLayer('https://api.mapbox.com/styles/v1/westngn/ck2z53u89
 }).addTo(map);
 
 var survey_points = L.geoJSON(survey_result_points);
-console.log(survey_points);
-console.log(survey_result_points);
-var features = (survey_result_points["features"]);
-console.log((features[0]["geometry"]["coordinates"][0]) +", "+ (features[0]["geometry"]["coordinates"][1]));
-
-//console.log(survey_result_points[features]);
+var features = (survey_result_points["features"]); //this gets the features dictionary which contains "geometry"(latlng) and "properties"(speed results)  
 var markers = new L.markerClusterGroup();
-
-//markers.addLayer(survey_points);
 
 markers.on('clusterclick', function (a) {
     a.layer.zoomToBounds({padding: [20,20]});
 });
 
-//for (var i = 0; i < markers.length; i++) {
-//		var a = markers[i];
-//		var title = a[2];
-//		var marker = L.marker(L.latLng(a[0], a[1]), { properties: properties });
-//		marker.bindPopup("properties");
-//		markers.addLayer(marker);
-//	console.log("interation" + i)
-//}
-
+//making a new icon
 var LeafIcon = L.Icon.extend({
     options: {
        iconSize:     [38, 95],
@@ -50,11 +35,11 @@ var LeafIcon = L.Icon.extend({
 });
 
 var greenIcon = new LeafIcon({
-    iconUrl: 'http://leafletjs.com/examples/custom-icons/leaf-green.png',
+    iconUrl: 'http://leafletjs.com/examples/custom-icons/leaf-green.png', //to be changed
     shadowUrl: 'http://leafletjs.com/examples/custom-icons/leaf-shadow.png'
 });
 
-var blue_markers = [];
+var blue_markers = []; //These arrays will hold a bunch of Marker objects
 var green_markers = [];
 var red_markers = [];
 var blueSubGroup = L.featureGroup.subGroup(markers, blue_markers);
@@ -72,30 +57,27 @@ function makeMarkers(thing){
 		var blue_marker = L.marker(new L.LatLng((thing[i]["geometry"]["coordinates"][1]), (thing[i]["geometry"]["coordinates"][0])), {
 		});
 		
-		//marker.bindPopup(downspeed);
+		//This if statement determines the color of the marker based on speed
 		if(downspeed < 5){
-			green_markers.push(green_marker);
+			green_markers.push(green_marker); //Pushes to an array of markers, this is what the Subgroup Plugin takes as its second parameter
 		} else {
 			blue_markers.push(blue_marker);
 		}
-//		console.log("interation" + (i-1));
 	}
-	//markers.addLayers(green_markers,blue_markers);
 	blueSubGroup = L.featureGroup.subGroup(markers, blue_markers);
 	greenSubGroup = L.featureGroup.subGroup(markers, green_markers);
 	//redSubGroup = L.featureGroup.subGroup(markers, red_markers);
 
 }
-
 makeMarkers(features);
 
 map.addLayer(markers);
 map.addLayer(blueSubGroup);
 map.addLayer(greenSubGroup);
-
 //redSubGroup.addto(map);
 
-//console.log(markers);
+
+//Search function broke because of multiple marker types
 
 //implentation of the search function
 //function search(){
