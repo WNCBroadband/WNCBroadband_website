@@ -126,7 +126,7 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
   <section class="showcase">
     <div id="survey-bg" class="container-fluid p-5 row">
         <div class="mx-auto col-lg-8">
-         </div>
+        </div>
       <div class="mx-auto col-lg-8">
           <h2>Please answer the following 10 questions. It should only take about 5 minutes.</h2><br>
         <div class="form-group">
@@ -212,8 +212,32 @@ function showPosition(position) {
 	</DIV>
           <br>
           <br><div class="q-break"></div><br>
-            <h4>9&#41; There are major issues in broadband delivery concerning where broadband is available and what the actual speeds are delivered by providers. Please click on the button to run a speed test.</h4><br>
-              <a class="btn btn-primary mt-auto" href="https://speed.measurementlab.net/" target="_blank"> Start Speedtest </a>
+            <h4>9&#41; There are major issues in broadband delivery concerning where broadband is available and what the actual speeds are delivered by providers. Please use the M-Labs Speed Test below to test your speed.</h4><br>
+            <iframe frameborder="0" height="500" src="https://speed.measurementlab.net/#/" width="100%"></iframe>
+            <br><br>
+            <h4>From the results of the M-Labs test, compare the capabilities of your download speed with other speeds using the range slider below.</h4><br>
+            <div class="slidecontainer">
+              <input type="range" min="1" max="100" value="1" class="slider" id="myRange">
+                <p class="text-center lead">Download Speed: <span id="demo"></span></p>
+                <table class="table table-bordered table-sm">
+                  <thead class="thead-light">
+                    <tr>
+                      <th scope="col">Check email</th>
+                      <th scope="col">Stream HD content</th>
+                      <th scope="col">Stream 4K content and play competitive online games</th>
+                      <th scope="col">Stream 4K content, play online games, and download very large files</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td style="text-align: center;"><img id="img1" src="../img/x.png" width="50px" height="50px"></td>
+                      <td style="text-align: center;"><img id="img2" src="../img/x.png" width="50px" height="50px"></td>
+                      <td style="text-align: center;"><img id="img3" src="../img/x.png" width="50px" height="50px"></td>
+                      <td style="text-align: center;"><img id="img4" src="../img/x.png" width="50px" height="50px"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
           <br>
           <br><div class="q-break"></div><br>
             <h4>10&#41; If you have any additional comments, or if you are interested in being contacted about this projects developments and would like to leave your name and address, please do so below.</h4><br>
@@ -274,6 +298,36 @@ function showPosition(position) {
   });
   */
   </script>
+  <script>
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
+
+slider.oninput = function() {
+  output.innerHTML = this.value;
+
+  if(this.value >= 1){
+    document.getElementById("img1").src = "../img/check.png"
+  } else {
+    document.getElementById("img1").src = "../img/x.png"
+  }
+  if(this.value >=15){
+    document.getElementById("img2").src = "../img/check.png"
+  } else {
+    document.getElementById("img2").src = "../img/x.png"
+  }
+  if(this.value >=40){
+    document.getElementById("img3").src = "../img/check.png"
+  } else {
+    document.getElementById("img3").src = "../img/x.png"
+  }
+  if(this.value >=100){
+    document.getElementById("img4").src = "../img/check.png"
+  } else {
+    document.getElementById("img4").src = "../img/x.png"
+  }
+}
+</script>
 
 </body>
 </html>
