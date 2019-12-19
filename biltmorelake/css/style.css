@@ -244,6 +244,10 @@ float: left;
   cursor: pointer;
 }
 
+.card-img-top{
+	max-width:200px;
+}
+
 
 @media (max-width:576px){
 	.contact-photo{
