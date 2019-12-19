@@ -16,7 +16,7 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>WestNGN | Survey</title>
+  <title>WNC Broadband Project | Survey</title>
 
   <!-- Bootstrap core CSS -->
   <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -279,7 +279,7 @@ function showPosition(position) {
           </ul>
         </div>
         <div class="col-12 text-center">
-        <p>&copy; 2019 WestNGN | <a href="../privacypolicy.html"> Privacy Policy</a></p>
+        <p>&copy; 2019 WNC Broadband Project | <a href="../privacypolicy.html"> Privacy Policy</a></p>
         </div>
       </div>
     </div>
