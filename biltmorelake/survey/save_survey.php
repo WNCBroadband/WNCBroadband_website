@@ -6,6 +6,26 @@ include('../../db.php');
 
 
 
+function save_survey_no_uuid(){
+    global $conn;
+    $survey_id = intval($_POST['survey_id']);
+
+    $sql1 = "insert into Responses (survey_id, geoip_latitude, geoip_longitude, home_address_street, home_address_city, home_address_state, home_address_zip, ip_address, comments) values(?,?,?,?,?,?,?,?,?)";
+    $stmt = $conn->prepare($sql1);
+    if(!$stmt){
+        echo "DB Error inserting response: ".$conn->error."<BR>";
+        return NULL;
+    }
+    $stmt->bind_param("issssssss", $survey_id, $_POST['geoip_latitude'], $_POST['geoip_longitude'], $_POST['street_address'], $_POST['city_address'], $_POST['state_address'], $_POST['zip_address'], $_SERVER['REMOTE_ADDR'], $_POST['comments']);
+    $stmt->execute();
+    if ($conn->error) {
+        echo "DB Error inserting response: ".$conn->error."<BR>";
+        return NULL;
+    }
+    $response_id = $conn->insert_id;
+    return $response_id;
+}
+
 function save_survey(){
     global $conn;
     $survey_id = intval($_POST['survey_id']);
@@ -14,17 +34,21 @@ function save_survey(){
     $stmt = $conn->prepare($sql1);
     if(!$stmt){
         echo "DB Error inserting response: ".$conn->error."<BR>";
-        return;
+        return NULL;
     }
     $stmt->bind_param("isssssssss", $survey_id, $_POST['geoip_latitude'], $_POST['geoip_longitude'], $_POST['street_address'], $_POST['city_address'], $_POST['state_address'], $_POST['zip_address'], $_SERVER['REMOTE_ADDR'], $_POST['comments'],$_POST['uuid']);
     $stmt->execute();
     if ($conn->error) {
         echo "DB Error inserting response: ".$conn->error."<BR>";
-        return;
+        return NULL;
     }
     $response_id = $conn->insert_id;
+    return $response_id;
+}
 
-
+function save_survey_questions($response_id){
+    global $conn;
+    $survey_id = intval($_POST['survey_id']);
     $sql2 = "
     SELECT q.id as 'id', q.name as 'name'
     FROM Question q, Survey s, Survey_Questions sq
@@ -58,7 +82,14 @@ function save_survey(){
 
 #print_r($_POST);
 if(!empty($_POST['survey_id'])){
-    save_survey();
+    if( isset($_POST['uuid']) && !empty($_POST['uuid']) ){
+        $resp_id = save_survey();
+    }else{
+        $resp_id = save_survey_no_uuid();
+    }
+    if(!is_null($resp_id)){
+        save_survey_questions($resp_id);
+    }
 }
 
 ?>
@@ -173,8 +204,6 @@ if(!empty($_POST['survey_id'])){
     </div>
   </footer>
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.slim.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
