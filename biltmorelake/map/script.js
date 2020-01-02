@@ -15,7 +15,6 @@ $(".leaflet-control-zoom").css("visibility","hidden");
 survey_results = L.tileLayer('https://api.mapbox.com/styles/v1/westngn/ck2z53u892diw1cldqewni6bg/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1Ijoid2VzdG5nbiIsImEiOiJjanVzc3I1Zm8wMG5mNDNrZnl1aGt5cmhvIn0.0AULTTBaoxcqci1Iie9IDA', {
 }).addTo(map);
 
-var survey_points = L.geoJSON(survey_result_points);
 var features = (survey_result_points["features"]); //this gets the features dictionary which contains "geometry"(latlng) and "properties"(speed results)  
 var markers = new L.markerClusterGroup();
 
@@ -24,7 +23,7 @@ markers.on('clusterclick', function (a) {
 });
 
 //making a new icon
-var LeafIcon = L.Icon.extend({
+var PinIcon = L.Icon.extend({
     options: {
        iconSize:     [38, 95],
        shadowSize:   [50, 64],
@@ -34,17 +33,32 @@ var LeafIcon = L.Icon.extend({
     }
 });
 
-var greenIcon = new LeafIcon({
-    iconUrl: 'http://leafletjs.com/examples/custom-icons/leaf-green.png', //to be changed
-    shadowUrl: 'http://leafletjs.com/examples/custom-icons/leaf-shadow.png'
+var greenIcon = new PinIcon({
+    iconUrl: 'http://westngn.org/biltmorelake/map/img/pin_green.png', //to be changed
+    //shadowUrl: ''
+});
+var redIcon = new PinIcon({
+    iconUrl: 'http://westngn.org/biltmorelake/map/img/pin_red.png', //to be changed
+    //shadowUrl: ''
+});
+var orangeIcon = new PinIcon({
+    iconUrl: 'img/pin_orange', //to be changed
+    //shadowUrl: ''
+});
+var yellowIcon = new PinIcon({
+    iconUrl: 'img/pin_yellow', //to be changed
+    //shadowUrl: ''
 });
 
-var blue_markers = []; //These arrays will hold a bunch of Marker objects
+var orange_markers = []; //These arrays will hold a bunch of Marker objects
 var green_markers = [];
 var red_markers = [];
-var blueSubGroup = L.featureGroup.subGroup(markers, blue_markers);
+var yellow_markers = [];
+
+var orangeSubGroup = L.featureGroup.subGroup(markers, orange_markers);
 var greenSubGroup = L.featureGroup.subGroup(markers, green_markers);
-//var redSubGroup = L.featureGroup.subGroup(markers, red_markers);
+var redSubGroup = L.featureGroup.subGroup(markers, red_markers);
+var yellowSubGroup = L.featureGroup.subGroup(markers, yellow_markers);
 
 function makeMarkers(thing){
 	for (var i = 0; i < thing.length; i++) {
@@ -54,25 +68,39 @@ function makeMarkers(thing){
 		var green_marker = L.marker(new L.LatLng((thing[i]["geometry"]["coordinates"][1]), (thing[i]["geometry"]["coordinates"][0])), {
 			icon: greenIcon
 		});
-		var blue_marker = L.marker(new L.LatLng((thing[i]["geometry"]["coordinates"][1]), (thing[i]["geometry"]["coordinates"][0])), {
+		var red_marker = L.marker(new L.LatLng((thing[i]["geometry"]["coordinates"][1]), (thing[i]["geometry"]["coordinates"][0])), {
+			icon: redIcon
+		});
+		var orange_marker = L.marker(new L.LatLng((thing[i]["geometry"]["coordinates"][1]), (thing[i]["geometry"]["coordinates"][0])), {
+			icon: orangeIcon
+		});
+		var yellow_marker = L.marker(new L.LatLng((thing[i]["geometry"]["coordinates"][1]), (thing[i]["geometry"]["coordinates"][0])), {
+			icon: yellowIcon
 		});
 		
 		//This if statement determines the color of the marker based on speed
 		if(downspeed < 5){
-			green_markers.push(green_marker); //Pushes to an array of markers, this is what the Subgroup Plugin takes as its second parameter
-		} else {
-			blue_markers.push(blue_marker);
+			red_markers.push(red_marker); //Pushes to an array of markers, this is what the Subgroup Plugin takes as its second parameter
+//		} else if(downspeed >= 5 && downspeed < 25){
+//			orange_markers.push(orange_marker);
+//		} else if(downspeed >= 25 && downspeed < 90){
+//			yellow_markers.push(yellow_marker);
+//		} else {
+//			green_markers.push(green_marker);
 		}
 	}
-	blueSubGroup = L.featureGroup.subGroup(markers, blue_markers);
+	orangeSubGroup = L.featureGroup.subGroup(markers, orange_markers);
 	greenSubGroup = L.featureGroup.subGroup(markers, green_markers);
-	//redSubGroup = L.featureGroup.subGroup(markers, red_markers);
+	redSubGroup = L.featureGroup.subGroup(markers, red_markers);
+	yellowSubGroup = L.featureGroup.subGroup(markers, yellow_markers);
 
 }
 makeMarkers(features);
 
 map.addLayer(markers);
-map.addLayer(blueSubGroup);
+map.addLayer(orangeSubGroup);
+map.addLayer(redSubGroup);
+map.addLayer(yellowSubGroup);
 map.addLayer(greenSubGroup);
 //redSubGroup.addto(map);
 
