@@ -248,7 +248,15 @@ float: left;
 	max-width:200px;
 }
 
+.pie{
+	width:50%;
+	height:500px;
+}
 
+.bar{
+	width:100%;
+	height:300px;
+}
 @media (max-width:576px){
 	.contact-photo{
 		max-height:150px;
