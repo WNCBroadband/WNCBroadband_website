@@ -257,6 +257,12 @@ float: left;
 	width:100%;
 	height:300px;
 }
+
+.pielong{
+	width:100%;
+	height:500px;
+	background:pink;
+}
 @media (max-width:576px){
 	.contact-photo{
 		max-height:150px;

@@ -91,31 +91,43 @@
   <h2>Biltmore Survey Results</h2>
   <p class="lead">Below are the results of the Biltmore Lakes Community survey.</p>
   <br/>
+
   <h4>Generally, how satisfied are you with your current internet service?</h4>
   <div id="q1results" class="pie d-flex justify-content-center"></div>
+
   <h4>How do you rate the following characteristics of your internet service?</h4>
   <p class="lead">Download Speed</p>
   <div id="q2aresults" class="bar"></div>
+
   <p class="lead">Upload Speed</p>
   <div id="q2bresults" class="bar"></div>
+
   <p class="lead">Service Reliability</p>
   <div id="q2cresults" class="bar"></div>
+
   <p class="lead">Speed Consistency</p>
   <div id="q2dresults" class="bar"></div>
+
   <p class="lead">Technical Support</p>
   <div id="q2eresults" class="bar"></div>
+
   <h4>Do you feel like you pay a fair price for your internet speed?</h4>
   <div id="q3results" class="pie d-flex justify-content-center"></div>
+
   <h4>If more internet service options were available in your area, and if they were affordable, would you be interested in purchasing or subscribing to one of these services?</h4>
   <div id="q4results" class="pie d-flex justify-content-center"></div>
-  <h4>Do you use internet for any of the following (check all that apply):</h4>
+
+  <h4>Do you use internet for any of the following:</h4>
   <div id="q5results" class="bar"></div>
+
   <h4>As you think about the Internet Service in your neighborhood, what are the top two advocacy priorities you would like your local leaders to work on?
 </h4>
   <div id="q6results" class="bar"></div>
+
   <h4>What download speed do you pay for?
 </h4>
   <div id="q7results" class="bar"></div>
+
 </div>
 </section>
 
@@ -150,6 +162,7 @@
   <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <script>
+
   var trace1 = {
   type: 'pie',
   labels: ['Very Unsatisfied', 'Unsatisfied', 'Satisfied', 'Very Satisfied'],
@@ -213,7 +226,7 @@
 };
   var trace9 = {
   type: 'bar',
-  x: ['Employment related tasks including teleconferencing and other high bandwith needed services', 'Streaming TV, Videos, and Movies', 'Medical Information and Counseling', 'Selling products or services online (home based business)', '"Smart Home" applications such as security or remote monitoring systems', 'Educational purposes such as classwork, research, and college courses', 'Email, Twitter, Facebook and other communication programs', 'Online Video Games', 'Other uses'],
+  x: ['Employment related tasks', 'Streaming TV, Videos, and Movies', 'Medical Information and Counseling', 'Selling products or services online', '"Smart Home" applications', 'Educational purposes', 'Email, Twitter, and Social Media', 'Online Video Games', 'Other uses'],
   y: [1,2,3,4,5,6,7,8,9],
   marker: {
       color: '#4abb0d'
@@ -221,7 +234,7 @@
 };
   var trace10 = {
   type: 'bar',
-  x: ['More Service Providers', 'Faster Available Speeds (download and upload)', 'Greater Reliability of Service and Speeds', 'Less expensive Internet Service', 'Other', 'Nothing, the Internet Service is fine the way it is'],
+  x: ['More Service Providers', 'Faster Available Speeds (download and upload)', 'Greater Reliability of Service and Speeds', 'Less expensive Internet Service', 'Other', 'Nothing'],
   y: [1,2,3,4,5,6],
   marker: {
       color: '#4abb0d'
@@ -229,7 +242,7 @@
 };
   var trace11 = {
   type: 'bar',
-  x: ['< 5 Megabits per second', '5 to < 25 Megabits per second', '25 to < 100 Megabits per second', '100 to < 1,000 Megabits per second', '1,000 or more Megabits per second'],
+  x: ['< 5 Mps', '5 to < 25 Mps', '25 to < 100 Mps', '100 to < 1,000 Mps', '1,000 or more Mps'],
   y: [1,2,3,4,5],
   marker: {
       color: '#4abb0d'
@@ -252,8 +265,13 @@ var layout = {
   plot_bgcolor: '#rgba(0,0,0,0)',
   paper_bgcolor: 'rgba(0,0,0,0)',
   font_family: 'Helvetica',
-  margin: 0,
-  margin_pad: 0,
+  margin: {
+    l: 100,
+    r: 100,
+    b: 180,
+    t: 50,
+    pad: 5
+  },
 };
 
 
