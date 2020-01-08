@@ -19,15 +19,15 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
   <title>WNC Broadband Project | Survey</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- JQuery -->
-  <script src="../js/jquery.min.js"></script> 
+  <script src="../../js/jquery.min.js"></script> 
   <!-- Bootstrap core CSS -->
-  <link href="../vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link href="../../vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
   <!-- Custom fonts for this template -->
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
   <!--Site Stylesheet-->
-  <link href="../css/style.css" rel="stylesheet" type="text/css">
+  <link href="../../css/style.css" rel="stylesheet" type="text/css">
 	
 	<script>
 //		Apply a Unique identifier for this page
@@ -75,36 +75,33 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
 <body onLoad="createOnLoad()">
 
    <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dblue fixed-top stroke">
-    <div class="container">
-      <a class="navbar-brand" href="../index.html">
-        <img src="../img/wncbroadbandlogo.png" width="100px" alt="WNC Broadband Project Logo Image and Link">
+    <nav class="navbar navbar-expand-lg bg-dblue navbar-dark mainnav">
+      <a class="navbar-brand" href="https://wncbroadband.org/blog">
+        <img src="../../img/wncbroadbandlogo.png" alt="WNC Broadband Project Logo Image and Link" class="img-fluid logo">
       </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
+
+      <div class="collapse navbar-collapse navbars pull-right" id="navbar1">
+        <ul class="navbar-nav ml-auto small">
           <li class="nav-item">
-            <a class="nav-link" href="../index.html">Home
-              <span class="sr-only">(current)</span>
-            </a>
+            <a class="nav-link" href="https://wncbroadband.org/blog">Home</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="../aboutproject.html">WNC Broadband Project</a></li>
-              <li><a class="dropdown-item" href="../aboutBiltmoreLake.html">Biltmore Lake</a></li>
-           </ul>
+          <li class="nav-item">
+            <a class="nav-link" href="../aboutproject.html">About</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="../broadband101.html">Broadband 101</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../101links.html">Resources</a>
+            <a class="nav-link" href="https://wncbroadband.org/blog/blog">Blog</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../providers.html">Service Providers</a>
+            <a class="nav-link" href="https://wncbroadband.org/blog/archives">Archives</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../101links.html">Resources</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="../faq.html">FAQ</a>
@@ -112,16 +109,41 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
           <li class="nav-item">
             <a class="nav-link" href="../contact.html">Contact</a>
           </li>
+        </ul>
+  </div>
+</nav>
+
+<nav class="navbar navbar-expand-md bg-lblue navbar-dark communitynav">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar2" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+ <div class="collapse navbar-collapse navbars" id="navbar2">
+        <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="../index.html">Biltmore Lakes</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="../aboutBiltmoreLake.html">About Community</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="../survey.html">Survey</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../providers.html">Service Providers</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../communitycontacts.html">Community Contacts</a>
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Area Maps</a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="../map.html">Biltmore Lake</a></li>
+            <li><a class="dropdown-item" href="../map/map.html">Biltmore Lake</a></li>
            </ul>
           </li>
         </ul>
       </div>
-    </div>
   </nav>
+
   <section class="p-5"></section>
   <section class="showcase">
     <div id="survey-bg" class="container-fluid p-5 row">
@@ -169,7 +191,7 @@ if ($result->num_rows > 0) {
 	echo($row['html']);
     }
 }else{
-    echo("No Quesions Found");
+    echo("No Questions Found");
 }
 $conn->close();
 ?>
@@ -230,10 +252,10 @@ function showPosition(position) {
                   </thead>
                   <tbody>
                     <tr>
-                      <td style="text-align: center;"><img id="img1" src="../img/x.png" width="50px" height="50px"></td>
-                      <td style="text-align: center;"><img id="img2" src="../img/x.png" width="50px" height="50px"></td>
-                      <td style="text-align: center;"><img id="img3" src="../img/x.png" width="50px" height="50px"></td>
-                      <td style="text-align: center;"><img id="img4" src="../img/x.png" width="50px" height="50px"></td>
+                      <td style="text-align: center;"><img id="img1" src="../../img/x.png" width="50px" height="50px"></td>
+                      <td style="text-align: center;"><img id="img2" src="../../img/x.png" width="50px" height="50px"></td>
+                      <td style="text-align: center;"><img id="img3" src="../../img/x.png" width="50px" height="50px"></td>
+                      <td style="text-align: center;"><img id="img4" src="../../img/x.png" width="50px" height="50px"></td>
                     </tr>
                   </tbody>
                 </table>
@@ -307,29 +329,29 @@ slider.oninput = function() {
   output.innerHTML = this.value;
 
   if(this.value >= 1){
-    document.getElementById("img1").src = "../img/check.png"
+    document.getElementById("img1").src = "../../img/check.png"
   } else {
-    document.getElementById("img1").src = "../img/x.png"
+    document.getElementById("img1").src = "../../img/x.png"
   }
   if(this.value >=15){
-    document.getElementById("img2").src = "../img/check.png"
+    document.getElementById("img2").src = "../../img/check.png"
   } else {
-    document.getElementById("img2").src = "../img/x.png"
+    document.getElementById("img2").src = "../../img/x.png"
   }
   if(this.value >=40){
-    document.getElementById("img3").src = "../img/check.png"
+    document.getElementById("img3").src = "../../img/check.png"
   } else {
-    document.getElementById("img3").src = "../img/x.png"
+    document.getElementById("img3").src = "../../img/x.png"
   }
   if(this.value >=200){
-    document.getElementById("img4").src = "../img/check.png"
+    document.getElementById("img4").src = "../../img/check.png"
   } else {
-    document.getElementById("img4").src = "../img/x.png"
+    document.getElementById("img4").src = "../../img/x.png"
   }
 }
 </script>
-<script src="../vendor/jquery/jquery.slim.min.js"></script>
-<script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../../vendor/jquery/jquery.slim.min.js"></script>
+<script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
