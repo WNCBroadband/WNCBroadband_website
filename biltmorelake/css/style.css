@@ -3,6 +3,10 @@ body{
 	padding:0;
 }
 
+.navbar li:hover{
+	text-decoration: underline;
+}
+
 .cardbtn{
 	height:200px;
 	text-align:center;
@@ -56,7 +60,7 @@ body{
 }
 
 .header{
-	padding-top:125px;
+	padding-top:30px;
 	padding-bottom:30px;
 }
 
@@ -263,6 +267,25 @@ float: left;
 	height:500px;
 	background:pink;
 }
+
+
+.logo{
+	height:50px;
+	margin-left:50%;
+}
+
+.bg-lblue{
+	background-color:#ddd;
+}
+
+.mainnav{
+	height:45px;
+}
+
+.communitynav{
+	height:60px;
+}
+
 @media (max-width:576px){
 	.contact-photo{
 		max-height:150px;
@@ -279,5 +302,14 @@ float: left;
 	.custom-container{
 		margin-left:1rem;
 		margin-right:1rem;
+	}
+}
+
+@media (max-width:992px){
+	.mainnav{
+		height:100%;
+	}
+	.communitynav{
+		height:100%;
 	}
 }
