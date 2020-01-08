@@ -217,7 +217,7 @@ function showPosition(position) {
             <br><br>
             <h4>From the results of the M-Labs test, compare the capabilities of your download speed with other speeds using the range slider below.</h4><br>
             <div class="slidecontainer">
-              <input type="range" min="1" max="100" value="1" class="slider" id="myRange">
+              <input type="range" min="1" max="200" value="1" class="slider" id="myRange">
                 <p class="text-center lead">Download Speed: <span id="demo"></span></p>
                 <table class="table table-bordered table-sm">
                   <thead class="thead-light">
@@ -321,7 +321,7 @@ slider.oninput = function() {
   } else {
     document.getElementById("img3").src = "../img/x.png"
   }
-  if(this.value >=100){
+  if(this.value >=200){
     document.getElementById("img4").src = "../img/check.png"
   } else {
     document.getElementById("img4").src = "../img/x.png"

@@ -167,6 +167,41 @@
   </div>
 </section>
 
+<section class="pt-5 pb-5 bg-light">
+<div class="container">
+<h2>Take the Speed Test</h2>
+<p class="lead">There are major issues in broadband delivery concerning where broadband is available and what the actual speeds are delivered by providers. Test your speed by using the M-Labs speed test below. </p>
+<br>
+<div class="d-flex justify-content-center">
+<iframe frameborder="0" src="https://speed.measurementlab.net/#/" width="75%" height="350px"></iframe>
+</div>
+            <br><br>
+            <h4>From the results of the M-Labs test, compare the capabilities of your download speed with other speeds using the range slider below.</h4><br>
+            <div class="slidecontainer">
+              <input type="range" min="1" max="200" value="1" class="slider" id="myRange">
+                <p class="text-center lead">Download Speed: <span id="demo"></span><span id="plus"></span> Mbps</p>
+                <table class="table table-bordered table-sm">
+                  <thead class="thead-light">
+                    <tr>
+                      <th scope="col">Check email</th>
+                      <th scope="col">Stream HD content</th>
+                      <th scope="col">Stream 4K content and play competitive online games</th>
+                      <th scope="col">Stream 4K content, play online games, and download very large files</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td style="text-align: center;"><img id="img1" src="img/x.png" width="50px" height="50px"></td>
+                      <td style="text-align: center;"><img id="img2" src="img/x.png" width="50px" height="50px"></td>
+                      <td style="text-align: center;"><img id="img3" src="img/x.png" width="50px" height="50px"></td>
+                      <td style="text-align: center;"><img id="img4" src="img/x.png" width="50px" height="50px"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              </div>
+              </section>
+
 <footer class="footer bg-dblue text-white pt-5">
     <div class="container">
       <div class="row">
@@ -196,7 +231,38 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.slim.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script>
+var slider = document.getElementById("myRange");
+var output = document.getElementById("demo");
+output.innerHTML = slider.value;
 
+slider.oninput = function() {
+  output.innerHTML = this.value;
+
+  if(this.value >= 1){
+    document.getElementById("img1").src = "img/check.png"
+  } else {
+    document.getElementById("img1").src = "img/x.png"
+  }
+  if(this.value >=15){
+    document.getElementById("img2").src = "img/check.png"
+  } else {
+    document.getElementById("img2").src = "img/x.png"
+  }
+  if(this.value >=40){
+    document.getElementById("img3").src = "img/check.png"
+  } else {
+    document.getElementById("img3").src = "img/x.png"
+  }
+  if(this.value >=200){
+    document.getElementById("img4").src = "img/check.png"
+    document.getElementById("plus").innerHTML = "+";
+  } else {
+    document.getElementById("img4").src = "img/x.png"
+    document.getElementById("plus").innerHTML = "";
+  }
+}
+</script>
 </body>
 
 </html>
