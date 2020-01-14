@@ -240,7 +240,7 @@ function showPosition(position) {
             <h4>From the results of the M-Labs test, compare the capabilities of your download speed with other speeds using the range slider below.</h4><br>
             <div class="slidecontainer">
               <input type="range" min="1" max="200" value="1" class="slider" id="myRange">
-                <p class="text-center lead">Download Speed: <span id="demo"></span> Mbps</p>
+                <p class="text-center lead">Download Speed: <span id="demo"></span><span id="plus"></span> Mbps</p>
                 <table class="table table-bordered table-sm">
                   <thead class="thead-light">
                     <tr>
@@ -335,24 +335,26 @@ slider.oninput = function() {
   output.innerHTML = this.value;
 
   if(this.value >= 1){
-    document.getElementById("img1").src = "../../img/check.png"
+    document.getElementById("img1").src = "../../img/check.png";
   } else {
-    document.getElementById("img1").src = "../../img/x.png"
+    document.getElementById("img1").src = "../../img/x.png";
   }
   if(this.value >=15){
-    document.getElementById("img2").src = "../../img/check.png"
+    document.getElementById("img2").src = "../../img/check.png";
   } else {
-    document.getElementById("img2").src = "../../img/x.png"
+    document.getElementById("img2").src = "../../img/x.png";
   }
   if(this.value >=40){
-    document.getElementById("img3").src = "../../img/check.png"
+    document.getElementById("img3").src = "../../img/check.png";
   } else {
-    document.getElementById("img3").src = "../../img/x.png"
+    document.getElementById("img3").src = "../../img/x.png";
   }
   if(this.value >=200){
-    document.getElementById("img4").src = "../../img/check.png"
+    document.getElementById("img4").src = "../../img/check.png";
+    document.getElementById("plus").innerHTML = "+";
   } else {
-    document.getElementById("img4").src = "../../img/x.png"
+    document.getElementById("img4").src = "../../img/x.png";
+    document.getElementById("plus").innerHTML = "";
   }
 }
 </script>
