@@ -240,7 +240,7 @@ function showPosition(position) {
             <h4>From the results of the M-Labs test, compare the capabilities of your download speed with other speeds using the range slider below.</h4><br>
             <div class="slidecontainer">
               <input type="range" min="1" max="200" value="1" class="slider" id="myRange">
-                <p class="text-center lead">Download Speed: <span id="demo"></span></p>
+                <p class="text-center lead">Download Speed: <span id="demo"></span> Mbps</p>
                 <table class="table table-bordered table-sm">
                   <thead class="thead-light">
                     <tr>
