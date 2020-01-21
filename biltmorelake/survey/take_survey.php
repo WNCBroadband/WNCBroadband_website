@@ -237,7 +237,7 @@ function showPosition(position) {
             <h4>9&#41; There are major issues in broadband delivery concerning where broadband is available and what the actual speeds are delivered by providers. Please use the M-Labs Speed Test below to test your speed.</h4><br>
             <iframe frameborder="0" height="500" src="https://speed.measurementlab.net/#/" width="100%"></iframe>
             <br><br>
-            <h4>From the results of the M-Labs test, compare the capabilities of your download speed with other speeds using the range slider below.</h4><br>
+            <h4>From the results of the M-Labs test, explore the capabilities of your download speed with the speeds needed for various applications using the slider below.</h4><br>
             <div class="slidecontainer">
               <input type="range" min="1" max="200" value="1" class="slider" id="myRange">
                 <p class="text-center lead">Download Speed: <span id="demo"></span><span id="plus"></span> Mbps</p>
