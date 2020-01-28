@@ -139,7 +139,7 @@ footer a:hover{
 -moz-transform:scale(1.03,1.03);
 }
 .dropdown-menu{
-	background:#06284f;
+	background:#26529e;
 	border:none;
 	border-radius:0;
 }
@@ -148,13 +148,13 @@ footer a:hover{
 }
 
 .dropdown-menu li a:hover{
-	background:#06284f;
+	background:#26529e;
 	color:#fff;
 }
 
 .dropdown-menu li .active{
 	color:#fff;
-	background:#06284f;
+	background:#26529e;
 }
 
 .graphic{

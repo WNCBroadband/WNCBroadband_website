@@ -120,7 +120,7 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
  <div class="collapse navbar-collapse navbars" id="navbar2">
         <ul class="navbar-nav">
         <li class="nav-item">
-            <a class="nav-link" href="../index.html">Biltmore Lakes</a>
+            <a class="nav-link" href="../index.html">Biltmore Lake</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="../aboutBiltmoreLake.html">About Community</a>
@@ -135,16 +135,17 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
             <a class="nav-link" href="../communitycontacts.html">Community Contacts</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Area Maps</a>
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Biltmore Lake Maps</a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="../map/map.html">Biltmore Lake</a></li>
+            <li><a class="dropdown-item" href="../map/map.html">Speed Test Results</a></li>
+            <li><a class="dropdown-item" href="../map/map.html">Services Offered</a></li>
            </ul>
           </li>
         </ul>
       </div>
   </nav>
 
-  <section class="p-5"></section>
+  <section class="p-3"></section>
   <section class="showcase">
     <div id="survey-bg" class="container-fluid p-5 row">
         <div class="mx-auto col-lg-8">
@@ -235,7 +236,8 @@ function showPosition(position) {
           <br>
           <br><div class="q-break"></div><br>
             <h4>9&#41; There are major issues in broadband delivery concerning where broadband is available and what the actual speeds are delivered by providers. Please use the M-Labs Speed Test below to test your speed.</h4><br>
-            <iframe frameborder="0" height="500" src="https://speed.measurementlab.net/#/" width="100%"></iframe>
+            <iframe frameborder="0" height="550px" src="https://speed.measurementlab.net/#/" width="100%"></iframe>
+            <p class="small text-center">If the speed test does not show up, click <a href="https://speed.measurementlab.net/#/" target="_blank"> here </a> to open it in a new tab.</p>
             <br><br>
             <h4>From the results of the M-Labs test, explore the capabilities of your download speed with the speeds needed for various applications using the slider below.</h4><br>
             <div class="slidecontainer">
