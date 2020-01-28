@@ -107,13 +107,13 @@ function update_response_address($response_id){
 
 function insert_response($survey_id){
     global $conn;
-    $sql1 = "insert into Responses (survey_id, ip_address, uuid) values(?,?,?)";
+    $sql1 = "insert into Responses (survey_id, ip_address, uuid, HTTP_USER_AGENT) values(?,?,?,?)";
     $stmt = $conn->prepare($sql1);
     if(!$stmt){
         echo "DB Error inserting response: ".$conn->error."\n";
         exit;
     }
-    $stmt->bind_param("iss", $survey_id, $_SERVER['REMOTE_ADDR'],$_GET['uuid'] );
+    $stmt->bind_param("isss", $survey_id, $_SERVER['REMOTE_ADDR'],$_GET['uuid'], $_SERVER['HTTP_USER_AGENT'] );
     $stmt->execute();
     if ($conn->error) {
         echo "DB Error inserting response: ".$conn->error."\n";
