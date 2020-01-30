@@ -138,7 +138,7 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Biltmore Lake Maps</a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" href="../map/map.html">Speed Test Results</a></li>
-            <li><a class="dropdown-item" href="../map/map.html">Services Offered</a></li>
+            <!--<li><a class="dropdown-item" href="../map/map.html">Services Offered</a></li>-->
            </ul>
           </li>
         </ul>
