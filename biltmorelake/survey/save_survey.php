@@ -101,71 +101,95 @@ if(!empty($_POST['survey_id'])){
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>WestNGN Broadband</title>
+  <title>WNC Broadband Project | Survey</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- JQuery -->
-  <script src="../js/jquery.min.js"></script> 
+  <script src="../../js/jquery.min.js"></script> 
   <!-- Bootstrap core CSS -->
-  <link href="../vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link href="../../vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
   <!-- Custom fonts for this template -->
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
   <!--Site Stylesheet-->
-  <link href="../css/style.css" rel="stylesheet" type="text/css">
+  <link href="../../css/style.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dblue fixed-top stroke">
-    <div class="container">
-      <a class="navbar-brand" href="../index.html">
-        <img src="../img/West_NGN_logo.png" width="100" height="50" alt="WestNGN Logo Image and Link">
+    <nav class="navbar navbar-expand-lg bg-dblue navbar-dark mainnav">
+      <a class="navbar-brand" href="https://wncbroadband.org/blog">
+        <img src="../../img/wncbroadbandlogo.png" alt="WNC Broadband Project Logo Image and Link" class="img-fluid logo">
       </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
+
+      <div class="collapse navbar-collapse navbars pull-right" id="navbar1">
+        <ul class="navbar-nav ml-auto small">
           <li class="nav-item">
-            <a class="nav-link" href="../index.html">Home
-            </a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <li><a class="dropdown-item" href="../aboutWestNGN.html">WestNGN</a></li>
-              <li><a class="dropdown-item" href="../aboutBiltmoreLake.html">Biltmore Lake</a></li>
-           </ul>
+            <a class="nav-link" href="https://wncbroadband.org/blog">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../broadband101.html">Broadband 101</a>
+            <a class="nav-link" href="../../aboutproject.html">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../101links.html">Resources</a>
+            <a class="nav-link" href="../../broadband101.html">Broadband 101</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://wncbroadband.org/blog/blog">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://wncbroadband.org/blog/archives">Archives</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../../101links.html">Resources</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../../faq.html">FAQ</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../../contact.html">Contact</a>
+          </li>
+        </ul>
+  </div>
+</nav>
+
+<nav class="navbar navbar-expand-md bg-lblue navbar-dark communitynav">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar2" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+ <div class="collapse navbar-collapse navbars" id="navbar2">
+        <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" href="../index.html">Biltmore Lake</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="../aboutBiltmoreLake.html">About Community</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="../survey.html">Survey</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="../providers.html">Service Providers</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../faq.html">FAQ</a>
+            <a class="nav-link" href="../communitycontacts.html">Community Contacts</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../contact.html">Contact</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Area Maps</a>
+           <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Biltmore Lake Maps</a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="map.html">Biltmore Lake</a></li>
+            <li><a class="dropdown-item" href="../map/map.html">Speed Test Results</a></li>
+            <!--<li><a class="dropdown-item" href="../map/map.html">Services Offered</a></li>-->
            </ul>
           </li>
         </ul>
       </div>
-    </div>
   </nav>
 
   <!-- Page Content -->
+  <section class="p-3"></section>
 <section class="header">  
   <div class="container">
         <h1 class="mt-3 mb-5 text-center">Thank you for taking our survey!</h1>
@@ -184,21 +208,27 @@ if(!empty($_POST['survey_id'])){
         <div class="col-lg-6 text-right">
           <ul>
             <li class="list-inline-item">
-              <a href="../index.html">Home</a>
+              <a href="https://wncbroadband.org/blog">Home</a>
             </li><br>
             <li class="list-inline-item">
-              <a href="../contact.html">Contact</a>
+              <a href="https://wncbroadband.org/blog/blog">Blog</a>
             </li><br>
             <li class="list-inline-item">
-              <a href="../map.html">View Maps</a>
+              <a href="https://wncbroadband.org/blog/archives">Archives</a>
             </li><br>
             <li class="list-inline-item">
-              <a href="../../index.html">Change Community</a>
+              <a href="../../101links.html">Resources</a>
+            </li><br>
+            <li class="list-inline-item">
+              <a href="../../faq.html">FAQ</a>
+            </li><br>
+            <li class="list-inline-item">
+              <a href="../../contact.html">Contact</a>
             </li><br>
           </ul>
         </div>
-        <div class="row">
-        <p>&copy;2019 WestNGN | All Rights Reserved</p>
+        <div class="col-12 text-center">
+        <p>&copy; 2019 WNC Broadband Project | <a href="../../privacypolicy.html"> Privacy Policy</a></p>
         </div>
       </div>
     </div>

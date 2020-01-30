@@ -43,74 +43,42 @@
 <body>
 	  
 	<!-- Navigation -->
-    <nav class="navbar navbar-expand-lg bg-dblue navbar-dark mainnav">
-      <a class="navbar-brand" href="https://wncbroadband.org/blog">
-        <img src="../../img/wncbroadbandlogo.png" alt="WNC Broadband Project Logo Image and Link" class="img-fluid logo">
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dblue fixed-top stroke">
+    <div class="container">
+      <a class="navbar-brand" href="../../index.html">
+        <img src="../img/wncbroadbandlogo.png" width="100px" alt="WNC Broadband Project Logo Image and Link">
+        </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
-      <div class="collapse navbar-collapse navbars pull-right" id="navbar1">
-        <ul class="navbar-nav ml-auto small">
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+       <li class="nav-item">
+            <a class="nav-link" href="../index.html">Biltmore Lake
+            </a>
+       </li>
+       <li class="nav-item">
+            <a class="nav-link" href="../aboutBiltmoreLake.html">About Community
+            </a>
+       </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://wncbroadband.org/blog">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../../aboutproject.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../../broadband101.html">Broadband 101</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://wncbroadband.org/blog/blog">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://wncbroadband.org/blog/archives">Archives</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../../101links.html">Resources</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../../faq.html">FAQ</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../../contact.html">Contact</a>
-          </li>
-        </ul>
-  </div>
-</nav>
-
-<nav class="navbar navbar-expand-md bg-lblue navbar-dark communitynav">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar2" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
- <div class="collapse navbar-collapse navbars" id="navbar2">
-        <ul class="navbar-nav">
-        <li class="nav-item">
-            <a class="nav-link" href="../index.html">Biltmore Lake</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="../aboutBiltmoreLake.html">About Community</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="../survey.html">Survey</a>
-          </li>
+            <a class="nav-link" href="../survey/survey.html">Survey</a>
+           </li>
           <li class="nav-item">
             <a class="nav-link" href="../providers.html">Service Providers</a>
-          </li>
+           </li>
           <li class="nav-item">
             <a class="nav-link" href="../communitycontacts.html">Community Contacts</a>
-          </li>
-           <li class="nav-item dropdown">
+           </li>
+          <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Biltmore Lake Maps</a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item active" href="../map/map.html">Speed Test Results</a></li>
-            <!--<li><a class="dropdown-item" href="../../underconstruction.html">Services Offered</a></li>-->
            </ul>
           </li>
         </ul>
       </div>
+    </div>
   </nav>
 <!--	END NAVBAR	-->
 
