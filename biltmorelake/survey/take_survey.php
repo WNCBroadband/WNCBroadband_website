@@ -269,7 +269,7 @@ function showPosition(position) {
           <br>
           <br><div class="q-break"></div><br>
             <h4>Thank you for participating in this survey. Once you are finished, please click "Submit" below to submit your responses.</h4><br>
-              <input required name="submit" id="submit" class="btn btn-primary mt-auto mb-5" type="submit">
+              <input required name="submit" id="submit" class="btn btn-primary mt-auto mb-5" type="submit" value="Submit">
       
           </form>
           </div>
