@@ -191,11 +191,11 @@ if(!empty($_POST['survey_id'])){
   <!-- Page Content -->
   <section class="p-3"></section>
 <section class="header">  
-  <div class="container">
+  <div class="custom-container">
         <h1 class="mt-3 mb-5 text-center">Thank you for taking our survey!</h1>
-        <p class="lead">Thank you for your participation in this survey.<br><br>
-        Learn more about how you can get involved and get further engaged in broadband issues.</p>
-        <a class="btn btn-primary mb-5" href="../getinvolved.html">Get Involved! &gt;</a>
+        <p class="lead">Thank you for your participation in this survey. <br>
+        Learn more about how you can get involved and get further engaged in broadband issues <a href="../getinvolved.html"><b>here</b></a>.<br><br>
+        <a href="../index.html">Return to community homepage</a></p>
   </div>
 </section>
 
