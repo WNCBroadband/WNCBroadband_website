@@ -286,6 +286,14 @@ float: left;
 	height:60px;
 }
 
+.mainnav2{
+	height:45px;
+}
+
+.communitynav2{
+	height:60px;
+}
+
 @media (max-width:576px){
 	.contact-photo{
 		max-height:150px;
@@ -305,11 +313,27 @@ float: left;
 	}
 }
 
-@media (max-width:992px){
+@media (min-width:576px) and (max-width:992px){
 	.mainnav{
 		height:100%;
 	}
 	.communitynav{
 		height:100%;
+	}
+	.mainnav2{
+		height:auto;
+	}
+	.communitynav2{
+		height:auto;
+	}
+}
+
+
+@media (max-width:576px){
+	.mainnav2{
+		height:auto;
+	}
+	.communitynav2{
+		height:auto;
 	}
 }

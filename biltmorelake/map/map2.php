@@ -2,6 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>Area Map</title>
    
   <!--	Leaflet CSS	-->
@@ -10,13 +11,11 @@
   <!-- Bootstrap core CSS -->
   <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- JQuery -->
-  <script src="../../js/jquery.min.js"></script> 	
+  <script src="../js/vendor/jquery.min.js"></script> 	
   <!-- Bootstrap core CSS -->
   <link href="../../vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
   <!-- Custom fonts for this template -->
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
-  <!--Site Stylesheet-->
-  <link href="../../css/style.css" rel="stylesheet" type="text/css">
 	
   <!--	Lealet Javascript	-->
   <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
@@ -38,12 +37,16 @@
   <link href="../css/landing-page.min.css" rel="stylesheet">
   <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
   <link rel="stylesheet" href="../css/mapstyle.css">
+
+   <!--Site Stylesheet-->
+  <link href="../../css/style.css" rel="stylesheet" type="text/css">
 </head>	
+
 
 <body>
 	  
 	<!-- Navigation -->
-<nav class="navbar navbar-expand-lg bg-dblue navbar-dark mainnav">
+<nav class="navbar navbar-expand-lg bg-dblue navbar-dark mainnav2">
       <a class="navbar-brand" href="https://wncbroadband.org/blog">
         <img src="../img/wncbroadbandlogo.png" alt="WNC Broadband Project Logo Image and Link" class="img-fluid logo" width="100px">
       </a>
@@ -81,7 +84,7 @@
   </div>
 </nav>
 
-<nav class="navbar navbar-expand-md bg-lblue navbar-dark communitynav">
+<nav class="navbar navbar-expand-md bg-lblue navbar-dark communitynav2">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar2" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -117,7 +120,8 @@
 	
 <!--	MAP		-->
   	<div id="map"></div>
-	<div id="mapKey">
+
+<div id="mapKey">
 		<ul><h3>Map Key</h3>
 			<li><img src="img/pin_gray.png" height="20px" width="20px"> 	Gray: Unknown Speed</li>
 			<li><img src="img/pin_red.png" height="20px" width="20px">		Red: Less than 5 Mpbs</li>
@@ -144,7 +148,6 @@
   <script src="../../vendor/jquery/jquery.slim.min.js"></script>
   <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 	  
-
 
 </body>
 </html>
