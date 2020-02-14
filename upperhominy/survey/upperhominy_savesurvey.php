@@ -1,6 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--
+<?
+include('../../db.php');
 
+
+
+function save_survey_no_uuid(){
+    global $conn;
+    $survey_id = intval($_POST['survey_id']);
+
+    $sql1 = "insert into Responses (survey_id, geoip_latitude, geoip_longitude, home_address_street, home_address_city, home_address_state, home_address_zip, ip_address, comments) values(?,?,?,?,?,?,?,?,?)";
+    $stmt = $conn->prepare($sql1);
+    if(!$stmt){
+        echo "DB Error inserting response: ".$conn->error."<BR>";
+        return NULL;
+    }
+    $stmt->bind_param("issssssss", $survey_id, $_POST['geoip_latitude'], $_POST['geoip_longitude'], $_POST['street_address'], $_POST['city_address'], $_POST['state_address'], $_POST['zip_address'], $_SERVER['REMOTE_ADDR'], $_POST['comments']);
+    $stmt->execute();
+    if ($conn->error) {
+        echo "DB Error inserting response: ".$conn->error."<BR>";
+        return NULL;
+    }
+    $response_id = $conn->insert_id;
+    return $response_id;
+}
+
+function save_survey(){
+    global $conn;
+    $survey_id = intval($_POST['survey_id']);
+
+    $sql1 = "insert into Responses (survey_id, geoip_latitude, geoip_longitude, home_address_street, home_address_city, home_address_state, home_address_zip, ip_address, comments,uuid) values(?,?,?,?,?,?,?,?,?,?)";
+    $stmt = $conn->prepare($sql1);
+    if(!$stmt){
+        echo "DB Error inserting response: ".$conn->error."<BR>";
+        return NULL;
+    }
+    $stmt->bind_param("isssssssss", $survey_id, $_POST['geoip_latitude'], $_POST['geoip_longitude'], $_POST['street_address'], $_POST['city_address'], $_POST['state_address'], $_POST['zip_address'], $_SERVER['REMOTE_ADDR'], $_POST['comments'],$_POST['uuid']);
+    $stmt->execute();
+    if ($conn->error) {
+        echo "DB Error inserting response: ".$conn->error."<BR>";
+        return NULL;
+    }
+    $response_id = $conn->insert_id;
+    return $response_id;
+}
+
+function save_survey_questions($response_id){
+    global $conn;
+    $survey_id = intval($_POST['survey_id']);
+    $sql2 = "
+    SELECT q.id as 'id', q.name as 'name'
+    FROM Question q, Survey s, Survey_Questions sq
+    WHERE s.id = ?
+      AND sq.survey_id = s.id
+      AND sq.question_id = q.id
+    ORDER BY sq.display_order asc
+    ";
+    $stmt2 = $conn->prepare($sql2);
+    $stmt2->bind_param("i",$survey_id);
+    $stmt2->execute();
+    $result = $stmt2->get_result();
+    if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+            if(!empty($_POST[$row['name']])){
+                #echo "Inserting into Survey_Questions_Responses: (name=".$row['name'].") ";
+                #echo "$survey_id, ".$row['id'].", $response_id, ".$_POST[$row['name']];
+                #echo "<BR>";
+                $sql3 = "insert into Survey_Questions_Responses (survey_id, question_id, response_id, answer) values(?,?,?,?)";
+                $stmt3 = $conn->prepare($sql3);
+                $stmt3->bind_param("iiis",$survey_id, $row['id'], $response_id, $_POST[$row['name']]);
+                $stmt3->execute();
+                if($conn->error){
+                    echo "DB Error inserting survey_quesions_response: ".$conn->error."<BR>";
+                    return;
+                }
+            }
+        }
+    }
+}
+
+#print_r($_POST);
+if(!empty($_POST['survey_id'])){
+    if( isset($_POST['uuid']) && !empty($_POST['uuid']) ){
+        $resp_id = save_survey();
+    }else{
+        $resp_id = save_survey_no_uuid();
+    }
+    if(!is_null($resp_id)){
+        save_survey_questions($resp_id);
+    }
+}
+
+?>
+-->
 <head>
 
   <meta charset="utf-8">
@@ -24,8 +117,8 @@
 
 <body>
 
-   <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg bg-dblue navbar-dark mainnav">
+  <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-dblue navbar-dark mainnav">
       <a class="navbar-brand" href="https://wncbroadband.org/blog">
         <img src="../../img/wncbroadbandlogo.png" alt="WNC Broadband Project Logo Image and Link" class="img-fluid logo">
       </a>
@@ -84,10 +177,10 @@
           <li class="nav-item">
             <a class="nav-link" href="../communitycontacts.html">Community Contacts</a>
           </li>
-          <li class="nav-item dropdown">
+           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Upper Hominy Maps</a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="../map/img/Davis_Creek_Rd_Section_of_Upper_Hominy_Valley.pdf">Davis Creek Section</a></li>
+            <li><a class="dropdown-item" href="../map/img/Davis_Creek_Rd_Section_of_Upper_Hominy_Valley.pdf">Speed Test Results</a></li>
             <!--<li><a class="dropdown-item" href="../map/map.html">Services Offered</a></li>-->
            </ul>
           </li>
@@ -96,14 +189,13 @@
   </nav>
 
   <!-- Page Content -->
-<section class="p-3 bg-light"></section>
-<section class="bg-light p-5">
-  <div class="custom-container text-center">
-  <h2 class="pb-3">Upper Hominy Broadband Survey</h2>
-  <p class="lead">Thank you for your interest in the WNC Broadband Project!</p>
-        <p>Here you will take a short survey consisting of a preliminary question followed by short 10 question survey. Your answers will be used to create accurate map of the surveyed area. Your exact address location will not be displayed, and we will not sell any data.</p>
-       <a class="btn btn-primary mt-auto mb-5" href="q1.html"> Take Survey &gt;</a>
-    </div>
+  <section class="p-3"></section>
+<section class="header">  
+  <div class="custom-container">
+        <h1 class="mt-3 mb-5 text-center">Thank you for taking our survey!</h1>
+        <p class="lead">Thank you for your participation in this survey. <br>
+        Learn more about how you can get involved and get further engaged in broadband issues <a href="../getinvolved.html"><b>here</b></a>.<br><br>
+        <a href="../index.html">Return to community homepage</a></p>
   </div>
 </section>
 
@@ -142,8 +234,7 @@
     </div>
   </footer>
   <!-- Bootstrap core JavaScript -->
-  <script src="../../vendor/jquery/jquery.slim.min.js"></script>
-  <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>
