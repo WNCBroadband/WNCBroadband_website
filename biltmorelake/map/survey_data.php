@@ -47,6 +47,7 @@ if(isset($_GET['survey_id']) && !empty($_GET['survey_id'])){
     LEFT JOIN `MLABS_speed_data` d 
            ON d.`ip_address` = r.`ip_address`
     WHERE r.`survey_id` = ?
+      AND r.`include_on_map` = 1
       AND r.`geoip_latitude` IS NOT NULL 
       AND r.`geoip_latitude`  != 0
       AND r.`geoip_longitude` IS NOT NULL

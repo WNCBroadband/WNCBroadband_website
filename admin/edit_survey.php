@@ -15,7 +15,7 @@
 <body>
 
 <?php
-include('db.php');
+include('../db.php');
 
 if(empty($_GET['survey_id'])){
 
