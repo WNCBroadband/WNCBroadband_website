@@ -279,19 +279,19 @@ float: left;
 }
 
 .mainnav{
-	height:45px;
+	min-height:45px;
 }
 
 .communitynav{
-	height:60px;
+	min-height:60px;
 }
 
 .mainnav2{
-	height:45px;
+	min-height:45px;
 }
 
 .communitynav2{
-	height:60px;
+	min-height:60px;
 }
 
 @media (max-width:576px){
@@ -315,10 +315,10 @@ float: left;
 
 @media (min-width:576px) and (max-width:992px){
 	.mainnav{
-		height:100%;
+		height:auto;
 	}
 	.communitynav{
-		height:100%;
+		height:auto;
 	}
 	.mainnav2{
 		height:auto;
@@ -336,4 +336,14 @@ float: left;
 	.communitynav2{
 		height:auto;
 	}
+}
+
+@media (min-width:992px){
+	.mainnav{
+	height:45px;
+}
+
+.communitynav{
+	height:60px;
+}
 }
