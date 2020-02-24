@@ -95,7 +95,7 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
             <a class="nav-link" href="../../broadband101.html">Broadband 101</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://wncbroadband.org/blog/blog">Blog</a>
+            <a class="nav-link" href="https://wncbroadband.org/blog/blog">News</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="https://wncbroadband.org/blog/archives">Archives</a>
@@ -292,7 +292,7 @@ function showPosition(position) {
               <a href="https://wncbroadband.org/blog">Home</a>
             </li><br>
             <li class="list-inline-item">
-              <a href="https://wncbroadband.org/blog/blog">Blog</a>
+              <a href="https://wncbroadband.org/blog/blog">News</a>
             </li><br>
             <li class="list-inline-item">
               <a href="https://wncbroadband.org/blog/archives">Archives</a>
