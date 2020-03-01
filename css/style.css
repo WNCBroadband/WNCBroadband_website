@@ -117,8 +117,6 @@ footer a:hover{
 	background-color:rgba(0,0,0,0);
 }
 
-.accordion button:hover{
-}
 
 .indent{
 	text-indent:30px;
@@ -288,10 +286,58 @@ float: left;
 
 .mainnav2{
 	min-height:45px;
+	position:absolute;
+	z-index:500;
 }
 
 .communitynav2{
 	min-height:60px;
+	position:absolute;
+	z-index:500;
+}
+
+.mapkeycollapsible {
+  background-color: #2e7508;
+  position:fixed;
+  right:5%;
+  bottom:0%;
+  color: white;
+  cursor: pointer;
+  width: 250px;
+  padding:5px;
+  border: none;
+  border-radius:10px 10px 0px 0px;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+  z-index:300;
+}
+
+.mapkeyexpanded, .mapkeycollapsible:hover {
+  background-color: rgba(74, 187, 13, 0.75);
+}
+
+.mapkeyexpanded {
+  bottom:250px;
+}
+
+.mapkeycontent {
+  position:absolute;
+  right:5%;
+  height:0px;
+  width:250px;
+  display: none;
+  padding:5px 20px;
+  overflow: hidden;
+  background-color: rgba(230,230,230,0.6);
+  z-index:300;
+}
+
+.mapkeycontent ul{
+	list-style-position:inside;
+	margin-left:0;
+	padding-left:0;
+	float:left;
 }
 
 @media (max-width:576px){
@@ -346,4 +392,10 @@ float: left;
 .communitynav{
 	height:60px;
 }
+	.mainnav2{
+		height:45px;
+	}
+	.communitynav2{
+		height:60px;
+	}
 }
