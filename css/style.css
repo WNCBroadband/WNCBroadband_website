@@ -328,7 +328,7 @@ float: left;
 }
 
 .mapkeycontent {
-  position:absolute;
+  position:fixed;
   right:5%;
   height:0px;
   width:250px;
