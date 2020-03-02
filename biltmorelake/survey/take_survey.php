@@ -239,6 +239,17 @@ function showPosition(position) {
             <iframe frameborder="0" height="550px" src="https://speed.measurementlab.net/#/" width="100%"></iframe>
             <p class="small text-center">If the speed test does not show up, click <a href="https://speed.measurementlab.net/#/" target="_blank"> here </a> to open it in a new tab.</p>
             <br><br>
+            <h4>Please Input your Download Speed from the M-Labs Speed Test:</h4>
+            <div class="slidecontainer">
+              <input id="downslider" type="range" class="js-range-slider slider" min="1" max="200" step="0.1" value="1" data-rangeslider>
+              <p class="text-center lead">Download Speed <input id="downtextbox" type="text" class="js-input" name="downloadspeedval-biltmorelakes" id="downloadspeedval-biltmorelakes" class="text" maxlength="5" size="5"> Mbps</p>
+            </div>
+            <h4>Please Input your Upload Speed from the M-Labs Speed Test:</h4>
+            <div class="slidecontainer">
+              <input id="upslider" type="range" class="js-range-slider slider" min="1" max="200" step="0.1" value="1" data-rangeslider>
+              <p class="text-center lead">Upload Speed <input id="uptextbox" type="text" class="js-input" name="uploadspeedval-biltmorelakes" id="uploadspeedval-biltmorelakes" class="text" maxlength="5" size="5"> Mbps</p>
+            </div>
+            <br><br>
             <h4>From the results of the M-Labs test, explore the capabilities of your download speed with the speeds needed for various applications using the slider below.</h4><br>
             <div class="slidecontainer">
               <input type="range" min="1" max="200" value="1" class="slider" id="myRange">
@@ -362,6 +373,7 @@ slider.oninput = function() {
 </script>
 <script src="../../vendor/jquery/jquery.slim.min.js"></script>
 <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="surveyslider.js"></script>
 
 </body>
 </html>
