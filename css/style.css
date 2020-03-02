@@ -143,6 +143,7 @@ footer a:hover{
 }
 .dropdown-menu li a{
 	color:rgba(255,255,255,0.5);
+	background:#26529e;
 }
 
 .dropdown-menu li a:hover{
@@ -151,6 +152,11 @@ footer a:hover{
 }
 
 .dropdown-menu li .active{
+	color:#fff;
+	background:#26529e;
+}
+
+.dropdown-menu .show{
 	color:#fff;
 	background:#26529e;
 }
@@ -334,6 +340,7 @@ float: left;
 }
 
 .mapkeycontent ul{
+	list-style-type:none;
 	list-style-position:inside;
 	margin-left:0;
 	padding-left:0;
