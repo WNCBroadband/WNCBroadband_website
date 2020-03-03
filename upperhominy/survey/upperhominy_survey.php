@@ -235,9 +235,20 @@ function showPosition(position) {
 	</DIV>
           <br>
           <br><div class="q-break"></div><br>
-            <h4>9&#41; There are major issues in broadband delivery concerning where broadband is available and what the actual speeds are delivered by providers. Please use the M-Labs Speed Test below to test your speed.</h4><br>
+            <h4>9&#41; There are major issues in broadband delivery concerning where broadband is available and what the actual speeds are delivered by providers. We are working on ways to determine the speeds in your area. Please help us by using the M-Labs speed test and reporting your results using the sliders below.</h4><br>
             <iframe frameborder="0" height="550px" src="https://speed.measurementlab.net/#/" width="100%"></iframe>
             <p class="small text-center">If the speed test does not show up, click <a href="https://speed.measurementlab.net/#/" target="_blank"> here </a> to open it in a new tab.</p>
+            <br><br>
+            <h4>Please Input your Download Speed from the M-Labs Speed Test:</h4>
+            <div class="slidecontainer">
+              <input id="downslider" type="range" class="js-range-slider slider" min="1" max="200" step="0.1" value="1" data-rangeslider>
+              <p class="text-center lead">Download Speed <input id="downtextbox" type="text" class="js-input" name="downloadspeedval-upperhominy" id="downloadspeedval-upperhominy" class="text" maxlength="5" size="5"> Mbps</p>
+            </div>
+            <h4>Please Input your Upload Speed from the M-Labs Speed Test:</h4>
+            <div class="slidecontainer">
+              <input id="upslider" type="range" class="js-range-slider slider" min="1" max="200" step="0.1" value="1" data-rangeslider>
+              <p class="text-center lead">Upload Speed <input id="uptextbox" type="text" class="js-input" name="uploadspeedval-upperhominy" id="uploadspeedval-upperhominy" class="text" maxlength="5" size="5"> Mbps</p>
+            </div>
             <br><br>
             <h4>From the results of the M-Labs test, explore the capabilities of your download speed with the speeds needed for various applications using the slider below.</h4><br>
             <div class="slidecontainer">
@@ -362,6 +373,7 @@ slider.oninput = function() {
 </script>
 <script src="../../vendor/jquery/jquery.slim.min.js"></script>
 <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="surveyslider.js"></script>
 
 </body>
 </html>
