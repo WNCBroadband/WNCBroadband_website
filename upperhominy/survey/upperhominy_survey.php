@@ -217,7 +217,7 @@ function showPosition(position) {
       console.log(this.responseText);
     }
   };
-  xhttp.open("GET", "upperhominy_savequestion.php?uuid="+uuid+"&survey_id=1&geoip_latitude="+position.coords.latitude+"&geoip_longitude="+position.coords.longitude,true);
+  xhttp.open("GET", "upperhominy_savequestion.php?uuid="+uuid+"&survey_id=2&geoip_latitude="+position.coords.latitude+"&geoip_longitude="+position.coords.longitude,true);
   xhttp.send();
 
 }
@@ -241,13 +241,13 @@ function showPosition(position) {
             <br><br>
             <h4>Please Input your Download Speed from the M-Labs Speed Test:</h4>
             <div class="slidecontainer">
-              <input id="downslider" type="range" class="js-range-slider slider" min="1" max="200" step="0.1" value="1" data-rangeslider>
-              <p class="text-center lead">Download Speed <input id="downtextbox" type="text" class="js-input" name="downloadspeedval-upperhominy" id="downloadspeedval-upperhominy" class="text" maxlength="5" size="5"> Mbps</p>
+              <input id="downslider" name="SPEEDTEST__self-reported__download"  type="range" class="js-range-slider slider" min="1" max="200" step="0.1" value="1" data-rangeslider>
+              <p class="text-center lead">Download Speed <input id="downtextbox" name="SPEEDTEST__self-reported__download"  type="text" class="js-input" name="downloadspeedval-upperhominy" id="downloadspeedval-upperhominy" class="text" maxlength="5" size="5"> Mbps</p>
             </div>
             <h4>Please Input your Upload Speed from the M-Labs Speed Test:</h4>
             <div class="slidecontainer">
-              <input id="upslider" type="range" class="js-range-slider slider" min="1" max="200" step="0.1" value="1" data-rangeslider>
-              <p class="text-center lead">Upload Speed <input id="uptextbox" type="text" class="js-input" name="uploadspeedval-upperhominy" id="uploadspeedval-upperhominy" class="text" maxlength="5" size="5"> Mbps</p>
+              <input id="upslider" name="SPEEDTEST__self-reported__upload"  type="range" class="js-range-slider slider" min="1" max="200" step="0.1" value="1" data-rangeslider>
+              <p class="text-center lead">Upload Speed <input id="uptextbox" name="SPEEDTEST__self-reported__upload" type="text" class="js-input" name="uploadspeedval-upperhominy" id="uploadspeedval-upperhominy" class="text" maxlength="5" size="5"> Mbps</p>
             </div>
             <br><br>
             <h4>From the results of the M-Labs test, explore the capabilities of your download speed with the speeds needed for various applications using the slider below.</h4><br>
