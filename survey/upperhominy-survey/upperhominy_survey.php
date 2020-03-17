@@ -56,7 +56,7 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
 			  console.log(this.responseText);
 			}
 		  };
-		  xhttp.open("GET", "upperhominy_savequestion.php?uuid="+uuid+"&name="+this.name+"&value="+this.value+"&survey_id=2&type="+this.type,true); 
+		  xhttp.open("GET", "../save_question.php?uuid="+uuid+"&name="+this.name+"&value="+this.value+"&survey_id=2&type="+this.type,true); 
 		  xhttp.send();
 		}
 		//Change survey_id to 2
