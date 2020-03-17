@@ -22,7 +22,7 @@
 include('../db.php');
 
 // First, check which survry
-if(empty($_GET['survey_id'])){
+if(!isset($_GET['survey_id'])){
 
     echo '<FORM METHOD="GET" ACTION="">
     Edit Survey: <SELECT name="survey_id">';
@@ -32,6 +32,7 @@ if(empty($_GET['survey_id'])){
     if ($conn->error) {
         echo "<script>alert('Error: ".str_replace('\'', '\\\'', $conn->error)."');</script>";
     }
+    echo '<OPTION value="0"> -- Non-survey speed tests -- </OPTION>';
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
         echo('<OPTION VALUE="'.$row['id'].'">'.$row['name'].'</OPTION>');

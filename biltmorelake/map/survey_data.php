@@ -18,70 +18,34 @@ if ($conn->connect_error) {
 }
 $success=false;
 
-if(isset($_GET['survey_id']) && !empty($_GET['survey_id'])){
-    // Show response geo locations, 
-#    $sql = "SELECT 
-#        count(d.id), r.id,
-#        IFNULL(max(d.`download_speed`),'undefined') as `download_speed`, 
-#        IFNULL(max(d.`upload_speed`),'undefined') as `upload_speed`, 
-#        r.geoip_latitude as `latitude`,
-#        r.geoip_longitude as `longitude`
-#    FROM `Responses` r
-#    LEFT JOIN `MLABS_speed_data` d 
-#           ON d.`ip_address` = r.`ip_address`
-#           AND DATEDIFF(r.`date_taken`, d.`date_taken`) < 7
-#    WHERE r.`survey_id` = ?
-#      AND r.`geoip_latitude` IS NOT NULL 
-#      AND r.`geoip_latitude`  != 0
-#      AND r.`geoip_longitude` IS NOT NULL
-#      AND r.`geoip_longitude` != 0
-#    GROUP BY r.id";
-    // The below version doesn't have the date requirement
-    $sql = "SELECT 
-        count(d.id), r.id,
-        COALESCE(max(d.`download_speed`),max(rsd.`download_speed`),'undefined') as `download_speed`, 
-        COALESCE(max(d.`upload_speed`),max(rsd.`upload_speed`),'undefined') as `upload_speed`, 
-        r.geoip_latitude as `latitude`,
-        r.geoip_longitude as `longitude`
-    FROM `Responses` r
-    LEFT JOIN `Responses_speed_data` rsd
-           ON rsd.response_id = r.id
-    LEFT JOIN `MLABS_speed_data` d 
-           ON d.`ip_address` = r.`ip_address`
-    WHERE r.`survey_id` = ?
-      AND r.`include_on_map` = 1
-      AND r.`geoip_latitude` IS NOT NULL 
-      AND r.`geoip_latitude`  != 0
-      AND r.`geoip_longitude` IS NOT NULL
-      AND r.`geoip_longitude` != 0
-    GROUP BY r.id";
+$sql = "SELECT 
+    count(d.id), r.id,
+    COALESCE(max(d.`download_speed`),max(rsd.`download_speed`),'undefined') as `download_speed`, 
+    COALESCE(max(d.`upload_speed`),max(rsd.`upload_speed`),'undefined') as `upload_speed`, 
+    r.geoip_latitude as `latitude`,
+    r.geoip_longitude as `longitude`
+FROM `Responses` r
+LEFT JOIN `Responses_speed_data` rsd
+       ON rsd.response_id = r.id
+LEFT JOIN `MLABS_speed_data` d 
+       ON d.`ip_address` = r.`ip_address`
+WHERE r.`include_on_map` = 1
+  AND r.`geoip_latitude` IS NOT NULL 
+  AND r.`geoip_latitude`  != 0
+  AND r.`geoip_longitude` IS NOT NULL
+  AND r.`geoip_longitude` != 0
+GROUP BY r.id";
 
-#SELECT count(d.id), r.id, max(d.`download_speed`), max(d.`upload_speed`), r.geoip_latitude as `latitude`, r.geoip_longitude as `longitude` FROM `Responses` r LEFT JOIN `MLABS_speed_data` d ON d.`ip_address` = r.`ip_address` WHERE r.`survey_id` = 1 AND r.`geoip_latitude` IS NOT NULL AND r.`geoip_latitude` != 0 AND r.`geoip_longitude` IS NOT NULL AND r.`geoip_longitude` != 0 GROUP BY r.id
-
-
-    $stmt = $conn->prepare($sql);
-    if(!$stmt){
-        echo "console.log('survey_data.php: DB Prepare Error: ".str_replace('\'', '\\\'', $conn->error)."');";
-        echo 'console.log("sql: '.$sql.'");';
-    }else{
-        $stmt->bind_param("i",$_GET['survey_id']);
-        $stmt->execute();
-        if ($conn->error) {
-            echo "console.log('survey_data.php: DB Execute Error: ".str_replace('\'', '\\\'', $conn->error)."');";
-        }else{
-            $result = $stmt->get_result();
-            $success=true;
-        }
-    }
-
+$stmt = $conn->prepare($sql);
+if(!$stmt){
+    echo "console.log('survey_data.php: DB Prepare Error: ".str_replace('\'', '\\\'', $conn->error)."');";
+    echo 'console.log("sql: '.$sql.'");';
 }else{
-    // Show all, using mlabs/network geo location
-    $sql = "SELECT download_speed, upload_speed, latitude, longitude FROM MLABS_speed_data";
-    $result = $conn->query($sql);
+    $stmt->execute();
     if ($conn->error) {
-        echo "console.log('survey_data.php: DB Error: ".str_replace('\'', '\\\'', $conn->error)."');";
-        echo 'console.log("sql: '.$sql.'");';
+        echo "console.log('survey_data.php: DB Execute Error: ".str_replace('\'', '\\\'', $conn->error)."');";
     }else{
+        $result = $stmt->get_result();
         $success=true;
     }
 }
