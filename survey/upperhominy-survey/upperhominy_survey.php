@@ -217,7 +217,7 @@ function showPosition(position) {
       console.log(this.responseText);
     }
   };
-  xhttp.open("GET", "../savequestion.php?uuid="+uuid+"&survey_id=2&geoip_latitude="+position.coords.latitude+"&geoip_longitude="+position.coords.longitude,true);
+  xhttp.open("GET", "../save_question.php?uuid="+uuid+"&survey_id=2&geoip_latitude="+position.coords.latitude+"&geoip_longitude="+position.coords.longitude,true);
   xhttp.send();
 
 }
