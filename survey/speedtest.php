@@ -54,7 +54,7 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
         console.log(this.responseText);
       }
       };
-      xhttp.open("GET", "save_question.php?uuid="+uuid+"&name="+this.name+"&value="+this.value+"&survey_id=1&type="+this.type,true);
+      xhttp.open("GET", "save_question.php?uuid="+uuid+"&name="+this.name+"&value="+this.value+"&survey_id=0&type="+this.type,true);
       xhttp.send();
     }
     
@@ -169,7 +169,7 @@ function showPosition(position) {
       console.log(this.responseText);
     }
   };
-  xhttp.open("GET", "save_question.php?uuid="+uuid+"&survey_id=1&geoip_latitude="+position.coords.latitude+"&geoip_longitude="+position.coords.longitude,true);
+  xhttp.open("GET", "save_question.php?uuid="+uuid+"&survey_id=0&geoip_latitude="+position.coords.latitude+"&geoip_longitude="+position.coords.longitude,true);
   xhttp.send();
 
 }

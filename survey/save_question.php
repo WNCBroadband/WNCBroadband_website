@@ -9,9 +9,6 @@ echo "type=".$_GET['type']."\n";
 
 try{
     $inc_worked = include('../db.php');
-    if($inc_worked){
-        echo "include: worked\n";
-    }
 }catch(Exception $e) {
     echo 'Caught exception: '.$e->getMessage()."\n";
 }
@@ -263,11 +260,17 @@ function insert_self_reported_speed_test($response_id){
 
 
 ######### Main ##############################
+
+if(empty($_GET['survey_id'])){
+    echo "Survey_id=".$_GET['survey_id']." is empty";
+}
 if(!empty($_GET['survey_id'])){
 
     $survey_id = intval($_GET['survey_id']);
 
+    echo "getting response_id.  ";
     $response_id = get_response($survey_id);
+    echo "response_id = $response_id.";
 
 
     if(startsWith($_GET['name'],'SPEEDTEST__')){
