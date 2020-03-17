@@ -261,10 +261,7 @@ function insert_self_reported_speed_test($response_id){
 
 ######### Main ##############################
 
-if(empty($_GET['survey_id'])){
-    echo "Survey_id=".$_GET['survey_id']." is empty";
-}
-if(!empty($_GET['survey_id'])){
+if(isset($_GET['survey_id'])){
 
     $survey_id = intval($_GET['survey_id']);
 
