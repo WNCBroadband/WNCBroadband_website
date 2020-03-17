@@ -7,8 +7,20 @@ echo "survey_id=".$_GET['survey_id']."; ";
 echo "value=".$_GET['value']."; ";
 echo "type=".$_GET['type']."\n";
 
+try{
+    $inc_worked = include('../db.php');
+    if($inc_worked){
+        echo "include: worked\n";
+    }
+}catch(Exception $e) {
+    echo 'Caught exception: '.$e->getMessage()."\n";
+}
 
-include('../../db.php');
+if($conn){
+    echo "Connected to database.\n";
+}else{
+    echo "NOT Connected to database.\n";
+}
 
 
 function get_response($survey_id){
