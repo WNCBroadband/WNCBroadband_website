@@ -13,13 +13,30 @@
   <!-- Bootstrap core CSS -->
   <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- JQuery -->
-  <script src="../js/jquery.min.js"></script> 
+  <script src="../vendor/js/jquery.min.js"></script> 
   <!-- Bootstrap core CSS -->
   <link href="../vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
   <!-- Custom fonts for this template -->
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
   <!--Site Stylesheet-->
   <link href="../css/style.css" rel="stylesheet" type="text/css">
+
+    <!--  Lealet Javascript -->
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
+  <script src="https://cdn-geoweb.s3.amazonaws.com/esri-leaflet/0.0.1-beta.5/esri-leaflet.js"></script>
+  <script src="https://cdn-geoweb.s3.amazonaws.com/esri-leaflet-geocoder/0.0.1-beta.5/esri-leaflet-geocoder.js"></script>
+  <script src="leaflet.featuregroup.subgroup.js"></script>
+
+  <!--  Leaflet Stylesheets -->
+  <link rel="stylesheet" type="text/css" href="https://cdn-geoweb.s3.amazonaws.com/esri-leaflet-geocoder/0.0.1-beta.5/esri-leaflet-geocoder.css">
+  <link href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" rel="stylesheet">
+  <link href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" rel="stylesheet">
+    
+  <!-- Custom styles for this template -->
+  <!-- <link href="../css/landing-page.min.css" rel="stylesheet"> -->
+  <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+  <link rel="stylesheet" href="map_resources/css/survey-0-mapstyle.css">
+
 </head>
 
 <body>
@@ -76,6 +93,30 @@
         <button class="btn btn-primary mb-5" onclick="goBack()">Go Back</button>
         <br><br>
   </div>
+  <div class="survey-0-map-container"></div>
+      <div class="mapkey">
+      <button type="button" class="mapkeycollapsible"><h3>Map Key</h3></button>
+      <div class="mapkeycontent"> 
+        <h5>Download Speed:</h5>
+        <ul>
+      <li><img src="img/pin_gray.png" height="20px" width="20px">   Gray: Unknown Speed</li>
+      <li><img src="img/pin_red.png" height="20px" width="20px">    Red: Less than 5 Mpbs</li>
+      <li><img src="img/pin_orange.png" height="20px" width="20px"> Orange: Between 5 and 25 Mbps </li>
+      <li><img src="img/pin_yellow.png" height="20px" width="20px"> Yellow: Between 25 and 90 Mbps</li>
+      <li><img src="img/pin_green.png" height="20px" width="20px">  Green: Greater than 90 Mbps</li>
+        </ul>
+      </div>
+      </div>
+      <?php
+        if(isset($_GET['survey_id']) && !empty($_GET['survey_id'])){
+          echo '<script src="survey_data.php?survey_id='.$_GET['survey_id'].'"></script>';
+        }else{
+          echo '<script src="survey_data.php?survey_id=0"></script>';
+      }
+      ?>
+      <script  src="map-resources/survey-0-map-script.js"></script>
+      <script src="map-resources/survey-0-mapkey.js"></script>
+
 </section>
 
 <div class="separate"></div>
