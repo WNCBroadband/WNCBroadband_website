@@ -109,13 +109,13 @@
       </div>
       <?php
         if(isset($_GET['survey_id']) && !empty($_GET['survey_id'])){
-          echo '<script src="survey_data.php?survey_id='.$_GET['survey_id'].'"></script>';
+          echo '<script src="map-resources/js/survey_0_data.php?survey_id='.$_GET['survey_id'].'"></script>';
         }else{
-          echo '<script src="survey_data.php?survey_id=0"></script>';
+          echo '<script src="map-resources/js/survey_0_data.php?survey_id=0"></script>';
       }
       ?>
-      <script  src="map-resources/survey-0-map-script.js"></script>
-      <script src="map-resources/survey-0-mapkey.js"></script>
+      <script  src="map-resources/js/survey-0-map-script.js"></script>
+      <script src="map-resources/js/survey-0-mapkey.js"></script>
 
 </section>
 
