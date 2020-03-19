@@ -13,7 +13,7 @@
   <!-- Bootstrap core CSS -->
   <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- JQuery -->
-  <script src="../vendor/js/jquery.min.js"></script> 
+  <script src="../vendor/jquery/jquery.min.js"></script> 
   <!-- Bootstrap core CSS -->
   <link href="../vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
   <!-- Custom fonts for this template -->
@@ -25,7 +25,7 @@
   <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
   <script src="https://cdn-geoweb.s3.amazonaws.com/esri-leaflet/0.0.1-beta.5/esri-leaflet.js"></script>
   <script src="https://cdn-geoweb.s3.amazonaws.com/esri-leaflet-geocoder/0.0.1-beta.5/esri-leaflet-geocoder.js"></script>
-  <script src="leaflet.featuregroup.subgroup.js"></script>
+  <script src="/map_resources/js/leaflet.featuregroup.subgroup.js"></script>
 
   <!--  Leaflet Stylesheets -->
   <link rel="stylesheet" type="text/css" href="https://cdn-geoweb.s3.amazonaws.com/esri-leaflet-geocoder/0.0.1-beta.5/esri-leaflet-geocoder.css">
@@ -99,23 +99,23 @@
       <div class="mapkeycontent"> 
         <h5>Download Speed:</h5>
         <ul>
-      <li><img src="img/pin_gray.png" height="20px" width="20px">   Gray: Unknown Speed</li>
-      <li><img src="img/pin_red.png" height="20px" width="20px">    Red: Less than 5 Mpbs</li>
-      <li><img src="img/pin_orange.png" height="20px" width="20px"> Orange: Between 5 and 25 Mbps </li>
-      <li><img src="img/pin_yellow.png" height="20px" width="20px"> Yellow: Between 25 and 90 Mbps</li>
-      <li><img src="img/pin_green.png" height="20px" width="20px">  Green: Greater than 90 Mbps</li>
+      <li><img src="/map_resources/js/img/pin_gray.png" height="20px" width="20px">   Gray: Unknown Speed</li>
+      <li><img src="/map_resources/js/img/pin_red.png" height="20px" width="20px">    Red: Less than 5 Mpbs</li>
+      <li><img src="/map_resources/js/img/pin_orange.png" height="20px" width="20px"> Orange: Between 5 and 25 Mbps </li>
+      <li><img src="/map_resources/js/img/pin_yellow.png" height="20px" width="20px"> Yellow: Between 25 and 90 Mbps</li>
+      <li><img src="/map_resources/js/img/pin_green.png" height="20px" width="20px">  Green: Greater than 90 Mbps</li>
         </ul>
       </div>
       </div>
       <?php
         if(isset($_GET['survey_id']) && !empty($_GET['survey_id'])){
-          echo '<script src="map-resources/js/survey_0_data.php?survey_id='.$_GET['survey_id'].'"></script>';
+          echo '<script src="/map_resources/js/survey_0_data.php?survey_id='.$_GET['survey_id'].'"></script>';
         }else{
-          echo '<script src="map-resources/js/survey_0_data.php?survey_id=0"></script>';
+          echo '<script src="/map_resources/js/survey_0_data.php?survey_id=0"></script>';
       }
       ?>
-      <script  src="map-resources/js/survey-0-map-script.js"></script>
-      <script src="map-resources/js/survey-0-mapkey.js"></script>
+      <script  src="/map-resources/js/survey-0-map-script.js"></script>
+      <script src="/map-resources/js/survey-0-mapkey.js"></script>
 
 </section>
 
