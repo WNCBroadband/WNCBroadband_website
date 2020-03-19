@@ -93,7 +93,9 @@
         <button class="btn btn-primary mb-5" onclick="goBack()">Go Back</button>
         <br><br>
   </div>
-  <div id="map"></div>
+
+  <div class="map-survey-0-container">
+      <div id="map"></div>
       <div class="mapkey">
       <button type="button" class="mapkeycollapsible"><h3>Map Key</h3></button>
       <div class="mapkeycontent"> 
@@ -116,6 +118,7 @@
       ?>
       <script  src="map_resources/js/survey-0-map-script.js"></script>
       <script src="map_resources/js/survey-0-mapkey.js"></script>
+</div>
 
 </section>
 
