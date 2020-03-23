@@ -150,7 +150,8 @@ if ($conn->connect_error) {
 
 ?>
           
-            <h4>We are constructing a map of broadband speeds in your community. Would you be willing to provide your address for us to display the speed of your internet service on the map? (We will not sell any data).</h4><br>
+            <p class="lead">Broadband service speed and capacity can be distributed unevenly not only across our region, but even in our local communities and neighborhoods. Often, consumers struggle to learn what level of service they and others in their area receive. Moreover, internet service providers are not motivated to share such information with their customers.</p>
+            <p class="lead"> In order to gather this information for consumers to use in communication with their providers, we are constructing a map of broadband speeds in your community. <b>Would you be willing to provide your address for us to display the speed of your internet service on the map? (We will not sell any data).</b></p><br>
 <script>
 function getLocation() {
   if (navigator.geolocation) {
@@ -189,7 +190,7 @@ function showPosition(position) {
           <br>
 
     <div class="q-break"></div><br>
-      <h4>There are major issues in broadband delivery concerning where broadband is available and what the actual speeds are delivered by providers. We are working on ways to determine the speeds in your area. Please help us by using the M-Labs speed test and reporting your results using the sliders below.</h4><br>
+      <p class="lead">There are major issues in broadband delivery concerning where broadband is available and what the actual speeds are delivered by providers. We are working on ways to determine the speeds in your area. <b>Please help us by using the M-Labs speed test and reporting your results using the sliders below.</b></p><br>
       <iframe frameborder="0" height="550px" src="https://speed.measurementlab.net/#/" width="100%"></iframe>
       <p class="small text-center">If the speed test does not show up, click <a href="https://speed.measurementlab.net/#/" target="_blank"> here </a> to open it in a new tab.</p>
       <br><br>
