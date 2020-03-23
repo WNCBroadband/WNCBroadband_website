@@ -138,19 +138,13 @@ if(!empty($_POST['survey_id'])){
             <a class="nav-link" href="../../broadband101.html">Broadband 101</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://wncbroadband.org/blog/blog">News</a>
+            <a class="nav-link" href="https://wncbroadband.org/blog/community-initiatives/">Community Initiatives</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://wncbroadband.org/blog/archives">Archives</a>
+            <a class="nav-link" href="../../advocacy.html">Actions We Can Take</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../../101links.html">Resources</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../../faq.html">FAQ</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../../contact.html">Contact</a>
+            <a class="nav-link" href="https://wncbroadband.org/blog/blog/">News</a>
           </li>
         </ul>
   </div>
@@ -195,7 +189,6 @@ if(!empty($_POST['survey_id'])){
         <h1 class="mt-3 mb-5 text-center">Thank you for taking our survey!</h1>
         <p class="lead">Thank you for your participation in this survey. <br>
         Learn more about how you can get involved and get further engaged in broadband issues <a href="../../biltmorelake/getinvolved.html"><b>here</b></a>.<br><br>
-        You can also take the <a href="../speedtest.php"> Speed Test</a> on our main site and help contribute your speeds to your community map.<br></br>
         <a href="../../biltmorelake/index.html">Return to community homepage</a></p>
   </div>
 </section>
@@ -205,29 +198,55 @@ if(!empty($_POST['survey_id'])){
 <footer class="footer bg-dblue text-white pt-5">
     <div class="container">
       <div class="row">
-        <div class="col-lg-6"></div>
-        <div class="col-lg-6 text-right">
-          <ul>
-            <li class="list-inline-item">
-              <a href="https://wncbroadband.org/blog">Home</a>
-            </li><br>
-            <li class="list-inline-item">
-              <a href="https://wncbroadband.org/blog/blog">News</a>
-            </li><br>
-            <li class="list-inline-item">
-              <a href="https://wncbroadband.org/blog/archives">Archives</a>
-            </li><br>
-            <li class="list-inline-item">
-              <a href="../../101links.html">Resources</a>
-            </li><br>
-            <li class="list-inline-item">
-              <a href="../../faq.html">FAQ</a>
-            </li><br>
-            <li class="list-inline-item">
-              <a href="../../contact.html">Contact</a>
-            </li><br>
-          </ul>
-        </div>
+      <div class="col-6 col-sm-3">
+        <ul>
+          <li class="list-inline-item">
+          <a href="https://wncbroadband.org/blog/">Home</a>
+          </li><br>
+          <li class="list-inline-item">
+          <a href="../../aboutproject.html">About</a>
+          </li><br>
+          <li class="list-inline-item">
+          <a href="../../faq.html">FAQ</a>
+          </li><br>
+          <li class="list-inline-item">
+          <a href="../../contact.html">Contact</a>
+          </li><br>
+          <li class="list-inline-item">
+          <a href="../../broadband101.html">Broadband 101</a>
+          </li><br>
+          <li class="list-inline-item">
+          <a href="https://wncbroadband.org/blog/community-initiatives/">Community Initiatives</a>
+          </li><br>
+        </ul>
+      </div>
+      <div class="col-6 col-sm-3">
+        <ul>
+          <li class="list-inline-item">
+          <a href="../../survey/speedtest.php">Speed Test</a>
+          </li><br>
+          <li class="list-inline-item">
+          <a href="../../advocacy.html">Actions We Can Take</a>
+          </li><br>
+          <li class="list-inline-item">
+          <a href="../../getinvolved.html">Get Involved</a>
+          </li><br>
+          <li class="list-inline-item">
+          <a href="../../101links.html">Resources</a>
+          </li><br>
+          <li class="list-inline-item">
+          <a href="https://wncbroadband.org/blog/blog/">News</a>
+          </li><br>
+          <li class="list-inline-item">
+          <a href="https://wncbroadband.org/blog/archives/">Archives</a>
+          </li><br>
+        </ul>
+      </div>
+      <div class="col-3">
+      </div>
+      <div class="col-3">
+      </div>
+
         <div class="col-12 text-center">
         <p>&copy; 2020 WNC Broadband Project | <a href="../../privacypolicy.html"> Privacy Policy</a></p>
         </div>

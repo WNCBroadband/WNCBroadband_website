@@ -64,19 +64,13 @@
             <a class="nav-link" href="../../broadband101.html">Broadband 101</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://wncbroadband.org/blog/blog">Blog</a>
+            <a class="nav-link" href="https://wncbroadband.org/blog/community-initiatives/">Community Initiatives</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://wncbroadband.org/blog/archives">Archives</a>
+            <a class="nav-link" href="../../advocacy.html">Actions We Can Take</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../../101links.html">Resources</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../../faq.html">FAQ</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../../contact.html">Contact</a>
+            <a class="nav-link" href="https://wncbroadband.org/blog/blog/">News</a>
           </li>
         </ul>
   </div>

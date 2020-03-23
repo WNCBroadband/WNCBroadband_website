@@ -76,7 +76,7 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
   <nav class="navbar navbar-expand-lg navbar-dark bg-dblue fixed-top stroke">
     <div class="container">
       <a class="navbar-brand" href="https://wncbroadband.org/blog/">
-        <img src="img/wncbroadbandlogo.png" width="100px" alt="WNC Broadband Project Logo Image and Link">
+        <img src="../img/wncbroadbandlogo.png" width="100px" alt="WNC Broadband Project Logo Image and Link">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
