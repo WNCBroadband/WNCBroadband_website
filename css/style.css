@@ -3,6 +3,19 @@ body{
 	padding:0;
 }
 
+.survey-0-map-container{
+  width: 80%;
+  height: 500px;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+}
+
+.parent-container{
+	display: flex;
+}
+
 .navbar li:hover{
 	text-decoration: underline;
 }
