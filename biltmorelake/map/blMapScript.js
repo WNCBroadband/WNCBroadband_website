@@ -102,19 +102,19 @@ function makeMarkers(thing){
 		//This if statement determines the color of the marker based on speed
 		if(downspeed < 5){
 			red_markers.push(red_marker); //Pushes to an array of markers, this is what the Subgroup Plugin takes as its second parameter
-			red_marker.addTo(map).bindPopup("Download Speed: <strong>" + downspeed + "</strong> Mbps");
+			red_marker.bindPopup("Download Speed: <strong>" + downspeed + "</strong> Mbps");
 		} else if(downspeed >= 5 && downspeed < 25){
 			orange_markers.push(orange_marker);
-			orange_marker.addTo(map).bindPopup("Download Speed: <strong>" + downspeed + "</strong> Mbps");			
+			orange_marker.bindPopup("Download Speed: <strong>" + downspeed + "</strong> Mbps");			
 		} else if(downspeed >= 25 && downspeed < 90){
 			yellow_markers.push(yellow_marker);		
-			yellow_marker.addTo(map).bindPopup("Download Speed: <strong>" + downspeed + "</strong> Mbps");
+			yellow_marker.bindPopup("Download Speed: <strong>" + downspeed + "</strong> Mbps");
 		} else if(downspeed >= 90){
 			green_markers.push(green_marker);
-			green_marker.addTo(map).bindPopup("Download Speed: <strong>" + downspeed + "</strong> Mbps");
+			green_marker.bindPopup("Download Speed: <strong>" + downspeed + "</strong> Mbps");
 		} else {
 			gray_markers.push(gray_marker);
-			gray_marker.addTo(map).bindPopup("Download Speed: <strong>Unknown</strong>");			
+			gray_marker.bindPopup("Download Speed: <strong>Unknown</strong>");			
 		}
 	}
 	orangeSubGroup = L.featureGroup.subGroup(markers, orange_markers);
