@@ -147,6 +147,7 @@ function update_response_geoip(){
         echo "updated response: geoip\n";
     }
 }
+
 function update_include_on_map(){
     global $conn;
     //$_GET['geoip_latitude'], $_GET['geoip_longitude']
@@ -160,6 +161,7 @@ function update_include_on_map(){
         echo "updated response: include_on_map\n";
     }
 }
+
 function select_speed_tests($ip){
     global $conn;
     $sql = "select ip_address, date_taken, download_speed, upload_speed from MLABS_speed_data where ip_address=?";

@@ -1,17 +1,18 @@
 // Initialize the map and assign it to a variable for later use
-var corner1 = L.latLng(35.544993, -82.676201),
-	corner2 = L.latLng(35.519708, -82.610626),
+var corner1 = L.latLng(35.48, -82.77),
+	corner2 = L.latLng(35.44, -82.73),
 	bounds = L.latLngBounds(corner1, corner2);
+
 
 var map = L.map('map', {
     // Set latitude and longitude of the map center (required)
-    center: [35.532, -82.643], 
+    center: [35.464269, -82.748532], 
     // Set the initial zoom level, values 0-18, where 0 is most zoomed-out (required)
     zoom: 15,
-    maxZoom: 17,
+    maxZoom: 18,
 	minZoom: 14,
-	//Uncomment to activate binding window to survey area
-	//maxBounds: bounds
+	//maxBounds: bounds			//Uncomment to activate binding window to survey area
+
 });
 
 L.control.scale().addTo(map);
@@ -102,19 +103,19 @@ function makeMarkers(thing){
 		//This if statement determines the color of the marker based on speed
 		if(downspeed < 5){
 			red_markers.push(red_marker); //Pushes to an array of markers, this is what the Subgroup Plugin takes as its second parameter
-			red_marker.bindPopup("Download Speed: <strong>" + downspeed + "</strong> Mbps");
+			red_marker.bindPopup("Download Speed: <strong>" + downspeed + "</strong> Mbps<br> Upload Speed: <strong>" + upspeed + "</strong> Mbps");
 		} else if(downspeed >= 5 && downspeed < 25){
 			orange_markers.push(orange_marker);
-			orange_marker.bindPopup("Download Speed: <strong>" + downspeed + "</strong> Mbps");			
+			orange_marker.bindPopup("Download Speed: <strong>" + downspeed + "</strong> Mbps<br> Upload Speed: <strong>" + upspeed + "</strong> Mbps");			
 		} else if(downspeed >= 25 && downspeed < 90){
 			yellow_markers.push(yellow_marker);		
-			yellow_marker.bindPopup("Download Speed: <strong>" + downspeed + "</strong> Mbps");
+			yellow_marker.bindPopup("Download Speed: <strong>" + downspeed + "</strong> Mbps<br> Upload Speed: <strong>" + upspeed + "</strong> Mbps");
 		} else if(downspeed >= 90){
 			green_markers.push(green_marker);
-			green_marker.bindPopup("Download Speed: <strong>" + downspeed + "</strong> Mbps");
+			green_marker.bindPopup("Download Speed: <strong>" + downspeed + "</strong> Mbps<br> Upload Speed: <strong>" + upspeed + "</strong> Mbps");
 		} else {
 			gray_markers.push(gray_marker);
-			gray_marker.bindPopup("Download Speed: <strong>Unknown</strong>");			
+			gray_marker.bindPopup("Download Speed: <strong>Unknown</strong><br> Upload Speed: <strong>Unknown</strong>");			
 		}
 	}
 	orangeSubGroup = L.featureGroup.subGroup(markers, orange_markers);
