@@ -1,14 +1,19 @@
-// // Initialize the map and assign it to a variable for later use
-var map = map;
+// Initialize the map and assign it to a variable for later use
+var corner1 = L.latLng(35.48, -82.77),
+	corner2 = L.latLng(35.44, -82.73),
+	bounds = L.latLngBounds(corner1, corner2);
+
+
 var map = L.map('map', {
     // Set latitude and longitude of the map center (required)
-    center: [0, 0], 
+    center: [35.464269, -82.748532], 
     // Set the initial zoom level, values 0-18, where 0 is most zoomed-out (required)
     zoom: 15,
-    //maxZoom: 18,
-	//minZoom: 0,
-});
+    maxZoom: 18,
+	minZoom: 14,
+	//maxBounds: bounds			//Uncomment to activate binding window to survey area
 
+});
 
 L.control.scale().addTo(map);
 $(".leaflet-control-zoom").css("visibility","hidden");
