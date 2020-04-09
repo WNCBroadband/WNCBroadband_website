@@ -25,16 +25,23 @@
 
 <body>
 <? 
-//ini_set('display_errors', true);
-//error_reporting(E_ALL);
-//$geocode_path = 'https://wncbroadband.org/survey/map_resources/js/geocode_admin.php';
-//require($geocode_path);
+ $path = $_SERVER['DOCUMENT_ROOT'];
+ $path .= "/common/header.php";
+ include_once($path);
+
+ini_set('display_errors', true);
+error_reporting(E_ALL);
+$geocode_path = './map_resources/js/geocode_s0.php';
+require($geocode_path);
 
 
 $saved_response_id  = $_GET['response_id'];
 $saved_geoip_latitude = $_GET['geoip_latitude'];
 $saved_geoip_longitude = $_GET['geoip_longitude'];
 $saved_user_address = $_GET['user_address'];
+
+set_address($saved_user_address);
+geocode($saved_user_address);
 ?>
 
 <script>

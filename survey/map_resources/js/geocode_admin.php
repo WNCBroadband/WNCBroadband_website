@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <HTML>
-<HEAD><TITLE>Geocode</TITLE>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+<!-- <HEAD><TITLE>Geocode</TITLE>
+ --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- 
     <style>
        /* Set the size of the div element that contains the map */
       #map {
@@ -16,32 +16,43 @@
 
 </HEAD>
 <BODY>
-
+ -->
 <?php 
 
-include('../db.php');
+include('https://wncbroadband.org/db.php');
 
-// First, check which survy
-if(!isset($_GET['survey_id'])){
+$geo_address = '';
+$response_id = -1;
 
-    echo '<FORM METHOD="GET" ACTION="">
-    Edit Survey: <SELECT name="survey_id">';
-
-    $sql = "SELECT id,name FROM `Survey`";
-    $result = $conn->query($sql);
-    if ($conn->error) {
-        echo "<script>alert('Error: ".str_replace('\'', '\\\'', $conn->error)."');</script>";
-    }
-    echo '<OPTION value="0"> -- Non-survey speed tests -- </OPTION>';
-    if ($result->num_rows > 0) {
-        while($row = $result->fetch_assoc()) {
-        echo('<OPTION VALUE="'.$row['id'].'">'.$row['name'].'</OPTION>');
-        }
-    }
-    $conn->close();
-    echo '</SELECT><INPUT type="submit" value="Go"></FORM>';
-    exit(0);
+function set_address($address){
+    $geo_address = $address;
 }
+
+function set_response_id($rid){
+    $response_id = $rid;
+}
+
+// // First, check which survy
+// if(!isset($_GET['survey_id'])){
+
+//     echo '<FORM METHOD="GET" ACTION="">
+//     Edit Survey: <SELECT name="survey_id">';
+
+//     $sql = "SELECT id,name FROM `Survey`";
+//     $result = $conn->query($sql);
+//     if ($conn->error) {
+//         echo "<script>alert('Error: ".str_replace('\'', '\\\'', $conn->error)."');</script>";
+//     }
+//     echo '<OPTION value="0"> -- Non-survey speed tests -- </OPTION>';
+//     if ($result->num_rows > 0) {
+//         while($row = $result->fetch_assoc()) {
+//         echo('<OPTION VALUE="'.$row['id'].'">'.$row['name'].'</OPTION>');
+//         }
+//     }
+//     $conn->close();
+//     echo '</SELECT><INPUT type="submit" value="Go"></FORM>';
+//     exit(0);
+// }
 
 
 
@@ -294,68 +305,3 @@ if(isset($_POST['id']) && isset($_POST['address'])){
 }
 
 ?>
-<TABLE BORDER=1 width="100%">
-    <TR><TH></TH><TH>Date</TH><TH>Coordinates</TH><TH>Address</TH><TH></TH><TH><A style="font-size:10px" HREF="?survey_id=<? echo $_GET['survey_id'];
-    if(isset($_GET['show_hidden'])){
-        echo '">Hide X';
-    }else{
-        echo '&show_hidden=1">All';
-    }
-    ?></A></TH></TR>
-<?
-foreach($resps as $r){
-    $id = $r[0];
-    $date = $r[1];
-    $lat_long = $r[2];
-    $addr = $r[3];
-    $geocode_fg = $r[4];
-    $include_on_map_fg = $r[5];
-    $ip_address = $r[8];
-
-
-
-    if( (!empty($_POST['id']) && $_POST['id'] == $id) || 
-        (!empty($_GET['id']) && $_GET['id'] == $id)   ){
-        echo "<TR bgcolor=\"#def440\">";
-    }else if(isset($_GET['show_hidden']) || $include_on_map_fg){
-        echo "<TR>";
-    }else{
-        continue;
-    }
-    echo "<TD width=25>".$id.'</TD>';
-    echo "<TD width=170>".$date.'</TD>';
-    echo "<TD>". implode('</TD><TD>', array($lat_long, $addr)) . '</TD>';
-    $ntests = select_speed_tests($ip_address);
-    echo "<TD><a href=\"?survey_id=".$_GET['survey_id']."&id=".$id."\">".count($ntests)." Tests</TD>";
-    echo '<TD><form action="" method="post">
-        <input type="hidden" name="address" value="'.$addr.'">
-        <input type="hidden" name="id" value="'.$id.'">
-        <input type="submit" value="Lookup"></form></TD>';
-    echo '<TD><form action="" method="post">';
-    echo '<input type="hidden" name="id" value="'.$id.'">';
-    if($include_on_map_fg){
-        echo '<!-- $include_on_map_fg='.$include_on_map_fg.' -->';
-        echo '<input type="hidden" name="include_on_map" value="0">';
-        echo '<BUTTON type="submit">';
-        echo '<i class="fa fa-check-circle" style="font-size:18px;color:green"></i>';
-        echo '</BUTTON></form></TD>';
-    }else{
-        echo '<!-- $include_on_map_fg='.$include_on_map_fg.' -->';
-        echo '<input type="hidden" name="include_on_map" value="1">';
-        echo '<BUTTON type="submit">';
-        echo '<i class="fa fa-remove" style="font-size:18px;color:red"></i>';
-        echo '</BUTTON></form></TD>';
-    }
-    echo '</TR>'."\n";
-    if( (!empty($_POST['id']) && $_POST['id'] == $id) || 
-        (!empty($_GET['id']) && $_GET['id'] == $id)   ){
-        echo "<TR><TD COLSPAN=\"7\" ALIGN=\"center\">";
-        print_speed_tests($ip_address);
-        echo "</TD></TR>";
-    }
-}
-?>
-</TABLE>
-
-</BODY>
-</HTML>

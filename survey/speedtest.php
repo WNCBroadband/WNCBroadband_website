@@ -28,6 +28,7 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
   <link href="../css/style.css" rel="stylesheet" type="text/css">
 
 <script>
+
 //    Apply a Unique identifier for this page
     function uuidv4() {
       return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
