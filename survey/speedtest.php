@@ -28,7 +28,7 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
   <link href="../css/style.css" rel="stylesheet" type="text/css">
 
 <script>
-
+    var response_id = -10;
 //    Apply a Unique identifier for this page
     function uuidv4() {
       return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
@@ -53,10 +53,20 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
       xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         console.log(this.responseText);
+
+        //parseInt(string)
+        //
+        var response_variable = this.responseText.match(/response_id=\d+/);
+        //console.log(response_variable);        
+        response_num = response_variable[0].match(/\d+/);
+        //console.log(response_num);
+        response_id = response_num;
+
       }
       };
       xhttp.open("GET", "save_question.php?uuid="+uuid+"&name="+this.name+"&value="+this.value+"&survey_id=0&type="+this.type,true);
       xhttp.send();
+      update_geo();
     }
     
     //create an OnChange() for every input element
@@ -116,15 +126,34 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
   </div>
   </div>
 </section>
+<script>
+  var user_in_address;
+  var lat_coord=0;
+  var lng_coord=0;
+//////////////////////////////////////
+  function update_geo(){
+    //unused
+    //document.getElementById('response_id').value = response_id;
+    user_in_address = "" + document.getElementById("street_address").value + ", " + document.getElementById("city_address").value + " "
+                        + document.getElementById("state_address").value +  " " + document.getElementById("zip_address").value;
+    console.log(user_in_address);
 
+    document.getElementById("fullsurvey").action="save_speedtest.php?geoip_latitude="+lat_coord+"&geoip_longitude="+lng_coord+"&user_address="+user_in_address+"&response_id="+response_id;
+
+  }
+//////////////////////////////////////
+</script>
   <section class="showcase">
     <div id="survey-bg" class="container-fluid p-5 row">
         <div class="mx-auto col-lg-8">
         </div>
       <div class="mx-auto col-lg-8">
         <div class="form-group">
-          <form id="fullsurvey" class="form" method="POST" action="save_speedtest.php">    
-<SCRIPT>
+          <form id="fullsurvey" class="form" method="POST" action="">   
+          <script>
+              update_geo();
+          </script> 
+          <SCRIPT>
           document.write('<INPUT TYPE="hidden" name="uuid" value="'+uuid+'">');
           </SCRIPT>
 <?
@@ -139,9 +168,7 @@ if ($conn->connect_error) {
     echo("Connection failed: " . $conn->connect_error);
     exit(0);
 }
-
 ?>
-          
             <p class="lead">Broadband service speed and capacity can be distributed unevenly not only across our region, but even in our local communities and neighborhoods. Often, consumers struggle to learn what level of service they and others in their area receive. Moreover, internet service providers are not motivated to share such information with their customers.</p>
             <p class="lead"> In order to gather this information for consumers to use in communication with their providers, we are constructing a map of broadband speeds in your community. <b>Would you be willing to provide your address for us to display the speed of your internet service on the map? (We will not sell any data).</b></p><br>
 <script>
@@ -152,31 +179,40 @@ function getLocation() {
   document.getElementById('hidden_address_block').style.display='block';
   
 }
+
 function showPosition(position) {
+  console.log(position);
   document.getElementById('geoip_latitude').value = position.coords.latitude;
   document.getElementById('geoip_longitude').value = position.coords.longitude;
+  lat_coord = position.coords.latitude;
+  lng_coord = position.coords.longitude;
+
+  update_geo();
 
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       console.log(this.responseText);
+
     }
   };
-  xhttp.open("GET", "save_question.php?uuid="+uuid+"&survey_id=0&geoip_latitude="+position.coords.latitude+"&geoip_longitude="+position.coords.longitude,true);
+  xhttp.open("GET", "save_question.php?uuid="+uuid+"&survey_id=0&geoip_latitude="+position.coords.latitude+"&geoip_longitude="+position.coords.longitude);
   xhttp.send();
 
 }
 </script>
+
 <input required name="permission" type="radio" onclick="getLocation()">&nbsp;&nbsp;Yes
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <input required name="permission" type="radio">&nbsp;&nbsp;No
+<input type=hidden id="response_id" name="response_id" value="">
 <input type=hidden id="geoip_latitude" name="geoip_latitude" value="">
 <input type=hidden id="geoip_longitude" name="geoip_longitude" value="">
   <DIV id="hidden_address_block" style="display:none">
-    Street Address <INPUT class="form-control" name="street_address" type="text"><BR>
-    City <INPUT class="form-control" name="city_address" type="text"><BR>
-    State <INPUT class="form-control" name="state_address" type="text"><BR>
-    Zip Code<INPUT class="form-control" name="zip_address" type="text"><BR>
+    Street Address <INPUT class="form-control" name="street_address" id="street_address" type="text"><BR>
+    City <INPUT class="form-control" name="city_address" id="city_address" type="text"><BR>
+    State <INPUT class="form-control" name="state_address" id="state_address" type="text"><BR>
+    Zip Code<INPUT class="form-control" name="zip_address" id="zip_address" type="text"><BR>
   </DIV>
           <br>
           <br>
@@ -224,6 +260,7 @@ function showPosition(position) {
         <br><div class="q-break"></div><br>
         <p class="lead">Thank you for taking the speed test. Once you are finished, please click "Submit" below to submit your responses.</p>
         <input required name="submit" id="submit" class="btn btn-primary mt-auto mb-5" type="submit" value="Submit">
+
       
           </form>
           </div>
@@ -339,7 +376,9 @@ slider.oninput = function() {
     document.getElementById("plus").innerHTML = "";
   }
 }
+
 </script>
+
 <script src="../vendor/jquery/jquery.slim.min.js"></script>
 <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <script src="speedtestslider.js"></script>

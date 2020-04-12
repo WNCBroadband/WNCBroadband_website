@@ -15,23 +15,6 @@
 //3. Geocode the address to new_latlng
 //4. Inject new_latlng into geoip field for response_number
 
-include('https://wncbroadband.org/db.php');
-
-
-$geo_address = '';
-$response_number = -1;
-
-function set_address($address){
-    $geo_address = $address;
-
-    $printaddress = json_encode($geo_address);
-    echo "<script>console.log(\"geo_address changed to \" +" . $printaddress . ");</script>";
-}
-
-function set_response_number($rid){
-    $response_number = $rid;
-}
-
 function geocode($address){
  
     // url encode the address
@@ -80,12 +63,12 @@ function geocode($address){
     }
 }
 
-function update_response_geoip(){
+function update_response_geoip($latitude, $longitude, $id){
     global $conn;
     //$_GET['geoip_latitude'], $_GET['geoip_longitude']
     $sql = "UPDATE Responses set geoip_latitude=?, geoip_longitude=? where id=?";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ssi", $_POST['latitude'], $_POST['longitude'],$_POST['id']);
+    $stmt->bind_param("ssi", $latitude, $longitude, $id);
     $stmt->execute();
     if($conn->error){
         echo "DB Error inserting response: ".$conn->error."\n";
