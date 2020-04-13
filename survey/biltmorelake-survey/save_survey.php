@@ -2,10 +2,7 @@
 <html lang="en">
 <!--
 <?
-include('../../db.php');
-
-
-
+/*
 function save_survey_no_uuid(){
     global $conn;
     $survey_id = intval($_POST['survey_id']);
@@ -91,9 +88,11 @@ if(!empty($_POST['survey_id'])){
         save_survey_questions($resp_id);
     }
 }
-
+*/
 ?>
 -->
+
+
 <head>
 
   <meta charset="utf-8">
@@ -116,6 +115,41 @@ if(!empty($_POST['survey_id'])){
 </head>
 
 <body>
+
+<?
+//ini_set('display_errors', 1);
+//ini_set('display_startup_errors', 1);
+//error_reporting(E_ALL);
+
+include('../../db.php');
+require('../../survey/map_resources/js/geocode_s0.php');
+
+$saved_response_id  = $_GET['response_id'];
+$saved_geoip_latitude = $_GET['geoip_latitude'];
+$saved_geoip_longitude = $_GET['geoip_longitude'];
+$saved_user_address = $_GET['user_address'];
+
+$geocode_variables = geocode($saved_user_address);
+if ($geocode_variables!=false){
+  update_response_geoip($geocode_variables[0],$geocode_variables[1], $saved_response_id);
+  $saved_geoip_latitude = $geocode_variables[0];
+  $saved_geoip_longitude = $geocode_variables[1];
+}
+
+if ($saved_geoip_latitude==0 || $saved_geoip_longitude == 0){
+  $saved_geoip_latitude = 35.5951;
+  $saved_geoip_longitude = -82.5515;
+}
+
+?>
+
+<script>
+    console.log(<?= json_encode($saved_response_id); ?>);
+    console.log(<?= json_encode($saved_geoip_latitude); ?>);
+    console.log(<?= json_encode($saved_geoip_longitude); ?>);
+    console.log(<?= json_encode($saved_user_address); ?>);
+</script>
+
 
   <!-- Navigation -->
     <nav class="navbar navbar-expand-lg bg-dblue navbar-dark mainnav">
@@ -175,7 +209,7 @@ if(!empty($_POST['survey_id'])){
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Biltmore Lake Maps</a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" href="../../biltmorelake/map/map.html">Speed Test Results</a></li>
-            <!--<li><a class="dropdown-item" href="../map/map.html">Services Offered</a></li>-->
+            <li><a class="dropdown-item" href="../../biltmorelake/map/map2.php">Services Offered</a></li>
            </ul>
           </li>
         </ul>

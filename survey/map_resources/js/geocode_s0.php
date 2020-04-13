@@ -71,22 +71,14 @@ function update_response_geoip($latitude, $longitude, $id){
     $stmt->bind_param("ssi", $latitude, $longitude, $id);
     $stmt->execute();
     if($conn->error){
-        echo "DB Error inserting response: ".$conn->error."\n";
+        echo "<script>console.log(\"DB Error inserting response: ".$conn->error."\")<script>";
     }else{
-        echo "updated response: geoip\n";
+        echo "<script>console.log(\"updated response: geoip\")</script>";
     }
 }
 
 
 ?>
-
-    <script type="text/javascript">
-        console.log("Hello from JS in geocode_s0.php");
-        console.log(<?= json_encode($geo_address); ?>);
-        console.log(<?= json_encode($response_number); ?>);
-
-
-    </script>
 </body>
 </html>
 

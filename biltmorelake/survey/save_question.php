@@ -8,7 +8,17 @@ echo "value=".$_GET['value']."; ";
 echo "type=".$_GET['type']."\n";
 
 
-include('../../db.php');
+try{
+    $inc_worked = include('../../db.php');
+}catch(Exception $e) {
+    echo 'Caught exception: '.$e->getMessage()."\n";
+}
+
+if($conn){
+    echo "Connected to database.\n";
+}else{
+    echo "NOT Connected to database.\n";
+}
 
 
 function get_response($survey_id){

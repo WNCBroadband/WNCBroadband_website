@@ -3,28 +3,6 @@ body{
 	padding:0;
 }
 
-.survey-0-map-container{
-  width: 80%;
-  height: 500px;
-  justify-content: center;
-  margin-left: auto;
-  margin-right: auto;
-  border: none;
-}
-
-.service_myMap{
-	height: 100vh;
-	width: 100vw;
-}
-
-.parent-container{
-	display: flex;
-}
-
-.navbar li:hover{
-	text-decoration: underline;
-}
-
 .cardbtn{
 	height:200px;
 	text-align:center;
@@ -78,7 +56,7 @@ body{
 }
 
 .header{
-	padding-top:30px;
+	padding-top:125px;
 	padding-bottom:30px;
 }
 
@@ -114,12 +92,12 @@ footer a:hover{
 }
 
 .btn{
-	background-color:#2e7508;
+	background-color:#4abb0d;
 	border:none;
 }
 
 .btn:hover{
-	background-color:#4abb0d;
+	background-color:#2e7508;
 
 }
 
@@ -135,6 +113,8 @@ footer a:hover{
 	background-color:rgba(0,0,0,0);
 }
 
+.accordion button:hover{
+}
 
 .indent{
 	text-indent:30px;
@@ -155,28 +135,22 @@ footer a:hover{
 -moz-transform:scale(1.03,1.03);
 }
 .dropdown-menu{
-	background:#26529e;
+	background:#06284f;
 	border:none;
 	border-radius:0;
 }
 .dropdown-menu li a{
 	color:rgba(255,255,255,0.5);
-	background:#26529e;
 }
 
 .dropdown-menu li a:hover{
-	background:#26529e;
+	background:#06284f;
 	color:#fff;
 }
 
 .dropdown-menu li .active{
 	color:#fff;
-	background:#26529e;
-}
-
-.dropdown-menu .show{
-	color:#fff;
-	background:#26529e;
+	background:#06284f;
 }
 
 .graphic{
@@ -289,82 +263,6 @@ float: left;
 	height:500px;
 	background:pink;
 }
-
-
-.logo{
-	height:50px;
-	margin-left:50%;
-}
-
-.bg-lblue{
-	background-color:#26529e;
-}
-
-.mainnav{
-	min-height:45px;
-}
-
-.communitynav{
-	min-height:60px;
-}
-
-.mainnav2{
-	min-height:45px;
-	position:absolute;
-	z-index:500;
-}
-
-.communitynav2{
-	min-height:60px;
-	position:absolute;
-	z-index:500;
-}
-
-.mapkeycollapsible {
-  background-color: #2e7508;
-  position:fixed;
-  right:5%;
-  bottom:0%;
-  color: white;
-  cursor: pointer;
-  width: 250px;
-  padding:5px;
-  border: none;
-  border-radius:10px 10px 0px 0px;
-  text-align: center;
-  outline: none;
-  font-size: 15px;
-  z-index:300;
-}
-
-.mapkeyexpanded, .mapkeycollapsible:hover {
-  background-color: rgba(74, 187, 13, 0.75);
-}
-
-.mapkeyexpanded {
-  bottom:250px;
-}
-
-.mapkeycontent {
-  position:fixed;
-  right:5%;
-  height:0px;
-  width:250px;
-  display: none;
-  padding:5px 20px;
-  overflow: hidden;
-  background-color: rgba(230,230,230,0.6);
-  z-index:300;
-}
-
-.mapkeycontent ul{
-	list-style-type:none;
-	list-style-position:inside;
-	margin-left:0;
-	padding-left:0;
-	float:left;
-}
-
 @media (max-width:576px){
 	.contact-photo{
 		max-height:150px;
@@ -381,46 +279,5 @@ float: left;
 	.custom-container{
 		margin-left:1rem;
 		margin-right:1rem;
-	}
-}
-
-@media (min-width:576px) and (max-width:992px){
-	.mainnav{
-		height:auto;
-	}
-	.communitynav{
-		height:auto;
-	}
-	.mainnav2{
-		height:auto;
-	}
-	.communitynav2{
-		height:auto;
-	}
-}
-
-
-@media (max-width:576px){
-	.mainnav2{
-		height:auto;
-	}
-	.communitynav2{
-		height:auto;
-	}
-}
-
-@media (min-width:992px){
-	.mainnav{
-	height:45px;
-}
-
-.communitynav{
-	height:60px;
-}
-	.mainnav2{
-		height:45px;
-	}
-	.communitynav2{
-		height:60px;
 	}
 }
