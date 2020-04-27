@@ -1,99 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--
-<?
-include('../../db.php');
 
-
-
-function save_survey_no_uuid(){
-    global $conn;
-    $survey_id = intval($_POST['survey_id']);
-
-    $sql1 = "insert into Responses (survey_id, geoip_latitude, geoip_longitude, home_address_street, home_address_city, home_address_state, home_address_zip, ip_address, comments) values(?,?,?,?,?,?,?,?,?)";
-    $stmt = $conn->prepare($sql1);
-    if(!$stmt){
-        echo "DB Error inserting response: ".$conn->error."<BR>";
-        return NULL;
-    }
-    $stmt->bind_param("issssssss", $survey_id, $_POST['geoip_latitude'], $_POST['geoip_longitude'], $_POST['street_address'], $_POST['city_address'], $_POST['state_address'], $_POST['zip_address'], $_SERVER['REMOTE_ADDR'], $_POST['comments']);
-    $stmt->execute();
-    if ($conn->error) {
-        echo "DB Error inserting response: ".$conn->error."<BR>";
-        return NULL;
-    }
-    $response_id = $conn->insert_id;
-    return $response_id;
-}
-
-function save_survey(){
-    global $conn;
-    $survey_id = intval($_POST['survey_id']);
-
-    $sql1 = "insert into Responses (survey_id, geoip_latitude, geoip_longitude, home_address_street, home_address_city, home_address_state, home_address_zip, ip_address, comments,uuid) values(?,?,?,?,?,?,?,?,?,?)";
-    $stmt = $conn->prepare($sql1);
-    if(!$stmt){
-        echo "DB Error inserting response: ".$conn->error."<BR>";
-        return NULL;
-    }
-    $stmt->bind_param("isssssssss", $survey_id, $_POST['geoip_latitude'], $_POST['geoip_longitude'], $_POST['street_address'], $_POST['city_address'], $_POST['state_address'], $_POST['zip_address'], $_SERVER['REMOTE_ADDR'], $_POST['comments'],$_POST['uuid']);
-    $stmt->execute();
-    if ($conn->error) {
-        echo "DB Error inserting response: ".$conn->error."<BR>";
-        return NULL;
-    }
-    $response_id = $conn->insert_id;
-    return $response_id;
-}
-
-function save_survey_questions($response_id){
-    global $conn;
-    $survey_id = intval($_POST['survey_id']);
-    $sql2 = "
-    SELECT q.id as 'id', q.name as 'name'
-    FROM Question q, Survey s, Survey_Questions sq
-    WHERE s.id = ?
-      AND sq.survey_id = s.id
-      AND sq.question_id = q.id
-    ORDER BY sq.display_order asc
-    ";
-    $stmt2 = $conn->prepare($sql2);
-    $stmt2->bind_param("i",$survey_id);
-    $stmt2->execute();
-    $result = $stmt2->get_result();
-    if ($result->num_rows > 0) {
-        while($row = $result->fetch_assoc()) {
-            if(!empty($_POST[$row['name']])){
-                #echo "Inserting into Survey_Questions_Responses: (name=".$row['name'].") ";
-                #echo "$survey_id, ".$row['id'].", $response_id, ".$_POST[$row['name']];
-                #echo "<BR>";
-                $sql3 = "insert into Survey_Questions_Responses (survey_id, question_id, response_id, answer) values(?,?,?,?)";
-                $stmt3 = $conn->prepare($sql3);
-                $stmt3->bind_param("iiis",$survey_id, $row['id'], $response_id, $_POST[$row['name']]);
-                $stmt3->execute();
-                if($conn->error){
-                    echo "DB Error inserting survey_quesions_response: ".$conn->error."<BR>";
-                    return;
-                }
-            }
-        }
-    }
-}
-
-#print_r($_POST);
-if(!empty($_POST['survey_id'])){
-    if( isset($_POST['uuid']) && !empty($_POST['uuid']) ){
-        $resp_id = save_survey();
-    }else{
-        $resp_id = save_survey_no_uuid();
-    }
-    if(!is_null($resp_id)){
-        save_survey_questions($resp_id);
-    }
-}
-
-?>
--->
 <head>
 
   <meta charset="utf-8">
@@ -116,6 +23,41 @@ if(!empty($_POST['survey_id'])){
 </head>
 
 <body>
+
+<?
+//ini_set('display_errors', 1);
+//ini_set('display_startup_errors', 1);
+//error_reporting(E_ALL);
+
+include('../../db.php');
+require('../../survey/map_resources/js/geocode_s0.php');
+
+$saved_response_id  = $_GET['response_id'];
+$saved_geoip_latitude = $_GET['geoip_latitude'];
+$saved_geoip_longitude = $_GET['geoip_longitude'];
+$saved_user_address = $_GET['user_address'];
+
+$geocode_variables = geocode($saved_user_address);
+if ($geocode_variables!=false){
+  update_response_geoip($geocode_variables[0],$geocode_variables[1], $saved_response_id);
+  $saved_geoip_latitude = $geocode_variables[0];
+  $saved_geoip_longitude = $geocode_variables[1];
+}
+
+if ($saved_geoip_latitude==0 || $saved_geoip_longitude == 0){
+  $saved_geoip_latitude = 35.5951;
+  $saved_geoip_longitude = -82.5515;
+}
+
+?>
+
+<script>
+    console.log(<?= json_encode($saved_response_id); ?>);
+    console.log(<?= json_encode($saved_geoip_latitude); ?>);
+    console.log(<?= json_encode($saved_geoip_longitude); ?>);
+    console.log(<?= json_encode($saved_user_address); ?>);
+</script>
+
 
   <!-- Navigation -->
     <nav class="navbar navbar-expand-lg bg-dblue navbar-dark mainnav">
@@ -157,25 +99,25 @@ if(!empty($_POST['survey_id'])){
  <div class="collapse navbar-collapse navbars" id="navbar2">
         <ul class="navbar-nav">
         <li class="nav-item">
-            <a class="nav-link" href="../../upperhominy/index.html">Upper Hominy</a>
+            <a class="nav-link" href="../../biltmorelake/index.html">Biltmore Lake</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="../../upperhominy/aboutUpperHominy.html">About Community</a>
+            <a class="nav-link" href="../../biltmorelake/aboutBiltmoreLake.html">About Community</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" href="survey.html">Survey</a>
+            <a class="nav-link active" href="../../biltmorelake/survey.html">Survey</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../../upperhominy/providers.html">Service Providers</a>
+            <a class="nav-link" href="../../biltmorelake/providers.html">Service Providers</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../../upperhominy/communitycontacts.html">Community Contacts</a>
+            <a class="nav-link" href="../../biltmorelake/communitycontacts.html">Community Contacts</a>
           </li>
            <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Upper Hominy Maps</a>
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Biltmore Lake Maps</a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="../../upperhominy/map/uhMap.php">Speed Test Results</a></li>
-            <!--<li><a class="dropdown-item" href="../map/map.html">Services Offered</a></li>-->
+            <li><a class="dropdown-item" href="../../biltmorelake/map/map.html">Speed Test Results</a></li>
+            <li><a class="dropdown-item" href="../../biltmorelake/map/map2.php">Services Offered</a></li>
            </ul>
           </li>
         </ul>
@@ -189,7 +131,6 @@ if(!empty($_POST['survey_id'])){
         <h1 class="mt-3 mb-5 text-center">Thank you for taking our survey!</h1>
         <p class="lead">Thank you for your participation in this survey. <br>
         Learn more about how you can get involved and get further engaged in broadband issues <a href="../../upperhominy/getinvolved.html"><b>here</b></a>.<br><br>
-        You can also take the <a href="../speedtest.php"><b> Speed Test</b></a> on our main site and help contribute your speeds to your community map.<br></br>
         <a href="../../upperhominy/index.html">Return to community homepage</a></p>
   </div>
 </section>
