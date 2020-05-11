@@ -92,7 +92,7 @@
   
 <!--  MAP   -->
     <div class="service_myMap" id="myMap">
-      <iframe src="https://www.google.com/maps/d/embed?mid=1MnJdT6MvcsGsmbHbhRpy9EntC-Amkf7-" width="100%" height="100%"></iframe>   
+      <iframe src="https://www.google.com/maps/d/embed?mid=1ZhPnpvEGNYriKJvObsaS63bKM8b54c4O" width="100%" height="100%"></iframe>   
     </div>
         <!--  MAP END   -->
 
