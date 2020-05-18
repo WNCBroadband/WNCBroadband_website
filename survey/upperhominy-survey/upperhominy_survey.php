@@ -278,11 +278,13 @@ function showPosition(position) {
             <p class="small text-center">If the speed test does not show up, click <a href="https://speed.measurementlab.net/#/" target="_blank"> here </a> to open it in a new tab.</p>
             <br><br>
             <h4>Please Input your Download Speed from the M-Labs Speed Test:</h4>
+            <p>Drag the green circle on the slider to your download speed or type in the speed in the box below.</p>
             <div class="slidecontainer">
               <input id="downslider" name="SPEEDTEST__self-reported__download" type="range" class="js-range-slider slider" min="1" max="200" step="0.1" value="1" data-rangeslider>
               <p class="text-center lead">Download Speed <input id="downtextbox" type="text" class="js-input" name="SPEEDTEST__self-reported__download" id="downloadspeedval-biltmorelakes" class="text" maxlength="5" size="5"> Mbps</p>
             </div>
             <h4>Please Input your Upload Speed from the M-Labs Speed Test:</h4>
+            <p>Drag the green circle on the slider to your upload speed or type in the speed in the box below.</p>
             <div class="slidecontainer">
               <input id="upslider"  name="SPEEDTEST__self-reported__upload" type="range" class="js-range-slider slider" min="1" max="200" step="0.1" value="1" data-rangeslider>
               <p class="text-center lead">Upload Speed <input id="uptextbox" type="text" class="js-input" name="SPEEDTEST__self-reported__upload" id="uploadspeedval-biltmorelakes" class="text" maxlength="5" size="5"> Mbps</p>
