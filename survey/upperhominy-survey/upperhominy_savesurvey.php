@@ -109,25 +109,25 @@ if ($saved_geoip_latitude==0 || $saved_geoip_longitude == 0){
  <div class="collapse navbar-collapse navbars" id="navbar2">
         <ul class="navbar-nav">
         <li class="nav-item">
-            <a class="nav-link" href="../../biltmorelake/index.html">Biltmore Lake</a>
+            <a class="nav-link" href="../../upperhominy/index.html">Upper Hominy</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="../../biltmorelake/aboutBiltmoreLake.html">About Community</a>
+            <a class="nav-link" href="../../upperhominy/aboutUpperHominy.html">About Community</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" href="../../biltmorelake/survey.html">Survey</a>
+            <a class="nav-link active" href="survey.html">Survey</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../../biltmorelake/providers.html">Service Providers</a>
+            <a class="nav-link" href="../../upperhominy/providers.html">Service Providers</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../../biltmorelake/communitycontacts.html">Community Contacts</a>
+            <a class="nav-link" href="../../upperhominy/communitycontacts.html">Community Contacts</a>
           </li>
-           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Biltmore Lake Maps</a>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Upper Hominy Maps</a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="../../biltmorelake/map/map.html">Speed Test Results</a></li>
-            <li><a class="dropdown-item" href="../../biltmorelake/map/map2.php">Services Offered</a></li>
+            <li><a class="dropdown-item" href="../../upperhominy/map/uhMap.php">Speed Test Results</a></li>
+            <!--<li><a class="dropdown-item" href="../map/map.html">Services Offered</a></li>-->
            </ul>
           </li>
         </ul>
