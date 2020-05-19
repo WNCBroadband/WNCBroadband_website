@@ -93,7 +93,17 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
           <form id="fullsurvey" class="form" method="POST" action="edit_survey.php?survey_id=1"> 
           <input type="hidden" name="action"  value="validate">
 <?
-include('../db.php');
+$servername = "138.68.228.126";
+$username = "drawertl_westngn";
+$password = "dbpass_adh4enal";
+$dbname = "drawertl_westngn";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    echo("Connection failed: " . $conn->connect_error);
+    exit(0);
+}
 
 echo '<INPUT type="hidden" name="survey_id" value="1">';
 
