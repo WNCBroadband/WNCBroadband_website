@@ -44,8 +44,6 @@ if(empty($_GET['survey_id'])){
 
   <!-- Bootstrap core CSS -->
   <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <!-- JQuery -->
-  <script src="../js/jquery.min.js"></script> 
   <!-- Bootstrap core CSS -->
   <link href="../vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
   <!-- Custom fonts for this template -->
@@ -83,9 +81,8 @@ if(empty($_GET['survey_id'])){
 
 $sql = "
 SELECT q.id as 'question_id', q.display_html as 'html' 
-FROM Question q, Survey s, Survey_Questions sq
-WHERE s.id = ?
-  AND sq.survey_id = s.id
+FROM Question q, Survey_Questions sq
+WHERE sq.survey_id = ?
   AND sq.question_id = q.id
 ORDER BY sq.display_order asc
 ";

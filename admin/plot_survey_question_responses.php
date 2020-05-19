@@ -38,6 +38,9 @@ function get_data(){
             $str .= "];\n";
             echo $str;
             return True;
+        }else{
+            echo "console.log('Error: no results for survey_id=".$survey_id." and question_id=".$question_id."');\n";
+            return False;
         }
     }else{
         echo "console.log('Error: could not fetch data, need survey_id and question_id');\n";
@@ -53,10 +56,9 @@ function get_data(){
     <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
 </head>
 <SCRIPT>
-<?php
-if(get_data()){ 
-?>
 function go(){
+    var x = [];
+    <?php get_data(); ?>
     var trace = {
         x: x,
         type: 'histogram',
@@ -64,9 +66,6 @@ function go(){
     var data = [trace];
     Plotly.newPlot('myDiv', data);
 }
-<?
-}
-?>
 </SCRIPT>
 <STYLE>
     #myDiv {
