@@ -74,7 +74,7 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
 
       }
       };
-      xhttp.open("GET", "../save_question.php?uuid="+uuid+"&name="+this.name+"&value="+this.value+"&survey_id=2&type="+this.type,true);
+      xhttp.open("GET", "../save_question.php?uuid="+uuid+"&name="+this.name+"&value="+this.value+"&survey_id=3&type="+this.type,true);
       xhttp.send();
       update_geo();
     }
@@ -133,10 +133,10 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
  <div class="collapse navbar-collapse navbars" id="navbar2">
         <ul class="navbar-nav">
         <li class="nav-item">
-            <a class="nav-link" href="../../villagepark/index.html">Upper Hominy</a>
+            <a class="nav-link" href="../../villagepark/index.html">Village Park</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="../../villagepark/aboutvillagepark.html">About Community</a>
+            <a class="nav-link" href="../../villagepark/aboutVillagePark.html">About Community</a>
         </li>
         <li class="nav-item">
             <a class="nav-link active" href="survey.html">Survey</a>
@@ -168,7 +168,7 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
       <div class="mx-auto col-lg-8">
           <h2>Please answer the following 10 questions. It should only take about 5 minutes.</h2><br>
         <div class="form-group">
-          <form id="fullsurvey" class="form" method="POST" action="upperhominy_savesurvey.php"> 
+          <form id="fullsurvey" class="form" method="POST" action="villagepark_savesurvey.php"> 
           <SCRIPT>
           document.write('<INPUT TYPE="hidden" name="uuid" value="'+uuid+'">');
           </SCRIPT>
@@ -183,7 +183,7 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
                         + document.getElementById("state_address").value +  " " + document.getElementById("zip_address").value;
     console.log(user_in_address);
 
-    document.getElementById("fullsurvey").action="upperhominy_savesurvey.php?geoip_latitude="+lat_coord+"&geoip_longitude="+lng_coord+"&user_address="+user_in_address+"&response_id="+response_id;
+    document.getElementById("fullsurvey").action="villagepark_savesurvey.php?geoip_latitude="+lat_coord+"&geoip_longitude="+lng_coord+"&user_address="+user_in_address+"&response_id="+response_id;
   }
 //////////////////////////////////////
 </script>
@@ -255,7 +255,7 @@ function showPosition(position) {
       console.log(this.responseText);
     }
   };
-  xhttp.open("GET", "../save_question.php?uuid="+uuid+"&survey_id=2&geoip_latitude="+position.coords.latitude+"&geoip_longitude="+position.coords.longitude,true);
+  xhttp.open("GET", "../save_question.php?uuid="+uuid+"&survey_id=3&geoip_latitude="+position.coords.latitude+"&geoip_longitude="+position.coords.longitude,true);
   xhttp.send();
 
 }

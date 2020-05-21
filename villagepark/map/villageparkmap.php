@@ -9,11 +9,11 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"/>
   
   <!-- Bootstrap core CSS -->
-  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- JQuery -->
-  <script src="../js/jquery.min.js"></script>   
+  <script src="../../js/jquery.min.js"></script>   
   <!-- Bootstrap core CSS -->
-  <link href="../vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link href="../../vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
   <!-- Custom fonts for this template -->
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
   <!--Site Stylesheet-->
@@ -27,18 +27,18 @@
 
   <!--  Leaflet Stylesheets -->
   <link rel="stylesheet" type="text/css" href="https://cdn-geoweb.s3.amazonaws.com/esri-leaflet-geocoder/0.0.1-beta.5/esri-leaflet-geocoder.css">
-  <link href="../vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link href="../../vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
   <link href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" rel="stylesheet">
   <link href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" rel="stylesheet">
   
   <!-- Custom fonts for this template -->
-  <link href="../vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+  <link href="../../vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
   
   <!-- Custom styles for this template -->
-  <link href="../css/landing-page.min.css" rel="stylesheet">
+  <link href="../../css/landing-page.min.css" rel="stylesheet"> <!--Add this-->
   <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
-  <link rel="stylesheet" href="../css/mapstyle.css">
+  <link rel="stylesheet" href="../../css/mapstyle.css"> <!--Add this-->
 </head> 
 
 <body>
@@ -46,7 +46,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg bg-dblue navbar-dark mainnav2">
       <a class="navbar-brand" href="https://wncbroadband.org/blog">
-        <img src="../img/wncbroadbandlogo.png" alt="WNC Broadband Project Logo Image and Link" class="img-fluid logo" width="100px">
+        <img src="../../img/wncbroadbandlogo.png" alt="WNC Broadband Project Logo Image and Link" class="img-fluid logo" width="100px">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -153,8 +153,8 @@
     <script src="mapkey.js"></script>
   
   <!-- Bootstrap core JavaScript -->
-  <script src="../vendor/jquery/jquery.slim.min.js"></script>
-  <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../vendor/jquery/jquery.slim.min.js"></script>
+  <script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     
 
 
