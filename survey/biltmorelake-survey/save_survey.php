@@ -185,7 +185,7 @@ if ($saved_geoip_latitude==0 || $saved_geoip_longitude == 0){
             <a class="nav-link" href="https://wncbroadband.org/blog/community-initiatives/">Community Initiatives</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../../advocacy.html">Actions We Can Take</a>
+            <a class="nav-link" href="https://wncbroadband.org/blog/advocacy/">Actions We Can Take</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="https://wncbroadband.org/blog/blog/">News</a>
@@ -270,7 +270,7 @@ if ($saved_geoip_latitude==0 || $saved_geoip_longitude == 0){
           <a href="../../survey/speedtest.php">Speed Test</a>
           </li><br>
           <li class="list-inline-item">
-          <a href="../../advocacy.html">Actions We Can Take</a>
+          <a href="https://wncbroadband.org/blog/advocacy/">Actions We Can Take</a>
           </li><br>
           <li class="list-inline-item">
           <a href="../../getinvolved.html">Get Involved</a>

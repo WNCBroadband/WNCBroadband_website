@@ -67,7 +67,7 @@
             <a class="nav-link" href="https://wncbroadband.org/blog/community-initiatives/">Community Initiatives</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../../advocacy.html">Actions We Can Take</a>
+            <a class="nav-link" href="https://wncbroadband.org/blog/advocacy/">Actions We Can Take</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="https://wncbroadband.org/blog/blog/">News</a>
