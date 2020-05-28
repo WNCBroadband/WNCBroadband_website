@@ -348,7 +348,7 @@ function showPosition(position) {
           <a href="../../faq.html">FAQ</a>
           </li><br>
           <li class="list-inline-item">
-          <a href="../../contact.html">Contact</a>
+          <a href="https://wncbroadband.org/blog/contact/">Contact</a>
           </li><br>
           <li class="list-inline-item">
           <a href="../../broadband101.html">Broadband 101</a>
