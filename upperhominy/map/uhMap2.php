@@ -111,44 +111,14 @@
 
   
 <!--  MAP   -->
-    <div id="map"></div>
-
-<!--  <div id="mapKey">
-    <ul><h3>Map Key</h3>
-      <h5>Download Speed:</h5>
-      <li><img src="img/pin_gray.png" height="20px" width="20px">   Gray: Unknown Speed</li>
-      <li><img src="img/pin_red.png" height="20px" width="20px">    Red: Less than 5 Mpbs</li>
-      <li><img src="img/pin_orange.png" height="20px" width="20px"> Orange: Between 5 and 25 Mbps </li>
-      <li><img src="img/pin_yellow.png" height="20px" width="20px"> Yellow: Between 25 and 90 Mbps</li>
-      <li><img src="img/pin_green.png" height="20px" width="20px">  Green: Greater than 90 Mbps</li>
-    </ul>
-  </div>-->
-
-  <div class="mapkey">
-      <button type="button" class="mapkeycollapsible"><h3>Map Key</h3></button>
-      <div class="mapkeycontent"> 
-        <h5>Download Speed:</h5>
-        <ul>
-      <li><img src="img/pin_gray.png" height="20px" width="20px">   Gray: Unknown Speed</li>
-      <li><img src="img/pin_red.png" height="20px" width="20px">    Red: Less than 5 Mpbs</li>
-      <li><img src="img/pin_orange.png" height="20px" width="20px"> Orange: Between 5 and 25 Mbps </li>
-      <li><img src="img/pin_yellow.png" height="20px" width="20px"> Yellow: Between 25 and 90 Mbps</li>
-      <li><img src="img/pin_green.png" height="20px" width="20px">  Green: Greater than 90 Mbps</li>
-        </ul>
-      </div>
-      </div>
+    <div class="service_myMap" id="myMap">
+      <iframe src="https://www.google.com/maps/d/embed?mid=1flxLQ_YedeeBeRa0VjIJShCTDSlQVmLl" width="100%" height="100%"></iframe>
+    </div>
         <!--  MAP END   -->
+
 
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-
-    <?php
-        if(isset($_GET['survey_id']) && !empty($_GET['survey_id'])){
-    echo '<script src="survey_data.php?survey_id='.$_GET['survey_id'].'"></script>';
-        }else{
-    echo '<script src="survey_data.php?survey_id=2"></script>';
-        }
-    ?>
     <script  src="uhMapScript.js"></script>
     <script src="mapkey.js"></script>
   
