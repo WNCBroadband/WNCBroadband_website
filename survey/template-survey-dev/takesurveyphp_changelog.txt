@@ -1,0 +1,18 @@
+survey changelog for take_survey.php:
+
+1. change all instances of savesurvey.php to have proper surveyid
+2. change iframe source url  line 270, also link to "if does not show up" line 271
+
+lines 273 thru 276 get results from speedtest (keep div id names)
+
+Line 292 used to say "from results of m-lab speed test", now says "results of speed test"
+
+put footer inside includes folder.
+
+line 30 calls biltmorelake jquery, make universal?
+
+change survey-end.html to php in order to have php includes!   > redirect here instead of .html
+
+
+
+survey-end: why 2 bootstrap includes? change to just 1?
