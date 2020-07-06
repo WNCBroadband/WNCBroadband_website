@@ -150,8 +150,8 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Upper Hominy Maps</a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="../../upperhominy/map/uhMap.php">Speed Test Results</a></li>
-            <!--<li><a class="dropdown-item" href="../map/map.html">Services Offered</a></li>-->
+            <li><a class="dropdown-item" href="/upperhominy/map/uhMap.php">Speed Test Results</a></li>
+            <li><a class="dropdown-item" href="/upperhominy/map/uhMap2.php">Services Offered</a></li>
            </ul>
           </li>
         </ul>
