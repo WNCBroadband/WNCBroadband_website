@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Community specific links exist in navbar and also in main page content -->
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+ 	<title>WNC Broadband Project | Survey</title>
+
+ 	<!-- Bootstrap core CSS -->
+  	<link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  	<!-- JQuery -->
+  	<script src="../../js/jquery.min.js"></script> 
+  	<!-- Bootstrap core CSS -->
+  	<link href="../../vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+  	<!-- Custom fonts for this template -->
+  	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+  	<!--Site Stylesheet-->
+  	<link href="../../css/style.css" rel="stylesheet" type="text/css">
+  	
+  	   <!-- Bootstrap core JavaScript -->
+  	<script src="../../vendor/jquery/jquery.slim.min.js"></script>
+  	<script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <!-- includes global main navigation -->
+	<?php include("http://wncbroadband.org/includes/nav_main_survey.php");?> 
+
+    <!-- Below is community specific navigation  -->
+	<nav class="navbar navbar-expand-md bg-lblue navbar-dark communitynav">
+   		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar2" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        	<span class="navbar-toggler-icon"></span>
+      	</button>
+ 		<div class="collapse navbar-collapse navbars" id="navbar2">
+        	<ul class="navbar-nav">
+        		<li class="nav-item">
+            		<a class="nav-link" href="../../biltmorelake/index.html">Biltmore Lake</a>
+        		</li>
+            	<li class="nav-item">
+                	<a class="nav-link" href="../../biltmorelake/aboutBiltmoreLake.html">About Community</a>
+            	</li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="../../biltmorelake/survey.html">Survey</a>
+                </li>
+                <li class="nav-item">
+                	<a class="nav-link" href="../../biltmorelake/providers.html">Service Providers</a>
+                </li>
+                <li class="nav-item">
+                	<a class="nav-link" href="../../biltmorelake/communitycontacts.html">Community Contacts</a>
+                </li>
+                <li class="nav-item dropdown">
+                	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Biltmore Lake Maps</a>
+                   	<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    	<li><a class="dropdown-item" href="../../biltmorelake/map/map.html">Speed Test Results</a></li>
+                    	<li><a class="dropdown-item" href="../../biltmorelake/map/map2.php">Services Offered</a></li>
+               		</ul>
+            	</li>
+        	</ul>
+    	</div>
+ 	</nav>
+
+    <!-- Page Content -->
+  	<section class="p-3"></section>
+    <section class="header">  
+     	<div class="custom-container">
+        	<h1 class="mt-3 mb-5 text-center">Thank you for taking our survey!</h1>
+            <p class="lead">Thank you for your participation in this survey. <br>
+            Learn more about how you can get involved and get further engaged in broadband issues <a href="../../biltmorelake/getinvolved.html"><b>here</b></a>.<br><br>
+            <a href="../../biltmorelake/index.html">Return to community homepage</a></p>
+      	</div>
+	</section>
+
+    <!-- Footer -->
+	<div class="separate"></div>
+	<?php include("http://www.wncbroadband.org/includes/footer.php");?> 
+  
+</body>
+</html>
