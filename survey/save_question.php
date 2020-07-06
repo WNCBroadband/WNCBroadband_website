@@ -271,13 +271,7 @@ if(isset($_GET['survey_id'])){
 
 
     if(startsWith($_GET['name'],'SPEEDTEST__')){
-        if(startsWith($_GET['name'],'SPEEDTEST__self-reported')){
-            insert_self_reported_speed_test($response_id);
-        }else{
-            echo "SPEEDTEST, but not self-reported";
-            insert_self_reported_speed_test($response_id);            
-        }
-        
+            insert_self_reported_speed_test($response_id);                   
     }else if($_GET['name']!="comments"){
 
         $question_id = get_question($_GET['name']);
