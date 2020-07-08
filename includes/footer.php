@@ -37,7 +37,7 @@
 			<div class="col-3"></div>
 			<div class="col-12 text-center">
 				<p>
-					&copy; 2020 WNC Broadband Project | <a href="../../privacypolicy.html"> Privacy Policy</a>
+					&copy; 2020 WNC Broadband Project | <a href="http://www.wncbroadband.org/privacypolicy.php"> Privacy Policy</a>
 				</p>
 			</div>
 		</div>
