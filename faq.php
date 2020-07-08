@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ 	<meta charset="utf-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  	<meta name="description" content="">
+  	<meta name="author" content="">
+  	<title>WNC Broadband Project | FAQ</title>
+  	<!-- Bootstrap core CSS -->
+  	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  	<!-- JQuery -->
+  	<script src="js/jquery.min.js"></script> 
+  	<!-- Bootstrap core CSS -->
+  	<link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+  	<!-- Custom fonts for this template -->
+  	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+  	<!--Site Stylesheet-->
+  	<link href="css/style.css" rel="stylesheet" type="text/css">
+    <!-- Bootstrap core JavaScript -->
+  	<script src="vendor/jquery/jquery.slim.min.js"></script>
+  	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>  
+</head>
+
+<body>
+
+	<!-- Navigation -->
+	<?php include("http://www.wncbroadband.org/includes/nav_main_core.php");?>
+
+ 	<!-- Page Content -->
+	<section class="header bg-broad pt-5">  
+		<div class="container pt-5">
+	  		<div class="row">
+	  			<div class="col-lg-7">
+	  				<h1>FAQ</h1>
+	  			</div>
+	  		</div>
+		</div>
+	</section>
+
+	<section class="pt-5 pb-5 accordion-section clearfix" aria-label="Question Accordions">
+		<div class="container">
+			<h2>Frequently Asked Questions</h2>
+			<div class="accordion" id="faq">
+				<!--Question 0-->
+				<div class="card">
+					<div class="card-header" id="headingZero">
+						<h2 class="mb-0">
+							<button class="btn btn-link collapsed text-left" type="button" data-toggle="collapse" data-target="#collapseZero" aria-expanded="false" aria-controls="collapseZero">
+								What is the WNC Broadband Project?
+							</button>
+						</h2>
+					</div>
+					<div id="collapseZero" class="collapse" aria-labelledby="headingZero" data-parent="#faq">
+						<div class="card-body">
+							<p>The WNC Broadband Project aims to support communities
+								interested in ensuring access to reliable, truly high-speed
+								internet service. The WNC Broadband Project develops tools to
+								empower individuals, communities, and area leaders in advocating
+								effectively for their digital needs.</p>
+							<p>To learn more about our project, visit our <a href="aboutproject.html">About</a> page.</p>
+						</div>
+					</div>
+				</div>
+				<!--Question 1-->
+				<div class="card">
+					<div class="card-header" id="headingOne">
+						<h2 class="mb-0">
+							<button class="btn btn-link collapsed text-left" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+								What is truly high-speed Internet service?
+							</button>
+						</h2>
+					</div>
+					<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#faq">
+						<div class="card-body">
+							<p>
+								Truly high-speed Internet service provides speeds needed for the
+								leading-edge services and devices consumers use today,
+								<!--as well as-->
+								and the infrastructure that allows for faster speeds every
+								couple of years to support those new services and devices that
+								regularly enter the marketplace.
+							</p>
+							<p>In 1999, when the FCC first defined broadband, truly
+								high-speed was identified as speeds of at least 256 Kbps. In
+								2009, truly high-speed Internet service was identified as speeds
+								of at least 4 Mbps. In 2019, truly high-speed Internet is
+								regarded as 100 Mbps. By 2029, truly high-speed Internet is
+								likely to be at least 1 Gbps, if not faster. It is critical that
+								our broadband infrastructure allow for this evolution to occur
+								seamlessly, or our economic, healthcare, governmental, cultural
+								and other critical choices and opportunities will be greatly
+								limited.
+							</p>
+						</div>
+					</div>
+				</div>
+				<!--Question 2-->
+				<div class="card">
+					<div class="card-header" id="headingTwo">
+						<h2 class="mb-0">
+							<button class="btn btn-link collapsed text-left" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+								What is meant by Mbps and Gbps?
+							</button>
+						</h2>
+					</div>
+					<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+						data-parent="#faq">
+						<div class="card-body">
+							<p>Mbps stands for Megabits per second. That is the speed the
+								bits are delivered to your device or uploaded from your device.
+								Gbps stands for Gigabits per second, which is 1000 times faster
+								than Mbps per second. In 2010, the FCC set a goal in the U.S. of
+								100 million homes with 100 Mbps service by 2020. That speed, 100
+								Mbps download, has become the standard for good residential
+								Internet service in urban areas today.</p>
+						</div>
+					</div>
+				</div>
+				<!--Question 3-->
+				<div class="card">
+					<div class="card-header" id="headingThree">
+						<h2 class="mb-0">
+							<button class="btn btn-link collapsed text-left" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+								What are examples of services today that require truly high-speed Internet?
+							</button>
+						</h2>
+					</div>
+					<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#faq">
+						<div class="card-body">
+							<p>Streaming services to state-of-the-art TVs and computers,
+								state-of-the-art gaming services, and work-at-home applications.
+								The website “Broadband Now” provides examples of online
+								activities and the speeds needed.</p>
+							<p>For many people, working from home, which is becoming more
+								common as employers seek to hire the most talented workforce,
+								requires higher download and upload speeds. Most corporate
+								networks today use computer applications that take advantage of
+								100 Mbps or higher corporate Local Area Networks. For employees
+								of these firms to use their companies applications at home, 100
+								Mbps or higher services are needed.</p>
+							<p>
+								The website <a href="https://broadbandnow.com/guides/how-much-internet-speed-do-i-need" target="_blank">broadbandnow.com</a> provides examples of online activities and the speeds needed.
+							</p>
+							<ul>
+								<li>Check email and browse the web: 1-5 Mbps minimum</li>
+								<li>Stream HD content: 15-25 Mbps minimum</li>
+								<li>Stream 4K content and play competitive online games: 40-100 Mbps minimum</li>
+								<li>Stream 4K content, play online games, and download very large files: 200+ Mbps minimum</li>
+							</ul>
+							<p>Since most homes may have more than one active device at
+								the same time, 100 Mbps is needed for truly high-speed Internet
+								service.
+							</p>
+						</div>
+					</div>
+				</div>
+				<!--Question 4-->
+				<div class="card">
+					<div class="card-header" id="headingFour">
+						<h2 class="mb-0">
+							<button class="btn btn-link collapsed text-left" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+								How do I calculate the Internet speed I need today?
+							</button>
+						</h2>
+					</div>
+					<div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#faq">
+						<div class="card-body">
+							<p>
+								The “Broadband Now” website provides a simpler bandwidth
+								calculation based on the number of users in your home and how
+								they use the Internet. Go to <a href="https://broadbandnow.com/bandwidth-calculator" target="_blank">bandwidth calculation tool</a>.
+							</p>
+						</div>
+					</div>
+				</div>
+				<!--Question 5-->
+				<div class="card">
+					<div class="card-header" id="headingFive">
+						<h2 class="mb-0">
+							<button class="btn btn-link collapsed text-left" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+								How will my need for Internet speeds increase in the years ahead?
+							</button>
+						</h2>
+					</div>
+					<div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#faq">
+						<div class="card-body">
+							<p>
+								Historically the home Internet access speed of the typical
+								use has doubled every three years or so. This trend is the
+								synergistic effect of electronic technology creating smarter
+								devices with more powerful display, enabling more and better
+								applications that require higher and higher access speeds. This
+								is a 25-year trend that will likely continue. Therefore if you
+								need 25 Mbps today, you will likely need 50 Mbps within three
+								years, and 100 Mbps within six years.
+							</p>
+						</div>
+					</div>
+				</div>
+				<!--Question 6-->
+				<div class="card">
+					<div class="card-header" id="headingSix">
+						<h2 class="mb-0">
+							<button class="btn btn-link collapsed text-left" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+								How do I tell if I have truly high-speed Internet service?
+							</button>
+						</h2>
+					</div>
+					<div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#faq">
+						<div class="card-body">
+							<p>First see what your service provider claims to offer as service.</p>
+							<p>
+								Then, run a speed test using the link on your community web site
+								or go to <a href="https://speed.measurementlab.net/" target="_blank">speed.measurementlab.net</a>. You may want to
+								check during a low-use period of the day (early morning or late
+								night), and also in the evening hours when many people are using
+								the Internet at home. Some Internet service providers have the
+								infrastructure to deliver truly high-speed Internet but are not
+								keeping up with the demand as more and more people use the
+								latest streaming services.
+							</p>
+						</div>
+					</div>
+				</div>
+				<!--Question 7-->
+				<div class="card">
+					<div class="card-header" id="headingSeven">
+						<h2 class="mb-0">
+							<button class="btn btn-link collapsed text-left" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+								What is the general meaning of the term <i>digital divide</i>?
+							</button>
+						</h2>
+					</div>
+					<div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#faq">
+						<div class="card-body">
+							<p>
+								The term <i>digital divide</i> generally signifies a gap of
+								access to and ability to use information and communication
+								technology (Compaine, B.M. [2001]. The digital divide: Facing a
+								crisis or creating a myth? Cambridge, Massachusetts: MIT Press).
+								More recently, organizations such as the National Digital
+								Inclusion Alliance, have moved toward a concept of “digital
+								inclusion,” which “refers to the activities necessary to ensure
+								that all individuals and communities, including the most
+								disadvantaged, have access to and use of Information and
+								Communication Technologies (ICTs)". This includes 5 elements:
+							<ol>
+								<li>affordable, robust broadband internet service;</li>
+								<li>internet-enabled devices that meet the needs of the user;</li>
+								<li>access to digital literacy training;</li>
+								<li>quality technical support;</li>
+								<li>applications and online content designed to enable and
+									encourage self-sufficiency, participation and collaboration.</li>
+							</ol>
+							<p>
+								(<a href="https://www.digitalinclusion.org/definitions/" target="_blank">https://www.digitalinclusion.org/definitions/</a>)
+							</p>
+						</div>
+					</div>
+				</div>
+				<!--Question 8-->
+				<div class="card">
+					<div class="card-header" id="headingEight">
+						<h2 class="mb-0">
+							<button class="btn btn-link collapsed text-left" type="button" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+								What is the digital divide in WNC?
+							</button>
+						</h2>
+					</div>
+					<div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#faq">
+						<div class="card-body">
+							<p>
+								WNC residents who cannot obtain truly high-speed Internet
+								(100 Mbps or higher service download speed with essentially
+								unlimited usage) will be on the wrong side of the digital divide
+								in the near future, unable to access cutting-edge devices and
+								services, to develop advanced digital literacy skills, or to
+								achieve parity (economic, social, cultural) with those who do
+								have such access.
+							</p>
+						</div>
+					</div>
+				</div>
+				<!--Question 9-->
+				<div class="card">
+					<div class="card-header" id="headingNine">
+						<h2 class="mb-0">
+							<button class="btn btn-link collapsed text-left" type="button" data-toggle="collapse" data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+								How can I tell if I will be on the wrong side of the digital divide?
+							</button>
+						</h2>
+					</div>
+					<div id="collapseNine" class="collapse"
+						aria-labelledby="headingNine" data-parent="#faq">
+						<div class="card-body">
+							<p>
+								A good first step is to find out what speed of service
+								your provider claims to offer. Then run the speed test several
+								times including during the evening busy hour to see if the
+								service provider is providing what they offered.
+							</p>
+						</div>
+					</div>
+				</div>
+				<!--Question 10-->
+				<div class="card">
+					<div class="card-header" id="headingTen">
+						<h2 class="mb-0">
+							<button class="btn btn-link collapsed text-left" type="button" data-toggle="collapse" data-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+								What type of networks can provide truly high-speed Internet service to my house?
+							</button>
+						</h2>
+					</div>
+					<div id="collapseTen" class="collapse" aria-labelledby="headingTen" data-parent="#faq">
+						<div class="card-body">
+							<p>
+								Modern cable networks and all fiber telecom networks can
+								provide truly high-speed residential service. Most telecom
+								networks that offer DSL services cannot. Neither can cellular
+								networks or satellite networks. Only a few fixed wireless
+								networks can do so.
+							</p>
+						</div>
+					</div>
+				</div>
+				<!--Question 11-->
+				<div class="card">
+					<div class="card-header" id="headingEleven">
+						<h2 class="mb-0">
+							<button class="btn btn-link collapsed text-left" type="button" data-toggle="collapse" data-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+								How do I do a speed test? What time of day should I do a speed
+								test?
+							</button>
+						</h2>
+					</div>
+					<div id="collapseEleven" class="collapse" aria-labelledby="headingEleven" data-parent="#faq">
+						<div class="card-body">
+							<p>
+								Click on the link on the community website and follow the
+								instructions. You can also go directly to <a href="https://speed.measurementlab.net/" target="_blank">measurementlabs.net</a>
+								but this will not provide us with information to help evaluate
+								the overall service in the community. Ideally you should run the
+								test during the evening busy hour and then in the early morning
+								or late evening. The first will indicate the service you can
+								expect when many others in your community are using the service.
+								The second should be close to the maximum speed you can expect.
+							</p>
+						</div>
+					</div>
+				</div>
+				<!--Question 12-->
+				<div class="card">
+					<div class="card-header" id="headingTwelve">
+						<h2 class="mb-0">
+							<button class="btn btn-link collapsed text-left" type="button" data-toggle="collapse" data-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+								What are my options for improving my Internet service?
+							</button>
+						</h2>
+					</div>
+					<div id="collapseTwelve" class="collapse"
+						aria-labelledby="headingTwelve" data-parent="#faq">
+						<div class="card-body">
+							<p>Once you know what your provider claims to offer and what
+								your actual upload and download speeds are, you can communicate
+								with your provider about improved service performance or begin
+								looking for alternative service providers in your area.</p>
+							<p>You can also encourage your friends and neighbors to take
+								the speed test. When talking with internet service providers,
+								there is often strength in numbers.</p>
+						</div>
+					</div>
+				</div>
+				<!--Question 13-->
+				<div class="card">
+					<div class="card-header" id="headingThirteen">
+						<h2 class="mb-0">
+							<button class="btn btn-link collapsed text-left" type="button" data-toggle="collapse" data-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
+								How do I determine if my home network is one of the reasons my Internet service is too slow?
+							</button>
+						</h2>
+					</div>
+					<div id="collapseThirteen" class="collapse" aria-labelledby="headingThirteen" data-parent="#faq">
+						<div class="card-body">
+							<p>There should be a port on the modem provided by your
+								service provider that you can plug your computer directly into.
+								Run the speed test by directly plugging your PC into that port.
+								Make sure nobody else in you home is using the network at the
+								same time.</p>
+							<p>Also, make sure nobody is using the microwave oven if your
+								microwave is close to you WiFi router. Many modern microwaves
+								use the same frequency as your WiFi router.</p>
+						</div>
+					</div>
+				</div>
+				<!--Question 14-->
+				<div class="card">
+					<div class="card-header" id="headingFourteen">
+						<h2 class="mb-0">
+							<button class="btn btn-link collapsed text-left" type="button" data-toggle="collapse" data-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
+								I have heard that delay (also referred to as latency) can be a
+								problem with satellite service. What does delay mean and will
+								that be a problem for me?
+							</button>
+						</h2>
+					</div>
+					<div id="collapseFourteen" class="collapse" aria-labelledby="headingFourteen" data-parent="#faq">
+						<div class="card-body">
+							<p>
+								Delay is the time that it takes for the bits of
+								information or data to get across the network and back. Delay is
+								typically measured in milliseconds (msec) or 1/1000th of a
+								second. Two-way applications, such as conferencing, are
+								sensitive to delay. Minimal delay is also very important in
+								interactive gaming applications. For today’s Internet access, 20
+								msec is excellent. Most applications can tolerate delay of two
+								to three times this length without an adverse effect.
+							</p>
+						</div>
+					</div>
+				</div>
+				<!--Question 15-->
+				<div class="card">
+					<div class="card-header" id="headingFifteen">
+						<h2 class="mb-0">
+							<button class="btn btn-link collapsed text-left" type="button" data-toggle="collapse" data-target="#collapseFifteen" aria-expanded="false" aria-controls="collapseFifteen">
+								Why is satellite service insufficient?
+							</button>
+						</h2>
+					</div>
+					<div id="collapseFifteen" class="collapse" aria-labelledby="headingFifteen" data-parent="#faq">
+						<div class="card-body">
+							<p>
+								The delay with any satellite service today is several
+								hundred msecs. This is due to the time it takes for a signal to
+								reach the satellite, which today is about 25,000 miles above the
+								earth, and return. This delay is far too long for two-way
+								applications and gaming.
+							</p>
+						</div>
+					</div>
+				</div>
+				<!-- Question 16
+      <div class="card">
+        <div class="card-header" id="headingSixteen">
+          <h2 class="mb-0">
+            <button class="btn btn-link collapsed text-left" type="button" data-toggle="collapse" data-target="#collapseSixteen" aria-expanded="false" aria-controls="collapseSixteen"> What are the different Internet service options in my community? What are the features of each? </button>
+          </h2>
+        </div>
+        <div id="collapseSixteen" class="collapse" aria-labelledby="headingSixteen" data-parent="#faq">
+          <div class="card-body"> You can check providers in your area through <a href="https://internetprovidersbyzip.com" target="_blank">internetprovidersbyzip.com</a> or <a href="https://www.whistleout.com/" target="_blank">whistleout.com</a>. You can view more information on service providers on our <a href="providers.html">Providers</a> page.</p>
+          </div>
+        </div>
+      </div>
+      -->
+				<!--Question 17-->
+				<div class="card">
+					<div class="card-header" id="headingSeventeen">
+						<h2 class="mb-0">
+							<button class="btn btn-link collapsed text-left" type="button" data-toggle="collapse" data-target="#collapseSeventeen" aria-expanded="false" aria-controls="collapseSeventeen">
+								Why shouldn’t I just wait for 5G?
+							</button>
+						</h2>
+					</div>
+					<div id="collapseSeventeen" class="collapse" aria-labelledby="headingSeventeen" data-parent="#faq">
+						<div class="card-body">
+							<p>The infrastructure for new cellular networks takes 10 to
+								20 years to roll-out nationwide, particularly to non-urban areas
+								such as Western NC. Truly high-speed 5G Internet service
+								requires the user to be really close to a new or newly
+								modernized cell site, particularly if the user is trying to
+								access the service from inside a home or office. Cellular signal
+								strength is much weaker inside buildings. Therefore, 5G will
+								require increasing the number of cell sites in our area by at
+								least one hundred-fold. Thus, the new 5G infrastructure will
+								first require fiber along all major streets and most secondary
+								streets to connect to the vastly greater number of cell sites.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<?php include("http://www.wncbroadband.org/includes/footer.php");?>
+
+</html>
