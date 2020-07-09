@@ -5,7 +5,7 @@
  	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   	<meta name="description" content="">
   	<meta name="author" content="">
-  	<title>WNC Broadband Project | FAQ</title>
+  	<title>WNC Broadband Project | Donate </title>
   	<!-- Bootstrap core CSS -->
   	<link href="http://wncbroadband.org/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   	<!-- JQuery -->
