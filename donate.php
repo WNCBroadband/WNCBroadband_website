@@ -24,6 +24,10 @@
 <body>
 
 	<!-- Navigation -->
+	<script>
+// 		var navid = "broadband101";
+	</script>
+	
 	<?php include("http://www.wncbroadband.org/includes/nav_main_core.php");?>
 
  	<!-- Page Content -->

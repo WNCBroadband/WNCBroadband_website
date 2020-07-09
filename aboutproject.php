@@ -5,20 +5,20 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="">
 	<meta name="author" content="">
- 	<title>WNC Broadband Project | About</title>
-  	<!-- Bootstrap core CSS -->
-  	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<!-- JQuery -->
-	<script src="js/jquery.min.js"></script> 
+	<title>WNC Broadband Project | About</title>
 	<!-- Bootstrap core CSS -->
-	<link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="https://wncbroadband.org/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<!-- JQuery -->
+	<script src="https://wncbroadband.org/vendor/jquery/jquery.min.js"></script> 
+	<!-- Bootstrap core CSS -->
+	<link href="https://wncbroadband.org/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 	<!-- Custom fonts for this template -->
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 	<!--Site Stylesheet-->
-	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link href="https://wncbroadband.org/css/style.css" rel="stylesheet" type="text/css">
 	<!-- Bootstrap core JavaScript -->
-  	<script src="vendor/jquery/jquery.slim.min.js"></script>
- 	<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="https://wncbroadband.org/vendor/jquery/jquery.slim.min.js"></script>
+	<script src="https://wncbroadband.org/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
 
