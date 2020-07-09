@@ -7,54 +7,28 @@
 	<meta name="author" content="">
 	<title>WNC Broadband Project | Broadband 101</title>
 	<!-- Bootstrap core CSS -->
-	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://wncbroadband.org/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<!-- JQuery -->
-	<script src="js/jquery.min.js"></script> 
+	<script src="https://wncbroadband.org/vendor/jquery/jquery.min.js"></script> 
 	<!-- Bootstrap core CSS -->
-	<link href="vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+	<link href="https://wncbroadband.org/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 	<!-- Custom fonts for this template -->
 	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 	<!--Site Stylesheet-->
-	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link href="https://wncbroadband.org/css/style.css" rel="stylesheet" type="text/css">
 	<!-- Bootstrap core JavaScript -->
-	<script src="vendor/jquery/jquery.slim.min.js"></script>
-	 <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="https://wncbroadband.org/vendor/jquery/jquery.slim.min.js"></script>
+	 <script src="https://wncbroadband.org/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
 
 	<!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dblue fixed-top stroke">
-    <div class="container">
-      <a class="navbar-brand" href="https://wncbroadband.org/blog/">
-        <img src="img/wncbroadbandlogo.png" width="100px" alt="WNC Broadband Project Logo Image and Link">
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="https://wncbroadband.org/blog/">Home</a>
-          </li>
-          <li class="nav-item"><a class="nav-link" href="aboutproject.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="broadband101.html">Broadband 101</a>
-          </li>
-           <li class="nav-item">
-            <a class="nav-link" href="https://wncbroadband.org/blog/community-initiatives/">Community Initiatives</a>
-          </li>
-           <li class="nav-item">
-            <a class="nav-link" href="https://wncbroadband.org/blog/advocacy/">Actions We Can Take</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://wncbroadband.org/blog/blog/">News</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+	<script>
+ 		var navid = "broadband101";
+//  	makes "Broadband 101" link active in nav
+	</script>
+	<?php include("http://www.wncbroadband.org/includes/nav_main_core.php");?>
 
 	<!-- Page Content -->
 	<section class="header bg-broad pt-5">  
