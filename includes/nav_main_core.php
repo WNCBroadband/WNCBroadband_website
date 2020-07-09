@@ -9,26 +9,40 @@
       	<div class="collapse navbar-collapse" id="navbarResponsive">
           	<ul class="navbar-nav ml-auto">
             	<li class="nav-item">
-                	<a class="nav-link" href="https://wncbroadband.org/blog/">Home</a>
-              	</li>
-              	<li class="nav-item"><a class="nav-link" href="https://wncbroadband.org/aboutproject.php">About</a>
+                	<a id="navid-home" class="nav-link" href="https://wncbroadband.org/blog/">Home</a>
               	</li>
               	<li class="nav-item">
-                	<a class="nav-link" href="https://wncbroadband.org/broadband101.php">Broadband 101</a>
-              	</li>
-               	<li class="nav-item">
-                	<a class="nav-link" href="https://wncbroadband.org/blog/community-initiatives/">Community Initiatives</a>
-              	</li>
-               	<li class="nav-item">
-                	<a class="nav-link" href="https://wncbroadband.org/blog/advocacy/">Actions We Can Take</a>
+              		<a id="navid-about" class="nav-link" href="https://wncbroadband.org/aboutproject.php">About</a>
               	</li>
               	<li class="nav-item">
-                	<a class="nav-link" href="https://wncbroadband.org/blog/blog/">News</a>
+                	<a id="navid-broadband101"  class="nav-link" href="https://wncbroadband.org/broadband101.php">Broadband 101</a>
+              	</li>
+               	<li class="nav-item">
+                	<a id="navid-communityinitiatives" class="nav-link" href="https://wncbroadband.org/blog/community-initiatives/">Community Initiatives</a>
+              	</li>
+               	<li class="nav-item">
+                	<a id="navid-actionswecantake" class="nav-link" href="https://wncbroadband.org/blog/advocacy/">Actions We Can Take</a>
+              	</li>
+              	<li class="nav-item">
+                	<a id="navid-news" class="nav-link" href="https://wncbroadband.org/blog/blog/">News</a>
               	</li>
             </ul>
     	</div>
 	</div>
 </nav>
+
+
+
+<script>
+// This gives current page "active" class in the header (text is white).
+$(function(){
+	if(navid != undefined){
+		var activeLink;
+		activeLink = ("navid-"+navid);
+		document.getElementById(activeLink).classList.add("active");
+	}		
+});
+</script>
 
 <!-- add "active" class any to nav-link item for it to be white. For instance: -->
 <!-- <a class="nav-link active" href="broadband101.html">Broadband 101</a> -->
