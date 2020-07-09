@@ -223,7 +223,7 @@ include('../../db.php');
           			<br><br>
           			<div class="q-break"></div><br>
             		<h4>10&#41; There are major issues in broadband delivery concerning where broadband is available and what the actual speeds are delivered by providers. We are working on ways to determine the speeds in your area. Please help us by using the following speed test</h4><br>
-            		<p>click here for information on how to make your speedtest more accurate</p>
+            		<p>click here for information on how to make your speedtest more accurate</p><br>
 					
 					<div id="speedtestArea">
 						<?php include "speedtest.php"?>
@@ -262,10 +262,10 @@ include('../../db.php');
                         <table class="table table-bordered table-sm">
                           <thead class="thead-light">
                             <tr>
-                              <th scope="col">Check email</th>
-                              <th scope="col">Stream HD content</th>
-                              <th scope="col">Stream 4K content and play competitive online games</th>
-                              <th scope="col">Stream 4K content, play online games, and download very large files</th>
+                              <th scope="col">Check email, Basic web browsing</th>
+                              <th scope="col">Stream HD content, Video conferencing, Online gaming</th>
+                              <th scope="col">Stream 4K content, Multiple users/devices</th>
+                              <th scope="col">Large file sharing</th>
                             </tr>
                           </thead>
                           <tbody>
@@ -277,6 +277,7 @@ include('../../db.php');
                             </tr>
                           </tbody>
                         </table>
+                        <small>A green check mark means your speed is fast enough for the associated capabilities</small>
                      </div>
           			<br><br>
           			<div class="q-break"></div><br>
