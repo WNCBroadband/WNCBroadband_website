@@ -7,18 +7,18 @@
   	<meta name="author" content="">
   	<title>WNC Broadband Project | Donate </title>
   	<!-- Bootstrap core CSS -->
-  	<link href="http://wncbroadband.org/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  	<link href="https://wncbroadband.org/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   	<!-- JQuery -->
-  	<script src="http://wncbroadband.org/vendor/jquery/jquery.min.js"></script> 
+  	<script src="https://wncbroadband.org/vendor/jquery/jquery.min.js"></script> 
   	<!-- Bootstrap core CSS -->
-  	<link href="http://wncbroadband.org/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+  	<link href="https://wncbroadband.org/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
   	<!-- Custom fonts for this template -->
   	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
   	<!--Site Stylesheet-->
-  	<link href="http://wncbroadband.org/css/style.css" rel="stylesheet" type="text/css">
+  	<link href="https://wncbroadband.org/css/style.css" rel="stylesheet" type="text/css">
     <!-- Bootstrap core JavaScript -->
-  	<script src="http://wncbroadband.org/vendor/jquery/jquery.slim.min.js"></script>
-  	<script src="http://wncbroadband.org/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>  
+  	<script src="https://wncbroadband.org/vendor/jquery/jquery.slim.min.js"></script>
+  	<script src="https://wncbroadband.org/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>  
 </head>
 
 <body>
