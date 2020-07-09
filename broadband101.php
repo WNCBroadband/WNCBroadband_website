@@ -18,7 +18,7 @@
 	<link href="https://wncbroadband.org/css/style.css" rel="stylesheet" type="text/css">
 	<!-- Bootstrap core JavaScript -->
 	<script src="https://wncbroadband.org/vendor/jquery/jquery.slim.min.js"></script>
-	 <script src="https://wncbroadband.org/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="https://wncbroadband.org/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
