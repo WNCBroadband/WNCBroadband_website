@@ -23,38 +23,11 @@
 <body>
 
   <!-- Navigation -->
-  	<nav class="navbar navbar-expand-lg navbar-dark bg-dblue fixed-top stroke">
-		<div class="container">
-	    	<a class="navbar-brand" href="https://wncbroadband.org/blog/">
-	        	<img src="img/wncbroadbandlogo.png" width="100px" alt="WNC Broadband Project Logo Image and Link">
-	    	</a>
-	    	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-	      		<span class="navbar-toggler-icon"></span>
-	      	</button>
-	      	<div class="collapse navbar-collapse" id="navbarResponsive">
-	          	<ul class="navbar-nav ml-auto">
-	            	<li class="nav-item">
-	                	<a class="nav-link" href="https://wncbroadband.org/blog/">Home</a>
-	              	</li>
-	              	<li class="nav-item">
-	              		<a class="nav-link active" href="aboutproject.html">About</a>
-	              	</li>
-	              	<li class="nav-item">
-	                	<a class="nav-link" href="broadband101.html">Broadband 101</a>
-	              	</li>
-	               	<li class="nav-item">
-	                	<a class="nav-link" href="https://wncbroadband.org/blog/community-initiatives/">Community Initiatives</a>
-	              	</li>
-	               	<li class="nav-item">
-	                	<a class="nav-link" href="https://wncbroadband.org/blog/advocacy/">Actions We Can Take</a>
-	              	</li>
-	              	<li class="nav-item">
-	                	<a class="nav-link" href="https://wncbroadband.org/blog/blog/">News</a>
-	              	</li>
-	            </ul>
-	    	</div>
-		</div>
-	</nav>
+  	<script>
+ 		var navid = "about";
+//  	makes "about" link active in nav
+	</script>
+	<?php include("http://www.wncbroadband.org/includes/nav_main_core.php");?>
 
 	<!-- Page Content -->
 	<section class="header bg-broad pt-5">  
