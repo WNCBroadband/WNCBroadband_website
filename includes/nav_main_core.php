@@ -36,7 +36,7 @@
 <script>
 // This gives current page "active" class in the header (text is white).
 $(function(){
-	if(navid != undefined){
+	if(window.navid){
 		var activeLink;
 		activeLink = ("navid-"+navid);
 		document.getElementById(activeLink).classList.add("active");
