@@ -9,7 +9,7 @@
   	<!-- Bootstrap core CSS -->
   	<link href="http://wncbroadband.org/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   	<!-- JQuery -->
-  	<script src="http://wncbroadband.org/js/jquery.min.js"></script> 
+  	<script src="http://wncbroadband.org/vendor/jquery/jquery.min.js"></script> 
   	<!-- Bootstrap core CSS -->
   	<link href="http://wncbroadband.org/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
   	<!-- Custom fonts for this template -->
