@@ -193,14 +193,14 @@ function insert_survey_question_response($survey_id, $question_id, $response_id,
     return $conn->affected_rows;
 }
 
-function insert_self_reported_speed_test($response_id){
+function insert_speed_test($response_id){
     global $conn;
     $uuid = $_GET['uuid'];
     list($speedtest,$report_type,$up_down) = explode("__",$_GET['name']);
 
-    if(empty($uuid)){ echo "insert_self_reported_speed_test() no uuid";return;}
-    if(empty($report_type)){ echo "insert_self_reported_speed_test() no report_type";return;}
-    if(empty($up_down)){ echo "insert_self_reported_speed_test() no up_down";return;}
+    if(empty($uuid)){ echo "insert_speed_test() no uuid";return;}
+    if(empty($report_type)){ echo "insert_speed_test() no report_type";return;}
+    if(empty($up_down)){ echo "insert_speed_test() no up_down";return;}
 
     $sql1 = "select id from Responses_speed_data where UUID = ? and report_type = ?";
     $sql2 = "insert into Responses_speed_data (ip_address,response_id, UUID, report_type) values (?,?,?,?)";
@@ -227,9 +227,27 @@ function insert_self_reported_speed_test($response_id){
         $stmt2->bind_param("siss",$_SERVER['REMOTE_ADDR'],$response_id,$uuid,$report_type);
         $stmt2->execute();
         if($conn->error){
-            echo "DB Error inserting Responses_speed_data: ".$conn->error."\n";
-            echo "insert Responses_speed_data(".$_SERVER['REMOTE_ADDR'].",$response_id,$uuid)\n";
-            exit();
+            // Race condition here, try inserting again
+            $stmt1_b = $conn->prepare($sql1);
+            $stmt1_b->bind_param("ss",$uuid,$report_type);
+            $stmt1_b->execute();
+            if($conn->error){
+                echo "DB Error inserting Responses_speed_data: ".$conn->error."\n";
+                echo "insert Responses_speed_data(".$_SERVER['REMOTE_ADDR'].",$response_id,$uuid)\n";
+                exit();
+            }
+            $result1_b = $stmt1_b->get_result();
+            if($result1->num_rows > 0){
+                $row = $result1->fetch_assoc();
+                echo "Found  Responses_speed_data id=$id for UUID=$uuid and report_type=$report_type\n";
+                $id = $row['id'];
+            }
+            if(!isset($id)){
+                echo "DB Error inserting Responses_speed_data (could not select after insert): ".$conn->error."\n";
+                echo "insert Responses_speed_data(".$_SERVER['REMOTE_ADDR'].",$response_id,$uuid)\n";
+                exit();
+            }
+
         }
         $id = $conn->insert_id;
         echo "inserted into Responses_speed_data id=$id for (".$_SERVER['REMOTE_ADDR'].",$response_id,$uuid,$report_type)\n";
@@ -271,7 +289,7 @@ if(isset($_GET['survey_id'])){
 
 
     if(startsWith($_GET['name'],'SPEEDTEST__')){
-            insert_self_reported_speed_test($response_id);                   
+            insert_speed_test($response_id);                   
     }else if($_GET['name']!="comments"){
 
         $question_id = get_question($_GET['name']);
