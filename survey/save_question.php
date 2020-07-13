@@ -28,6 +28,14 @@ function get_response($survey_id){
         echo "calling insert_response($survey_id)\n";
         $response_id = insert_response($survey_id);
         echo "Inserted response_id=".$response_id."\n";
+        if(is_null($response_id)){
+            // Race condition, try to select again
+            $response_id = select_response();
+            if(is_null($response_id)){
+                echo "Error: get_response(): select/insert/select did not work";
+                exit;
+            }
+        }
     }else{
         echo "Found response_id=".$response_id."\n";
     }
@@ -69,7 +77,7 @@ function update_response_comments($response_id){
     $stmt->bind_param("si",$_GET['value'],$response_id);
     $stmt->execute();
     if($conn->error){
-        echo "DB Error inserting response: ".$conn->error."\n";
+        echo "update_response_comments(): DB Error inserting response: ".$conn->error."\n";
     }else{
         echo "Updated response: comments\n";
     }
@@ -82,7 +90,7 @@ function update_response_geoip($response_id){
     $stmt->bind_param("ssi", $_GET['geoip_latitude'], $_GET['geoip_longitude'],$response_id);
     $stmt->execute();
     if($conn->error){
-        echo "DB Error inserting response: ".$conn->error."\n";
+        echo "update_response_geoip(): DB Error inserting response: ".$conn->error."\n";
     }else{
         echo "updated response: geoip\n";
     }
@@ -99,14 +107,14 @@ function update_response_address($response_id){
             $sql = "UPDATE Responses set $dbname=?  where id = ?";
             $stmt = $conn->prepare($sql);
             if(!$stmt){
-                echo "DB Error inserting response: ".$conn->error."\n";
+                echo "update_response_address(): DB Error inserting response: ".$conn->error."\n";
                 echo "SQL: $sql\n";
                 exit();
             }
             $stmt->bind_param("si",$_GET['value'], $response_id);
             $stmt->execute();
             if($conn->error){
-                echo "DB Error inserting response: ".$conn->error."\n";
+                echo "update_response_address(): DB Error inserting response: ".$conn->error."\n";
                 exit();
             }else{
                 echo "Updated response: $name\n";
@@ -120,14 +128,14 @@ function insert_response($survey_id){
     $sql1 = "insert into Responses (survey_id, ip_address, uuid, HTTP_USER_AGENT) values(?,?,?,?)";
     $stmt = $conn->prepare($sql1);
     if(!$stmt){
-        echo "DB Error inserting response: ".$conn->error."\n";
-        exit;
+        echo "insert_response(): DB Error inserting response: ".$conn->error."\n";
+        return NULL;
     }
     $stmt->bind_param("isss", $survey_id, $_SERVER['REMOTE_ADDR'],$_GET['uuid'], $_SERVER['HTTP_USER_AGENT'] );
     $stmt->execute();
     if ($conn->error) {
         echo "DB Error inserting response: ".$conn->error."\n";
-        exit;
+        return NULL;
     }
     $response_id = $conn->insert_id;
     return $response_id;
@@ -227,7 +235,7 @@ function insert_speed_test($response_id){
         $stmt2->bind_param("siss",$_SERVER['REMOTE_ADDR'],$response_id,$uuid,$report_type);
         $stmt2->execute();
         if($conn->error){
-            // Race condition here, try inserting again
+            // Race condition here, try selecting again
             $stmt1_b = $conn->prepare($sql1);
             $stmt1_b->bind_param("ss",$uuid,$report_type);
             $stmt1_b->execute();
@@ -237,10 +245,10 @@ function insert_speed_test($response_id){
                 exit();
             }
             $result1_b = $stmt1_b->get_result();
-            if($result1->num_rows > 0){
-                $row = $result1->fetch_assoc();
-                echo "Found  Responses_speed_data id=$id for UUID=$uuid and report_type=$report_type\n";
+            if($result1_b->num_rows > 0){
+                $row = $result1_b->fetch_assoc();
                 $id = $row['id'];
+                echo "Found Responses_speed_data id=$id for UUID=$uuid and report_type=$report_type\n";
             }
             if(!isset($id)){
                 echo "DB Error inserting Responses_speed_data (could not select after insert): ".$conn->error."\n";
@@ -248,9 +256,10 @@ function insert_speed_test($response_id){
                 exit();
             }
 
+        }else{
+            $id = $conn->insert_id;
+            echo "inserted into Responses_speed_data id=$id for (".$_SERVER['REMOTE_ADDR'].",$response_id,$uuid,$report_type)\n";
         }
-        $id = $conn->insert_id;
-        echo "inserted into Responses_speed_data id=$id for (".$_SERVER['REMOTE_ADDR'].",$response_id,$uuid,$report_type)\n";
     }
     if($up_down == 'download'){
         $stmt3 = $conn->prepare($sql3);
