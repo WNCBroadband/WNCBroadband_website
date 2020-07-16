@@ -63,7 +63,7 @@
     			<li>Engaging WNC students</li>
     			<li>Improving broadband access</li>
     		</ul>
-    		<a class="btn btn-primary mb-5" href="https://wncbroadband.org/donate.php">Donate Today &gt;</a>		
+    		<a class="btn btn-primary mb-5" href="https://wncbroadband.org/donate.php">Donate Today &gt;</a>	 	
 		</div>
 	</section>
 	
@@ -109,7 +109,7 @@
 <!--   		</div> -->
 <!-- 	</section> -->
 
-
+ 
 	<?php include("http://www.wncbroadband.org/includes/footer.php");?>
 </body>
 </html>
