@@ -41,22 +41,21 @@
   		</div>
 	</section>
 	
-	<section class="p-5">
-		<div class="container">
-	  		<h2>How to donate</h2>
-	  		<p class="lead">Leading information about donating</p>
-	  		<p>More detailed information about donating.</p>
-	  		<a class="btn btn-primary mb-5" href="https://wncbroadband.org/blog/contact/">Button link somewhere &gt;</a>
-	  		&nbsp;&nbsp;&nbsp;
-	  		<a class="btn btn-primary mb-5" href="https://wncbroadband.org/blog/advisory/">Button link somewhere else &gt;</a>
-		</div>
-	</section>
+<!-- 	<section class="p-5"> -->
+<!-- 		<div class="container"> -->
+<!-- 	  		<h2>How to donate</h2> -->
+<!-- 	  		<p class="lead">Leading information about donating</p> -->
+<!-- 	  		<p>More detailed information about donating.</p> -->
+<!-- 	  		<a class="btn btn-primary mb-5" href="https://wncbroadband.org/blog/contact/">Button link somewhere &gt;</a> -->
+<!-- 	  		&nbsp;&nbsp;&nbsp; -->
+<!-- 	  		<a class="btn btn-primary mb-5" href="https://wncbroadband.org/blog/advisory/">Button link somewhere else &gt;</a> -->
+<!-- 		</div> -->
+<!-- 	</section> -->
 	
 	<section class="p-5">
     	<div class="container">
-    		<h2>Donate today</h2>
-    		<p class="lead">Financial Donations</p>
-    		<p>Donate today to the WNC Broadband Project, a member of the UNCA Foundation.</p>
+    		<h2>Financial Donations</h2>
+    		<p class="lead">Donate today to the WNC Broadband Project, a member of the UNCA Foundation.</p>
     		<p>Your financial support helps Western North Carolina by:</p>
     		<ul>
     			<li>Reducing the digital divide</li>
