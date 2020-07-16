@@ -63,7 +63,7 @@
     			<li>Engaging WNC students</li>
     			<li>Improving broadband access</li>
     		</ul>
-    		<a class="btn btn-primary mb-5" href="https://wncbroadband.org/donate.php">Donate Today &gt;</a>	 	
+    		<a class="btn btn-primary mb-5" href="#">Donate Today &gt;</a>	 	
 		</div>
 	</section>
 	
@@ -73,7 +73,7 @@
 			<p>Goodwill of Western North Carolina has a partnership with Dell Reconnect in which they are able to recycle 100% of donated electronics, including printers and computer peripherals.</p>
 			
 			<p>Dell Reconnect is opetated in partnership between Dell and Goodwill, providing free drop-off recycling to allow consumers to responsibly recycle any brand of used computer equipment, in any condition, at more than 2,000 participating Goodwill locations in the U.S.</p>
-			<p>Recent model computers are refurbished and resold, giving local families a change to buy coputers and other hardware at a great price while providing revenue for Goodwill's employment and training services</p>
+			<p>Recent model computers are refurbished and resold, giving local families a change to buy computers and other hardware at a great price while providing revenue for Goodwill's employment and training services</p>
 			<p>Some computers may require extra preparation before they are donated, so remember to remove your personal data from hard drives or other storage media before bringing your equipment to Goodwill</p>
 			<p>Learn more about the Dell Reconnect program by visiting <a href="http://www.goodwillpc.org" target="_blank">www.goodwillpc.org</a></p>
 		</div>
