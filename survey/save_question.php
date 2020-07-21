@@ -230,18 +230,24 @@ function insert_speed_test($response_id){
         echo "Found  Responses_speed_data id=$id for UUID=$uuid and report_type=$report_type\n";
         $id = $row['id'];
     }
-    if(!isset($id)){
+    if(is_null($id)){
+        echo "Inserting into Responses_speed_data.\n";
         $stmt2 = $conn->prepare($sql2);
         $stmt2->bind_param("siss",$_SERVER['REMOTE_ADDR'],$response_id,$uuid,$report_type);
         $stmt2->execute();
-        if($conn->error){
+        if(!$conn->error){
+            $id = $conn->insert_id;
+            echo "inserted into Responses_speed_data id=$id for (".$_SERVER['REMOTE_ADDR'].",$response_id,$uuid,$report_type)\n";
+        }
+        if(is_null($id)){
+            echo "Could not insert into Responses_speed_data, selecting again\n";
             // Race condition here, try selecting again
             $stmt1_b = $conn->prepare($sql1);
             $stmt1_b->bind_param("ss",$uuid,$report_type);
             $stmt1_b->execute();
             if($conn->error){
                 echo "DB Error inserting Responses_speed_data: ".$conn->error."\n";
-                echo "insert Responses_speed_data(".$_SERVER['REMOTE_ADDR'].",$response_id,$uuid)\n";
+                echo "select from Responses_speed_data(".$_SERVER['REMOTE_ADDR'].",$response_id,$uuid)\n";
                 exit();
             }
             $result1_b = $stmt1_b->get_result();
@@ -256,9 +262,6 @@ function insert_speed_test($response_id){
                 exit();
             }
 
-        }else{
-            $id = $conn->insert_id;
-            echo "inserted into Responses_speed_data id=$id for (".$_SERVER['REMOTE_ADDR'].",$response_id,$uuid,$report_type)\n";
         }
     }
     if($up_down == 'download'){
@@ -270,7 +273,7 @@ function insert_speed_test($response_id){
             echo "insert Responses_speed_data.download=".$_GET['value']."\n";
             exit();
         }
-        echo "Updated ".$conn->affected_rows." rows into Responses_speed_data, download=".$_GET['value']."\n";
+        echo "Updated ".$conn->affected_rows." rows into Responses_speed_data.id=$id, download=".$_GET['value']."\n";
     }
     if($up_down == 'upload'){
         $stmt4 = $conn->prepare($sql4);
@@ -281,7 +284,7 @@ function insert_speed_test($response_id){
             echo "insert Responses_speed_data.upload=".$_GET['value']."\n";
             exit();
         }
-        echo "Updated ".$conn->affected_rows." rows into Responses_speed_data, upload=".$_GET['value']."\n";
+        echo "Updated ".$conn->affected_rows." rows into Responses_speed_data.id=$id, upload=".$_GET['value']."\n";
     }
 }
 
