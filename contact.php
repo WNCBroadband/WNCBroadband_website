@@ -160,7 +160,7 @@
 	<section class="pt-5 pb-5">
 		<div class="container contacts">
 			<h2>Advisory Committee</h2>
-			<p class="lead">View the list of Advisory Committee members <a href="advisory.html">here</a>.</p>
+			<p class="lead">View the list of Advisory Committee members <a href="https://wncbroadband.org/blog/advisory/">here</a>.</p>
 		</div>
 	</section>
 
