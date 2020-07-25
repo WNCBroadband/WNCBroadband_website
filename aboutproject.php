@@ -45,7 +45,7 @@
 	  		<h2>About the WNC Broadband Project</h2>
 	  		<p class="lead">The WNC Broadband Project aims to support communities interested in ensuring access to reliable, truly high-speed internet service.  The WNC Broadband Project develops tools to empower individuals, communities, and area leaders in advocating effectively for their digital needs.</p>
 	  		<p>The WNC Broadband Project was created to augment what WestNGN has done to promote broadband among governmental units. Involving many of the same people, the WNC Broadband Project aims to provide information, support neighborhoods interested in ensuring access to high-speed internet service and advocate for an inclusive broadband strategy. The WNC Broadband Project intends to develop tools to empower individuals, communities, and area leaders to achieve area coverage and inclusiveness.</p>
-	  		<a class="btn btn-primary mb-5" href="https://wncbroadband.org/blog/contact/">WNC Broadband Project Team &gt;</a>
+	  		<a class="btn btn-primary mb-5" href="https://wncbroadband.org/contact.php">WNC Broadband Project Team &gt;</a>
 	  		&nbsp;&nbsp;&nbsp;
 	  		<a class="btn btn-primary mb-5" href="https://wncbroadband.org/blog/advisory/">WNC Broadband Advisory Board &gt;</a>
 	  		<!--<h4>WNC Broadband Project Links</h4>
