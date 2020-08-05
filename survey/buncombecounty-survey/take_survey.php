@@ -73,7 +73,7 @@ include('../../db.php');
                 	}
             	}
           };
-          xhttp.open("GET", "../save_question.php?uuid="+uuid+"&name="+this.name+"&value="+this.value+"&survey_id=4&type="+this.type,true);
+          xhttp.open("GET", "../save_question.php?uuid="+uuid+"&name="+this.name+"&value="+this.value+"&survey_id=5&type="+this.type,true);
           xhttp.send();
           update_geo();
         }
@@ -154,12 +154,12 @@ include('../../db.php');
 					</script>
                     <?                    
                     //Populate Questions From Database
-                    echo '<INPUT type="hidden" name="survey_id" value="1">';
+                    echo '<INPUT type="hidden" name="survey_id" value="5">';
                     
                     $sql = "
                     SELECT q.display_html as 'html' 
                     FROM Question q, Survey s, Survey_Questions sq
-                    WHERE s.id = 1
+                    WHERE s.id = 5
                       AND sq.survey_id = s.id
                       AND sq.question_id = q.id
                     ORDER BY sq.display_order asc
@@ -205,7 +205,7 @@ include('../../db.php');
                           			console.log(this.responseText);
                         		}
                       		};
-                     		 xhttp.open("GET", "../save_question.php?uuid="+uuid+"&survey_id=4&geoip_latitude="+position.coords.latitude+"&geoip_longitude="+position.coords.longitude,true);
+                     		 xhttp.open("GET", "../save_question.php?uuid="+uuid+"&survey_id=5&geoip_latitude="+position.coords.latitude+"&geoip_longitude="+position.coords.longitude,true);
                       		xhttp.send();
                     	}
                     </script>
