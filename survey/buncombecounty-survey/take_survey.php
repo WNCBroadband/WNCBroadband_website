@@ -93,40 +93,7 @@ include('../../db.php');
     <!-- main navigation -->
 	<?php include("http://wncbroadband.org/includes/nav_main_survey.php");?>
 
-    <!-- Below is nav specific for biltmore lake -->
-	<nav class="navbar navbar-expand-md bg-lblue navbar-dark communitynav">
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar2" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        	<span class="navbar-toggler-icon"></span>
-      	</button>
- 		<div class="collapse navbar-collapse navbars" id="navbar2">
-        	<ul class="navbar-nav">
-        		<li class="nav-item">
-                    <a class="nav-link" href="../../biltmorelake/index.html">Biltmore Lake</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../../biltmorelake/aboutBiltmoreLake.html">About Community</a>
-                </li>
-                <li class="nav-item">
-                	<a class="nav-link active" href="../../biltmorelake/survey.html">Survey</a>
-                </li>
-                <li class="nav-item">
-                	<a class="nav-link" href="../../biltmorelake/providers.html">Service Providers</a>
-                </li>
-                <li class="nav-item">
-                	<a class="nav-link" href="../../biltmorelake/communitycontacts.html">Community Contacts</a>
-                </li>
-                <li class="nav-item dropdown">
-                	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Biltmore Lake Maps</a>
-                 	<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    	<li><a class="dropdown-item" href="../../biltmorelake/map/map.html">Speed Test Results</a></li>
-                    	<li><a class="dropdown-item" href="../../biltmorelake/map/map2.php">Services Offered</a></li>
-                   	</ul>
-             	</li>
-			</ul>
-    	</div>
-	</nav>
-  
- 	<section class="p-3"></section>
+   	<section class="p-3"></section>
  	<section class="showcase">
     	<div id="survey-bg" class="container-fluid p-5 row">
         	<div class="mx-auto col-lg-8">
