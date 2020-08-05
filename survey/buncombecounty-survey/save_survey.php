@@ -115,7 +115,7 @@ if(!empty($_POST['survey_id'])){
   <!-- Bootstrap core CSS -->
   <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- JQuery -->
-  <script src="../../js/jquery.min.js"></script> 
+  <script src="https://www.wncbroadband.org/vendor/js/jquery.min.js"></script> 
   <!-- Bootstrap core CSS -->
   <link href="../../vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
   <!-- Custom fonts for this template -->
