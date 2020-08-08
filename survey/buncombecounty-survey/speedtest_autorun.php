@@ -109,7 +109,7 @@ function I(id){return document.getElementById(id);}
 		color:#FFFFFF;
 	}
 	#startStopBtn:before{
-		content:"Start";
+		content:"Restart";
 	}
 	#startStopBtn.running:before{
 		content:"Abort";
@@ -196,7 +196,7 @@ function I(id){return document.getElementById(id);}
 </head>
 <body>
 <h3>Speed Test</h3>
-<!-- <div id="startStopBtn" onclick="startStop()"></div> -->
+<div id="startStopBtn" onclick="startStop()"></div>
 <h5>Speedtest runs continuously in the background and saves the best results.</h5>
 <h5>Below is the current speedtest in progress</h5>
 <div id="test">

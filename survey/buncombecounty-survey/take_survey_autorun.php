@@ -215,7 +215,7 @@ $( document ).ready(function() {
          	            		changeGraphic(down);  //this changes the green checkmark / red x graphic         	         
      	            		}
      	            		else{
-								console.log("latest down is less than old one. No changes.");
+								console.log("latest down is less than best result. No changes.");
          	            	}     	            		
      	            		if((up > document.getElementById("uptextbox").value) || (document.getElementById("uptextbox").value=="")){
          	            		console.log("better upload speed, changing textbox and calling onchange.");
@@ -223,7 +223,7 @@ $( document ).ready(function() {
      	            			document.getElementById('uptextbox').onchange();
      	            		}
      	            		else{
-     	            			console.log("latest up is less than told one. No changes.");
+     	            			console.log("latest up is less than best result. No changes.");
          	            	}
         	     		}
             	    </script>            
