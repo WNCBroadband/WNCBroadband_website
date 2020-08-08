@@ -9,7 +9,6 @@ include('../../db.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-164513870-1"></script>
@@ -33,11 +32,9 @@ include('../../db.php');
     <!-- Custom fonts for this template -->
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     <!--Site Stylesheet-->
-	<link href="../../css/style.css" rel="stylesheet" type="text/css">
-	
+	<link href="../../css/style.css" rel="stylesheet" type="text/css">	
 	<script src="../../vendor/jquery/jquery.slim.min.js"></script>
-	<script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-	
+	<script src="../../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>	
     <script>
         var response_id = -10;
         //Apply a Unique identifier for this page
@@ -91,41 +88,7 @@ include('../../db.php');
 
 <body onLoad="createOnLoad()">
     <!-- main navigation -->
-	<?php include("http://wncbroadband.org/includes/nav_main_survey.php");?>
-
-    <!-- Below is nav specific for biltmore lake -->
-	<nav class="navbar navbar-expand-md bg-lblue navbar-dark communitynav">
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar2" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        	<span class="navbar-toggler-icon"></span>
-      	</button>
- 		<div class="collapse navbar-collapse navbars" id="navbar2">
-        	<ul class="navbar-nav">
-        		<li class="nav-item">
-                    <a class="nav-link" href="../../biltmorelake/index.html">Biltmore Lake</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../../biltmorelake/aboutBiltmoreLake.html">About Community</a>
-                </li>
-                <li class="nav-item">
-                	<a class="nav-link active" href="../../biltmorelake/survey.html">Survey</a>
-                </li>
-                <li class="nav-item">
-                	<a class="nav-link" href="../../biltmorelake/providers.html">Service Providers</a>
-                </li>
-                <li class="nav-item">
-                	<a class="nav-link" href="../../biltmorelake/communitycontacts.html">Community Contacts</a>
-                </li>
-                <li class="nav-item dropdown">
-                	<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Biltmore Lake Maps</a>
-                 	<ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    	<li><a class="dropdown-item" href="../../biltmorelake/map/map.html">Speed Test Results</a></li>
-                    	<li><a class="dropdown-item" href="../../biltmorelake/map/map2.php">Services Offered</a></li>
-                   	</ul>
-             	</li>
-			</ul>
-    	</div>
-	</nav>
-  
+	<?php include("http://wncbroadband.org/includes/nav_main_survey.php");?>  
  	<section class="p-3"></section>
  	<section class="showcase">
     	<div id="survey-bg" class="container-fluid p-5 row">
@@ -297,22 +260,7 @@ include('../../db.php');
   
     <!-- Footer -->
 	<div class="separate"></div>
-	<?php include("http://www.wncbroadband.org/includes/footer.php");?>
-  
-    <!-- Script for only allowing two check boxes for Question 6 -->
-	<script>
-       /*
-       //This was integrated with the  onchange function defined above.
-        var limit = 3;
-      $('input.limited-checkbox').on('change', function(evt) {
-         if($(".limited-checkbox:checked").length >= limit) {
-           this.checked = false;
-           return false;
-         }
-      });
-      */
- 	</script>	
-	
+	<?php include("http://www.wncbroadband.org/includes/footer.php");?>  	
 	<script src="../speedtestslider.js"></script>  
     <script>
     //this script updates the red X's into green checks based on download speed parameter
