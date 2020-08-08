@@ -8,6 +8,19 @@ var myDLResult;
 var myULResult; 
 
 
+window.setInterval(startTest, 1000);
+
+function startTest(){
+	if (s.getState()==3){
+		console.log("interval: test is already running.");
+	}
+	else{
+		console.log("interval: test is not running. starting test.");
+		s.start();
+	}
+}
+
+
 s.onupdate=function(data){ //callback to update data in UI
     I("ip").textContent=data.clientIp;
     I("dlText").textContent=(data.testState==1&&data.dlStatus==0)?"...":data.dlStatus;
@@ -35,7 +48,6 @@ s.onend=function(aborted){ //callback for test ended/aborted
    		console.log("Final DL speed result is: "+ myDLResult);
     	console.log("Final UL speed result is: "+ myULResult);    
     	window.parent.getResults(myDLResult, myULResult);
-    	s.start(); 
     }
 }
 
@@ -46,7 +58,7 @@ function startStop(){ //start/stop button pressed
 	}else{
 		//test is not running, begin
 		s.start();
-		I("startStopBtn").className="running";
+		//I("startStopBtn").className="running";
 	}
 }
 
@@ -184,7 +196,9 @@ function I(id){return document.getElementById(id);}
 </head>
 <body>
 <h3>Speed Test</h3>
-<div id="startStopBtn" onclick="startStop()"></div>
+<!-- <div id="startStopBtn" onclick="startStop()"></div> -->
+<h5>Speedtest runs continuously in the background and saves the best results.</h5>
+<h5>Below is the current speedtest in progress</h5>
 <div id="test">
     <div id="progressBar"><div id="progress"></div></div>
 	<div class="testGroup">

@@ -199,7 +199,7 @@ $( document ).ready(function() {
             		<p>click here for information on how to make your speedtest more accurate</p><br>
 					
 					<div id="speedtestArea">
-						<?php include "speedtest.php"?>
+						<?php include "speedtest_autorun.php"?>
 					</div>
             
                 	<script type="text/javascript">
@@ -208,22 +208,27 @@ $( document ).ready(function() {
                  			console.log("getResults function was successfully called fom iframe to parent."); 
                 	 		console.log("download speed is: " + down);
      	            		console.log("upload speed is: " + up);
-     	            		changeGraphic(down);  //this changes the green checkmark / red x graphic
-     	            		if(down > document.getElementById("downtextbox".value)){
-         	            		console.log("latest download speed is greater, changing value in box and calling onchange.");
+     	            		if((down > document.getElementById("downtextbox").value) || (document.getElementById("downtextbox").value=="")){
+         	            		console.log("better download speed, changing textbox and calling onchange.");
      	            			document.getElementById("downtextbox").value=down;
          	            		document.getElementById('downtextbox').onchange();
+         	            		changeGraphic(down);  //this changes the green checkmark / red x graphic         	         
      	            		}
      	            		else{
-								console.log("latest downloadspeed is equal or less to old one. No changes.");
+								console.log("latest down is less than old one. No changes.");
          	            	}     	            		
-
-     	            		document.getElementById("uptextbox").value=up;
-     	            		document.getElementById('uptextbox').onchange();
+     	            		if((up > document.getElementById("uptextbox").value) || (document.getElementById("uptextbox").value=="")){
+         	            		console.log("better upload speed, changing textbox and calling onchange.");
+     	            			document.getElementById("uptextbox").value=up;
+     	            			document.getElementById('uptextbox').onchange();
+     	            		}
+     	            		else{
+     	            			console.log("latest up is less than told one. No changes.");
+         	            	}
         	     		}
             	    </script>            
             		<br><br>
-                    <h4>Your Results from the Speed Test:</h4>
+                    <h4>Your Best Results from the Speed Test:</h4>
 <!--                     <p>Drag the green circle on the slider to your download speed or type in the speed in the box below.</p> -->
                     <div class="slidecontainer">
 <!--               			<input id="downslider" name="SPEEDTEST__libre_speed-test__download" type="range" class="js-range-slider slider" min="1" max="200" step="0.1" value="1" data-rangeslider> -->
