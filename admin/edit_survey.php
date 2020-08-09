@@ -100,8 +100,10 @@ if(empty($_GET['survey_id'])){
                 $new_question_order = intval($new_question_order_txt);
                 $question_name = $_POST['question_name:NEW:'.$new_question_order];
                 echo "New Question ".$new_question_order."<BR>";
+                #echo "question_id_txt=$question_id_txt<BR>";
                 echo "question_name=$question_name<BR>";
-                if(empty($_POST['question_name:'.$question_id])){
+                #echo "value=$value<BR>";
+                if(empty($_POST['question_name:'.$question_id_txt])){
                     echo "Error inserting new question: name is empty<BR>";
                     continue;
                 }
