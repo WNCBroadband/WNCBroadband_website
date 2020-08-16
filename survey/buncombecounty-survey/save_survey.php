@@ -161,7 +161,7 @@ if ($saved_geoip_latitude==0 || $saved_geoip_longitude == 0){
 </script>
 
 
-	<?php include("http://www.wncbroadband.org/includes/nav_main_survey.php");?>
+	<?php include("http://www.wncbroadband.org/includes/nav_main_core.php");?>
 
     <!-- Page Content -->
 	<section class="p-3"></section>
