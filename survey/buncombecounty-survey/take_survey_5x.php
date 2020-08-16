@@ -142,7 +142,7 @@ include('../../db.php');
 					<br>
           			<br>
           			<div class="q-break"></div><br>
-            		<h4>9&#41; We are constructing a map of broadband speeds in the neighborhood. Would you be willing to provide your address for us to display the speed of your internet service on the map? (We will not sell any data).</h4><br>
+            		<h4>10&#41; We are constructing a map of broadband speeds in the neighborhood. Would you be willing to provide your address for us to display the speed of your internet service on the map? (We will not sell any data).</h4><br>
                     <script>
                     	function getLocation() {
                       		if (navigator.geolocation) {
@@ -182,7 +182,7 @@ include('../../db.php');
                     </DIV>
           			<br><br>
           			<div class="q-break"></div><br>
-            		<h4>10&#41; There are major issues in broadband delivery concerning where broadband is available and what the actual speeds are delivered by providers. We are working on ways to determine the speeds in your area. Please help us by using the following speed test</h4><br>
+            		<h4>11&#41; There are major issues in broadband delivery concerning where broadband is available and what the actual speeds are delivered by providers. We are working on ways to determine the speeds in your area. Please help us by using the following speed test</h4><br>
             		<p><a href="https://wncbroadband.org/blog/speedtest-best-practices/" target="_blank">click here for information on how to get a more accurate speed test</a></p><br>
 					
 					<div id="speedtestArea">
