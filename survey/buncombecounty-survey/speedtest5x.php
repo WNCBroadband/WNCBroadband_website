@@ -72,15 +72,14 @@ function I(id){return document.getElementById(id);}
 </script>
 
 <style type="text/css">
-	#speedtest{
-		text-align:center;
-		font-family:"Roboto",sans-serif;
-			border:none; padding:0; margin:0;
+	#speedtest{		
 		background:#FFFFFF;
+		border:none; 
 		color:#202020;
-	}
-	h1{
-		color:#404040;
+		font-family:"Roboto",sans-serif;
+	    margin:0;	    
+		padding:0; 
+		text-align:center;
 	}
 	#startStopBtn{
 		display:inline-block;
@@ -157,12 +156,12 @@ function I(id){return document.getElementById(id);}
 		display:inline-block;
 	}
 	@media all and (max-width:65em){
-		body{
+		#speedtest{
 			font-size:1.5vw;
 		}
 	}
 	@media all and (max-width:40em){
-		body{
+		#speedtest{
 			font-size:0.8em;
 		}
 		div.testGroup{
