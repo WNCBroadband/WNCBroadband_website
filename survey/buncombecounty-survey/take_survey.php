@@ -186,7 +186,7 @@ include('../../db.php');
             		<p><a href="https://wncbroadband.org/blog/speedtest-best-practices/" target="_blank" style="color: black; text-decoration: underline">click here for information on how to get a more accurate speed test</a></p><br>
 					
 					<div id="speedtestArea">
-						<?php include "speedtest5x.php"?>
+						<?php include "speedtest.php"?>
 					</div>
                     <script type="text/javascript">
              			function getResults(down, up){
@@ -204,12 +204,8 @@ include('../../db.php');
             		<br><br>
             		<h4>We recommend taking the test more than once. The best results from your speed tests will be saved.</h4><br>
                     <h5 class="text-center">Your Best Results from the Speed Test:</h5>
-<!--                     <div class="slidecontainer"> -->
-           			   <p class="text-center lead">Download Speed <input id="downtextbox" readonly type="text" class="js-input" name="SPEEDTEST__libre__download" class="text" maxlength="5" size="5"> Mbps</p>
-<!--             		</div> -->
-<!--             		<div class="slidecontainer"> -->
-             			<p class="text-center lead">Upload Speed <input id="uptextbox" readonly type="text" class="js-input" name="SPEEDTEST__libre__upload" class="text" maxlength="5" size="5"> Mbps</p>
-<!--             		</div> -->
+           			<p class="text-center lead">Download Speed <input id="downtextbox" readonly type="text" class="js-input" name="SPEEDTEST__libre__download" class="text" maxlength="5" size="5"> Mbps</p>
+             		<p class="text-center lead">Upload Speed <input id="uptextbox" readonly type="text" class="js-input" name="SPEEDTEST__libre__upload" class="text" maxlength="5" size="5"> Mbps</p>
             		<br><br>
            			<h4>Based on the results of the speed test, your download speed allows you the following capabilities of various applications:</h4><br>
                     <div class="slidecontainer">
@@ -246,7 +242,7 @@ include('../../db.php');
           </div>
         </div>
       	<div class="my-auto showcase-text offset-lg-2 survey-bg col-lg-8">
-      		</div>
+      	</div>
     	</div>  
 	</section>
   
