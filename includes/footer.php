@@ -9,7 +9,7 @@
 					<br>
 					<li class="list-inline-item"><a href="https://wncbroadband.org/faq.php">FAQ</a></li>
 					<br>
-					<li class="list-inline-item"><a href="https://wncbroadband.org/blog/contact/">Contact</a></li>
+					<li class="list-inline-item"><a href="https://wncbroadband.org/contact.php">Contact</a></li>
 					<br>
 					<li class="list-inline-item"><a href="https://wncbroadband.org/broadband101.php">Broadband 101</a></li>
 					<br>
