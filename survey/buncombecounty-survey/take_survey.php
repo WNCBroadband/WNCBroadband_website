@@ -232,7 +232,7 @@ include('../../db.php');
                      </div>
           			<br><br>
           			<div class="q-break"></div><br>
-            		<h4>11&#41; If you have any additional comments, or if you are interested in being contacted about this projects developments and would like to leave your name and address, please do so below.</h4><br>
+            		<h4>If you have any additional comments, or if you are interested in being contacted about this projects developments and would like to leave your name and address, please do so below.</h4><br>
             		<textarea id="comments" name="comments" cols="70" rows="6"></textarea>
           			<br><br>
           			<div class="q-break"></div><br>
