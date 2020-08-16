@@ -169,7 +169,8 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
 		            	<br>
 						<br>
 						<div class="q-break"></div><br>
-      					<p class="lead">There are major issues in broadband delivery concerning where broadband is available and what the actual speeds are delivered by providers. We are working on ways to determine the speeds in your area. <b>Please help us by using the M-Labs speed test and reporting your results using the sliders below.</b></p><br>
+      					<p class="lead">There are major issues in broadband delivery concerning where broadband is available and what the actual speeds are delivered by providers. We are working on ways to determine the speeds in your area. </p><br>
+      					<p><a href="https://wncbroadband.org/blog/speedtest-best-practices/" target="_blank" style="color: black; text-decoration: underline">click here for information on how to get a more accurate speed test</a></p><br>     					
       					<div id="speedtestArea">
 							<?php include "speedtest.php"?>
 						</div>                 					
@@ -187,13 +188,10 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
         	     		}
             	    </script>            
             		<br><br>
-                    <h4>Your Results from the Speed Test:</h4>
-                    <div class="slidecontainer">
-           			   <p class="text-center lead">Download Speed <input id="downtextbox" readonly type="text" class="js-input" name="SPEEDTEST__libre__download" class="text" maxlength="5" size="5"> Mbps</p>
-            		</div>
-            		<div class="slidecontainer">
-             			<p class="text-center lead">Upload Speed <input id="uptextbox" readonly type="text" class="js-input" name="SPEEDTEST__libre__upload" class="text" maxlength="5" size="5"> Mbps</p>
-            		</div>
+					<h4>We recommend taking the test more than once. The best results from your speed tests will be saved.</h4><br>
+                    <h5 class="text-center">Your Results from the Speed Test:</h5>
+           			<p class="text-center lead">Download Speed <input id="downtextbox" readonly type="text" class="js-input" name="SPEEDTEST__libre__download" class="text" maxlength="5" size="5"> Mbps</p>
+             		<p class="text-center lead">Upload Speed <input id="uptextbox" readonly type="text" class="js-input" name="SPEEDTEST__libre__upload" class="text" maxlength="5" size="5"> Mbps</p>
             		<br><br>
            			<h4>Based on the results of the speed test, your download speed allows you the following capabilities of various applications:</h4><br>
                     <div class="slidecontainer">
