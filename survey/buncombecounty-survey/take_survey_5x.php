@@ -87,7 +87,7 @@ include('../../db.php');
 </head>
 <body onLoad="createOnLoad()">
     <!-- main navigation -->
-	<?php include("http://wncbroadband.org/includes/nav_main_survey.php");?>
+	<?php include("http://wncbroadband.org/includes/nav_main_core.php");?>
    	<section class="p-3"></section>
  	<section class="showcase">
     	<div id="survey-bg" class="container-fluid p-5 row">
@@ -183,7 +183,7 @@ include('../../db.php');
           			<br><br>
           			<div class="q-break"></div><br>
             		<h4>10&#41; There are major issues in broadband delivery concerning where broadband is available and what the actual speeds are delivered by providers. We are working on ways to determine the speeds in your area. Please help us by using the following speed test</h4><br>
-            		<p>click here for information on how to make your speedtest more accurate</p><br>
+            		<p><a href="https://wncbroadband.org/blog/speedtest-best-practices/" target="_blank">click here for information on how to get a more accurate speed test</a></p><br>
 					
 					<div id="speedtestArea">
 						<?php include "speedtest5x.php"?>
@@ -202,6 +202,7 @@ include('../../db.php');
              			}
             	    </script>            
             		<br><br>
+            		<h4>We recommend taking the test more than once. The best results from your speed tests will be saved.</h4>
                     <h4>Your Best Results from the Speed Test:</h4>
                     <div class="slidecontainer">
            			   <p class="text-center lead">Download Speed <input id="downtextbox" readonly type="text" class="js-input" name="SPEEDTEST__libre__download" class="text" maxlength="5" size="5"> Mbps</p>
