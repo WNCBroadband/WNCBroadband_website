@@ -21,7 +21,7 @@
 	<script src="https://wncbroadband.org/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
-	<?php include("http://www.wncbroadband.org/includes/nav_main_survey.php");?>
+	<?php include("http://www.wncbroadband.org/includes/nav_main_core.php");?>
   
     <!-- Page Content -->
  	<section class="p-3"></section>
