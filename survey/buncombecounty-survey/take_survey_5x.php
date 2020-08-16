@@ -203,7 +203,7 @@ include('../../db.php');
             	    </script>            
             		<br><br>
             		<h4>We recommend taking the test more than once. The best results from your speed tests will be saved.</h4><br>
-                    <h4>Your Best Results from the Speed Test:</h4>
+                    <h5>Your Best Results from the Speed Test:</h5>
                     <div class="slidecontainer">
            			   <p class="text-center lead">Download Speed <input id="downtextbox" readonly type="text" class="js-input" name="SPEEDTEST__libre__download" class="text" maxlength="5" size="5"> Mbps</p>
             		</div>

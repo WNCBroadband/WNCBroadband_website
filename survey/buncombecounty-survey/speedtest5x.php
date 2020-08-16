@@ -72,14 +72,12 @@ function I(id){return document.getElementById(id);}
 </script>
 
 <style type="text/css">
-	html,body{
-		border:none; padding:0; margin:0;
-		background:#FFFFFF;
-		color:#202020;
-	}
-	body{
+	#speedtest{
 		text-align:center;
 		font-family:"Roboto",sans-serif;
+			border:none; padding:0; margin:0;
+		background:#FFFFFF;
+		color:#202020;
 	}
 	h1{
 		color:#404040;
@@ -191,37 +189,37 @@ function I(id){return document.getElementById(id);}
 	}
 
 </style>
-</head>
-<body>
-<h3>Speed Test</h3>
-<div id="startStopBtn" onclick="startStop()"></div>
-<div id="test">
-    <div id="progressBar"><div id="progress"></div></div>
-	<div class="testGroup">
-		<div class="testArea">
-			<div class="testName">Download</div>
-			<div id="dlText" class="meterText"></div>
-			<div class="unit">Mbps</div>
+<div id=speedtest>
+	<h3>Speed Test</h3>
+	<div id="startStopBtn" onclick="startStop()"></div>
+	<div id="test">
+    	<div id="progressBar"><div id="progress"></div></div>
+		<div class="testGroup">
+			<div class="testArea">
+				<div class="testName">Download</div>
+				<div id="dlText" class="meterText"></div>
+				<div class="unit">Mbps</div>
+			</div>
+			<div class="testArea">
+				<div class="testName">Upload</div>
+				<div id="ulText" class="meterText"></div>
+				<div class="unit">Mbps</div>
+			</div>
 		</div>
-		<div class="testArea">
-			<div class="testName">Upload</div>
-			<div id="ulText" class="meterText"></div>
-			<div class="unit">Mbps</div>
+		<div class="testGroup">
+			<div class="testArea">
+				<div class="testName">Latency</div>
+				<div id="pingText" class="meterText"></div>
+				<div class="unit">ms</div>
+			</div>
+		</div>
+		<div id="ipArea">
+			IP Address: <span id="ip"></span>
 		</div>
 	</div>
-	<div class="testGroup">
-		<div class="testArea">
-			<div class="testName">Latency</div>
-			<div id="pingText" class="meterText"></div>
-			<div class="unit">ms</div>
-		</div>
-	</div>
-	<div id="ipArea">
-		IP Address: <span id="ip"></span>
-	</div>
-</div>
-Speed Test code provided by Libre <a href="https://github.com/librespeed/speedtest">(Source code)</a>
-<script type="text/javascript">
+	Speed Test code provided by Libre <a href="https://github.com/librespeed/speedtest">(Source code)</a>
+	<script type="text/javascript">
     initUI();
 	//console.log(dlStatus);
-</script>
+	</script>
+</div>
