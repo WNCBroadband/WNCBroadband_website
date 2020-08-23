@@ -8,7 +8,7 @@ echo "value=".$_GET['value']."; ";
 echo "type=".$_GET['type']."\n";
 
 try{
-    $inc_worked = include('../db.php');
+    $inc_worked = include('http://www.wncbroadband.org/db.php');
 }catch(Exception $e) {
     echo 'Caught exception: '.$e->getMessage()."\n";
 }
