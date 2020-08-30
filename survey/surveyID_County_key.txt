@@ -1,0 +1,29 @@
+County		SurveyID
+surveypage created
+-----
+Buncombe 	5
+Madison		6
+*
+
+table made, questions added
+-----
+Haywood		7
+Henderson	8
+Rutherford	9
+Yancey		10
+Transylvania11
+Avery		12
+
+*
+
+table made, no questions added yet
+------
+
+*
+
+
+future (?)
+-----
+Burke		12
+Watauga 	13
+*
