@@ -174,7 +174,7 @@ if ($saved_geoip_latitude==0 || $saved_geoip_longitude == 0){
   		</div>
   		  <div class="parent-container">
     		<iframe class="survey-0-map-container" src="../map_resources/survey-0-map.php?geoip_latitude=<?php echo $saved_geoip_latitude ?>&geoip_longitude=<?php echo $saved_geoip_longitude ?>">
-    		</iframe>
+    		</iframe> 
   		</div>
 	</section>
 	<div class="separate"></div>
