@@ -172,6 +172,11 @@ if ($saved_geoip_latitude==0 || $saved_geoip_longitude == 0){
         	Learn more about how you can get involved and get further engaged in broadband issues <a href="https://wncbroadband.org/blog/advocacy/"><b>here</b></a>.<br><br>
         	<a href="http://www.wncbroadband.org/blog">Return to WNC Broadband Project homepage</a></p>
   		</div>
+  		
+  		<div class="parent-container">
+    		<iframe class="survey-0-map-container" src="../map_resources/survey-0-map.php?geoip_latitude=<?php echo $saved_geoip_latitude ?>&geoip_longitude=<?php echo $saved_geoip_longitude ?>">
+    		</iframe>
+  		</div>
 	</section>
 	<div class="separate"></div>
 	<?php include("http://www.wncbroadband.org/includes/footer.php");?>
