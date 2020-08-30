@@ -18,7 +18,7 @@
 	<link href="https://wncbroadband.org/css/style.css" rel="stylesheet" type="text/css">
 	<!-- Bootstrap core JavaScript -->
 	<script src="https://wncbroadband.org/vendor/jquery/jquery.slim.min.js"></script>
-	<script src="https://wncbroadband.org/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	 <script src="https://wncbroadband.org/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </head>
 
 <body>
@@ -26,8 +26,9 @@
 	<!-- Navigation -->
 	<script>
  		var navid = "broadband101";
-//  	makes "Broadband 101" link active in nav
+//  	makes "Broadband 101" link active in header
 	</script>
+	
 	<?php include("http://www.wncbroadband.org/includes/nav_main_core.php");?>
 
 	<!-- Page Content -->
@@ -165,7 +166,7 @@
 					<br>
 					<p class="lead">View more resources about broadband, the digital divide, and regional, statewide, and national initiatives.</p>
 					<br>
- 					<a class="btn btn-primary mb-5" href="101links.html">Informational Resources &gt;</a>
+ 					<a class="btn btn-primary mb-5" href="101links.php">Informational Resources &gt;</a>
  				</div>
 				<div class="col-md-3 col-8 my-auto mx-auto">
 					<img class="img-fluid" src="img/resources.png">
