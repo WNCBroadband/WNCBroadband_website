@@ -173,46 +173,67 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
 						<br>
 						<div class="q-break"></div><br>
       					<p class="lead">There are major issues in broadband delivery concerning where broadband is available and what the actual speeds are delivered by providers. We are working on ways to determine the speeds in your area. <b>Please help us by using the M-Labs speed test and reporting your results using the sliders below.</b></p><br>
-      					<iframe frameborder="0" height="550px" src="https://speed.measurementlab.net/#/" width="100%"></iframe>
-      					<p class="small text-center">If the speed test does not show up, click <a href="https://speed.measurementlab.net/#/" target="_blank"> here </a> to open it in a new tab.</p>
-          				<br><br>
-          				<h4>Please Input your Download Speed from the M-Labs Speed Test:</h4>
-          				<div class="slidecontainer">
-                            <input id="downslider" name="SPEEDTEST__self-reported__download" type="range" class="js-range-slider slider" min="1" max="200" step="0.1" value="1" data-rangeslider>
-                            <p class="text-center lead">Download Speed <input id="downtextbox" type="text" class="js-input" name="SPEEDTEST__self-reported__download" id="downloadspeedval-biltmorelakes" class="text" maxlength="5" size="5"> Mbps</p>
-          				</div>
-          				<h4>Please Input your Upload Speed from the M-Labs Speed Test:</h4>
-          				<div class="slidecontainer">
-                          	<input id="upslider"  name="SPEEDTEST__self-reported__upload" type="range" class="js-range-slider slider" min="1" max="200" step="0.1" value="1" data-rangeslider>
-                            <p class="text-center lead">Upload Speed <input id="uptextbox" type="text" class="js-input" name="SPEEDTEST__self-reported__upload" id="uploadspeedval-biltmorelakes" class="text" maxlength="5" size="5"> Mbps</p>
-          				</div>
-                        <br><br>
-                        <h4>From the results of the M-Labs test, explore the capabilities of your download speed with the speeds needed for various applications using the slider below.</h4><br>
-                        <div class="slidecontainer">
-                          <input type="range" min="1" max="200" value="1" class="slider" id="myRange">
-                          <p class="text-center lead">Download Speed: <span id="demo"></span><span id="plus"></span> Mbps</p>
-                          <table class="table table-bordered table-sm">
-                            <thead class="thead-light">
-                              <tr>
-                                <th scope="col">Check email</th>
-                                <th scope="col">Stream HD content</th>
-                                <th scope="col">Stream 4K content and play competitive online games</th>
-                                <th scope="col">Stream 4K content, play online games, and download very large files</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td style="text-align: center;"><img id="img1" src="../img/x.png" width="50px" height="50px"></td>
-                                <td style="text-align: center;"><img id="img2" src="../img/x.png" width="50px" height="50px"></td>
-                                <td style="text-align: center;"><img id="img3" src="../img/x.png" width="50px" height="50px"></td>
-                                <td style="text-align: center;"><img id="img4" src="../img/x.png" width="50px" height="50px"></td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-            			<br><br><div class="q-break"></div><br>
-            			<p class="lead">Thank you for taking the speed test. Once you are finished, please click "Submit" below to submit your responses.</p>
-            			<input required name="submit" id="submit" class="btn btn-primary mt-auto mb-5" type="submit" value="Submit">
+      					<div id="speedtestArea">
+							<?php include "http://wncbroadband.org/survey/templatersurvey_testinside/speedtest.php"?>
+						</div>                 					
+      					<script type="text/javascript">
+             			function getResults(down, up){
+                 			//this function is called from the speedtest iframe once the test ends in order to pass the data up.
+                 			console.log("getResults function was successfully called fom iframe to parent."); 
+                	 		console.log("download speed is: " + down);
+     	            		console.log("upload speed is: " + up);
+     	            		changeGraphic(down);  //this changes the green checkmark / red x graphic
+     	            		document.getElementById("downtextbox").value=down;
+     	            		document.getElementById("uptextbox").value=up;
+     	            		document.getElementById('uptextbox').onchange();
+     	            		document.getElementById('downtextbox').onchange();     	            		
+        	     		}
+            	    </script>            
+            		<br><br>
+                    <h4>Your Results from the Speed Test:</h4>
+<!--                     <p>Drag the green circle on the slider to your download speed or type in the speed in the box below.</p> -->
+                    <div class="slidecontainer">
+<!--               			<input id="downslider" name="SPEEDTEST__libre_speed-test__download" type="range" class="js-range-slider slider" min="1" max="200" step="0.1" value="1" data-rangeslider> -->
+           			   <p class="text-center lead">Download Speed <input id="downtextbox" readonly type="text" class="js-input" name="SPEEDTEST__libre__download" class="text" maxlength="5" size="5"> Mbps</p>
+            		</div>
+<!--             		<h4>Your Upload Speed from the Speed Test:</h4> -->
+<!--             		<p>Drag the green circle on the slider to your upload speed or type in the speed in the box below.</p> -->
+            		<div class="slidecontainer">
+<!--               			<input id="upslider"  name="SPEEDTEST__libre_speed_test__upload" type="range" class="js-range-slider slider" min="1" max="200" step="0.1" value="1" data-rangeslider> -->
+             			<p class="text-center lead">Upload Speed <input id="uptextbox" readonly type="text" class="js-input" name="SPEEDTEST__libre__upload" class="text" maxlength="5" size="5"> Mbps</p>
+            		</div>
+            		<br><br>
+           			<h4>Based on the results of the speed test, your download speed allows you the following capabilities of various applications:</h4><br>
+                    <div class="slidecontainer">
+                        <p class="text-center lead">Your Download Speed: <span id="demo">0</span><span id="plus"></span> Mbps</p>
+                        <table class="table table-bordered table-sm">
+                          <thead class="thead-light">
+                            <tr>
+                              <th scope="col">Check email, Basic web browsing</th>
+                              <th scope="col">Stream HD content, Video conferencing, Online gaming</th>
+                              <th scope="col">Stream 4K content, Multiple users/devices</th>
+                              <th scope="col">Large file sharing</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td style="text-align: center;"><img id="img1" src="../../img/x.png" width="50px" height="50px"></td>
+                              <td style="text-align: center;"><img id="img2" src="../../img/x.png" width="50px" height="50px"></td>
+                              <td style="text-align: center;"><img id="img3" src="../../img/x.png" width="50px" height="50px"></td>
+                              <td style="text-align: center;"><img id="img4" src="../../img/x.png" width="50px" height="50px"></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <small>A green check mark means your speed is fast enough for the associated capabilities</small>
+                     </div>
+          			<br><br>
+          			<div class="q-break"></div><br>
+            		<h4>11&#41; If you have any additional comments, or if you are interested in being contacted about this projects developments and would like to leave your name and address, please do so below.</h4><br>
+            		<textarea id="comments" name="comments" cols="70" rows="6"></textarea>
+          			<br><br>
+          			<div class="q-break"></div><br>
+            		<h4>Thank you for participating in this survey. Once you are finished, please click "Submit" below to submit your responses.</h4><br>
+              		<input required name="submit" id="submit" class="btn btn-primary mt-auto mb-5" type="submit" value="Submit">
               		</form>
               	</div>
             </div>

@@ -17,14 +17,13 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
   		gtag('js', new Date());
 		gtag('config', 'UA-164513870-1');
 	</script>
-
-
+	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="">
 	<meta name="author" content="">
 
-  <title>WNC Broadband Project | Speed Test</title>
+	<title>WNC Broadband Project | Speed Test</title>
   	<!-- Bootstrap core CSS -->
   	<link href="https://wncbroadband.org/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   	<!-- JQuery -->
@@ -91,7 +90,6 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
 <body onLoad="createOnLoad()">
     <!-- Navigation -->
 	<?php include("http://www.wncbroadband.org/includes/nav_main_core.php");?>
-
 	<section class="header bg-broad pt-5">  
   		<div class="container pt-5">
   			<div class="row">
@@ -100,8 +98,7 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
  				</div>
   			</div>
   	</div>
-	</section>
-	
+	</section>	
 	<script>
   		var user_in_address;
   		var lat_coord=0;
@@ -182,21 +179,17 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
       				</DIV>
               		<br><br>
         			<div class="q-break"></div><br>
-          			<p class="lead">There are major issues in broadband delivery concerning where broadband is available and what the actual speeds are delivered by providers. We are working on ways to determine the speeds in your area. <b>Please help us by using the M-Labs speed test and reporting your results using the sliders below.</b></p><br>
-          			
-          			          	
+          			<p class="lead">There are major issues in broadband delivery concerning where broadband is available and what the actual speeds are delivered by providers. We are working on ways to determine the speeds in your area. Please help us by using the following speed test.</p><br>
           	          <p><a href="https://wncbroadband.org/blog/speedtest-best-practices/" target="_blank" style="color: black; text-decoration: underline">click here for information on how to get a more accurate speed test</a></p><br>
 						<div id="speedtestArea">
 							<?php include "speedtest_forinclude.php"?>
-						</div>
-          	
-          	
+						</div>          	
           	            <script type="text/javascript">
              			function getResults(down, up){
-                 			//this function is called from the speedtest iframe once the test ends in order to pass the data up.
+                 			//this function is called from the included speedtest php file once the test ends in order to pass the data up.
                  			console.log("getResults function was successfully called."); 
-                	 		console.log("download speed sent: " + down);
-     	            		console.log("upload speed sent: " + up);
+                	 		console.log("download speed received by parent from test: " + down);
+     	            		console.log("upload speed received by parent from test: " + up);
      	            		changeGraphic(down);  //this changes the green checkmark / red x graphic
      	            		document.getElementById("downtextbox").value=down;
      	            		document.getElementById("uptextbox").value=up;
@@ -208,39 +201,7 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
             		<h4>We recommend taking the test more than once. The best results from your speed tests will be saved.</h4><br>
                     <h5 class="text-center">Your Best Results from the Speed Test:</h5>
            			<p class="text-center lead">Download Speed <input id="downtextbox" readonly type="text" class="js-input" name="SPEEDTEST__libre__download" class="text" maxlength="5" size="5"> Mbps</p>
-             		<p class="text-center lead">Upload Speed <input id="uptextbox" readonly type="text" class="js-input" name="SPEEDTEST__libre__upload" class="text" maxlength="5" size="5"> Mbps</p>
-          	
-          	
-          	
-          	
-<!--           			old -->
-
-<!--           			<h3>libre will go here.</h3> -->
-          	
-<!--           			<br><br> -->
-<!--           			<h4>Please Input your Download Speed from the M-Labs Speed Test:</h4> -->
-<!--           			<div class="slidecontainer"> -->
-<!--             			<input id="downslider" name="SPEEDTEST__self-reported__download" type="range" class="js-range-slider slider" min="1" max="200" step="0.1" value="1" data-rangeslider> -->
-<!--             			<p class="text-center lead">Download Speed <input id="downtextbox" type="text" class="js-input" name="SPEEDTEST__self-reported__download" id="downloadspeedval-biltmorelakes" class="text" maxlength="5" size="5"> Mbps</p> -->
-<!--           			</div> -->
-<!--           			<h4>Please Input your Upload Speed from the M-Labs Speed Test:</h4> -->
-<!--           			<div class="slidecontainer"> -->
-<!--             			<input id="upslider"  name="SPEEDTEST__self-reported__upload" type="range" class="js-range-slider slider" min="1" max="200" step="0.1" value="1" data-rangeslider> -->
-<!--             			<p class="text-center lead">Upload Speed <input id="uptextbox" type="text" class="js-input" name="SPEEDTEST__self-reported__upload" id="uploadspeedval-biltmorelakes" class="text" maxlength="5" size="5"> Mbps</p> -->
-<!--           			</div> -->
-          			
-          			
-          			
-          			
-          			
-          			
-          			
-          			
-          			
-          			
-          			
-          			
-          			
+             		<p class="text-center lead">Upload Speed <input id="uptextbox" readonly type="text" class="js-input" name="SPEEDTEST__libre__upload" class="text" maxlength="5" size="5"> Mbps</p>         			
           			<br><br>
            			<h4>Based on the results of the speed test, your download speed allows you the following capabilities of various applications:</h4><br>
             		<div class="slidecontainer">
@@ -263,8 +224,7 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
                   				</tr>
                 			</tbody>
               			</table>
-              			<small>A green check mark means your speed is fast enough for the associated capabilities</small>
-              			
+              			<small>A green check mark means your speed is fast enough for the associated capabilities</small>             			
             		</div>
             		<br>
             		<br><div class="q-break"></div><br>
@@ -312,9 +272,6 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off") {
           	}
 		}
 	</script>
-
-<script src="speedtestslider.js"></script>
-
 </body>
 </html>
 
