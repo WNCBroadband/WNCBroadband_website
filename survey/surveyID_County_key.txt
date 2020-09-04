@@ -9,11 +9,10 @@ table made, questions added
 -----
 Haywood		7
 Henderson	8
-Rutherford	9
-Yancey		10
+Rutherford	9			*remove/change
+Yancey		10			*remove/change
 Transylvania11
-Avery		12
-
+Avery		12			*remove/chage
 *
 
 table made, no questions added yet
@@ -24,6 +23,12 @@ table made, no questions added yet
 
 future (?)
 -----
-Burke		13
-Watauga 	14
-*
+cherokee	
+jackson	
+macon	
+clay
+graham
+swain
+
+
+
