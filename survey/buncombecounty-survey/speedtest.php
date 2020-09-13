@@ -82,9 +82,10 @@ function I(id){return document.getElementById(id);}
 		text-align:center;
 	}
 	#startStopBtn{
+        font-size: 1.25em;
 		display:inline-block;
 		margin:0 auto;
-		color:#6060AA;
+		color: #06284F;
 		background-color:rgba(0,0,0,0);
 		border:0.15em solid #6060FF;
 		border-radius:0.3em;
