@@ -169,7 +169,11 @@ if ($saved_geoip_latitude==0 || $saved_geoip_longitude == 0){
   		<div class="custom-container">
         	<h1 class="mt-3 mb-5 text-center">Thank you for taking our survey!</h1>
         	<p class="lead">Thank you for your participation in this survey. <br>
-        	Learn more about how you can get involved and get further engaged in broadband issues <a href="https://wncbroadband.org/blog/advocacy/"><b>here</b></a>.<br><br>
+        	Learn more about how you can get involved and get further engaged in broadband issues <a href="https://wncbroadband.org/advocacy.php"><b>here</b></a>.
+        	Educate yourself on broadband <a href="https://wncbroadband.org/broadband101.php">here</a>.<br>
+        	Donate to the cause <a href="https://wncbroadband.org/blog/donate-today">here</a>.<br>
+        	Volunteer by contacting a member of the leadership team <a href="https://wncbroadband.org/contact">here</a>.        	
+        	<br><br>
         	<a href="http://www.wncbroadband.org/blog">Return to WNC Broadband Project homepage</a></p>
   		</div>
   		  <div class="parent-container">
