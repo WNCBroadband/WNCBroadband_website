@@ -3,14 +3,10 @@ surveypage created
 -----
 Buncombe 	5
 Madison		6
-*
-
-table made, questions added
------
 Haywood		7
 Henderson	8
-Macon		9		
-Swain		10			
+Macon		9
+Swain		10
 Transylvania11
 Graham		12			
 Cherokee	13
@@ -20,17 +16,19 @@ clay		16
 jackson		17
 *
 
+table made, questions added
+-----
 
-table made, no questions added yet
-------
 
 *
 
 
-future (?)
------
+table made, no questions added yet
+------
+*
 		
-
-
+		
+change id:
+take_survey, line 73 , 119, 123, 168,
 
 
