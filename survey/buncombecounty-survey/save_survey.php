@@ -168,11 +168,14 @@ if ($saved_geoip_latitude==0 || $saved_geoip_longitude == 0){
 	<section class="header">  
   		<div class="custom-container">
         	<h1 class="mt-3 mb-5 text-center">Thank you for taking our survey!</h1>
-        	<p class="lead">Thank you for your participation in this survey. <br>
-        	Learn more about how you can get involved and get further engaged in broadband issues <a href="https://wncbroadband.org/advocacy.php"><b>here</b></a>.
-        	Educate yourself on broadband <a href="https://wncbroadband.org/broadband101.php">here</a>.<br>
-        	Donate to the cause <a href="https://wncbroadband.org/blog/donate-today">here</a>.<br>
-        	Volunteer by contacting a member of the leadership team <a href="https://wncbroadband.org/contact">here</a>.        	
+        	<p class="lead">Thank you for your participation in this survey. <br><br>
+        	Here are some more ways you can get involved:<br>
+        	<ul>
+	        	<li><a href="https://wncbroadband.org/advocacy.php"><b>Engage</b></a> in broadband topics<br></li>
+    	    	<li><a href="https://wncbroadband.org/broadband101.php"><b>Educate</b></a> yourself on broadband.<br></li>
+        		<li><a href="https://wncbroadband.org/blog/donate-today"><b>Donate</b></a> to the cause.<br></li>
+        		<li><a href="https://wncbroadband.org/contact.php"><b>Contact</b></a> a member of the leadership team about volunteering.</li>        	
+        	</ul>
         	<br><br>
         	<a href="http://www.wncbroadband.org/blog">Return to WNC Broadband Project homepage</a></p>
   		</div>
