@@ -34,7 +34,12 @@
 				</ul>
 			</div>
 			<div class="col-3"></div>
-			<div class="col-3"></div>
+			<div class="col-3">
+				<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>						
+				<a href="https://www.facebook.com/WNCBroadband/"><i class="fab fa-facebook-square"></i></a>
+				<a href="https://www.instagram.com/wncbroadband/"><i class="fab fa-instagram"></i></a>
+				<a href="https://www.youtube.com/channel/UC9WELkGzR58piCLwhoB5snw"><i class="fab fa-youtube"></i></a>
+			</div>
 			<div class="col-12 text-center">
 				<p>
 					&copy; 2020 WNC Broadband Project | <a href="http://www.wncbroadband.org/privacypolicy.php"> Privacy Policy</a>
