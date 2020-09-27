@@ -51,7 +51,9 @@
 		Contact us <a href="https://www.wncbroadband.org/contact.php">here</a> to get your community involved in this project.
 		</div>
 	</section>
-	
+
+<!-- 	
+commented out because other drop-down was preferred.	 	
 	<section class="p-5 bg-light">
 		<div class="container">
 			<h2>Countywide Surveys</h2>			
@@ -74,7 +76,8 @@
 			</select>
 		</div>
 	</section>	
-	
+-->
+
 	<section class="p-5 bg-light">
 		<div class="container">
 			<h2>Countywide Surveys</h2>			
@@ -93,6 +96,8 @@
                 .dropdown-content {
                   display: none;
                   position: absolute;
+                  left: 190px;
+                  top: 0;
                   background-color: #f1f1f1;
                   min-width: 160px;
                   overflow: auto;
