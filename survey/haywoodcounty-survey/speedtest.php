@@ -82,11 +82,17 @@ function I(id){return document.getElementById(id);}
 		text-align:center;
 	}
 	#startStopBtn{
+        font-size: 1.4em;
 		display:inline-block;
 		margin:0 auto;
-		color:#6060AA;
+		/*
+		color: #06284F;
 		background-color:rgba(0,0,0,0);
-		border:0.15em solid #6060FF;
+		border:0.2em solid #6060FF; 
+		*/
+		color:#FFFFFF;
+		background-color: #2AB84C; 
+		border: .2em solid #2AB84C;
 		border-radius:0.3em;
 		transition:all 0.3s;
 		box-sizing:border-box;
