@@ -36,11 +36,11 @@
 			<div class="col-3"></div>
 			<div class="col-3">
 				<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>						
-				<a href="https://www.facebook.com/WNCBroadband/"><i class="fab fa-lg fa-facebook-square"></i></a>
-				<a href="https://www.instagram.com/wncbroadband/"><i class="fab fa-lg fa-instagram"></i></a>
-				<a href="https://www.youtube.com/channel/UC9WELkGzR58piCLwhoB5snw"><i class="fab fa-lg fa-youtube"></i></a>
-				<a href="https://twitter.com/WNCBroadband"><i class="fab fa-lg fa-twitter"></i></a>
-				<a href="https://www.linkedin.com/company/wncbroadband"><i class="fa fa-lg fa-linkedin-square" aria-hidden="true"></i></a>				
+				<a href="https://www.facebook.com/WNCBroadband/"><i class="fab fa-2x fa-facebook-square"></i></a>
+				<a href="https://www.instagram.com/wncbroadband/"><i class="fab fa-2x fa-instagram"></i></a>
+				<a href="https://www.youtube.com/channel/UC9WELkGzR58piCLwhoB5snw"><i class="fab fa-2x fa-youtube"></i></a>
+				<a href="https://twitter.com/WNCBroadband"><i class="fab fa-2x fa-twitter"></i></a>
+				<a href="https://www.linkedin.com/company/wncbroadband"><i class="fab fa-2x fa-linkedin-in"></i></a>				
 			</div>
 			<div class="col-12 text-center">
 				<p>
