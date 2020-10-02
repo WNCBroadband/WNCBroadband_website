@@ -21,7 +21,7 @@
 				<ul>
 					<li class="list-inline-item"><a href="https://wncbroadband.org/survey/speedtest.php">SpeedTest</a></li>
 					<br>
-					<li class="list-inline-item"><a href="https://wncbroadband.org/blog/advocacy/">Actions We Can Take</a></li>
+					<li class="list-inline-item"><a href="https://wncbroadband.org/advocacy.php">Actions We Can Take</a></li>
 					<br>
 					<li class="list-inline-item"><a href="https://wncbroadband.org/getinvolved.php">Get Involved</a></li>
 					<br>

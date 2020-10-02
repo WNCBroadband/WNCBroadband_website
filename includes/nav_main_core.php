@@ -21,7 +21,7 @@
                 	<a id="navid-communityinitiatives" class="nav-link" href="https://wncbroadband.org/blog/community-initiatives/">Community Initiatives</a>
               	</li>
                	<li class="nav-item">
-                	<a id="navid-actionswecantake" class="nav-link" href="https://wncbroadband.org/blog/advocacy/">Actions We Can Take</a>
+                	<a id="navid-actionswecantake" class="nav-link" href="https://wncbroadband.org/advocacy.php">Actions We Can Take</a>
               	</li>
               	<li class="nav-item">
                 	<a id="navid-news" class="nav-link" href="https://wncbroadband.org/blog/blog/">News</a>
