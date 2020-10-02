@@ -81,7 +81,7 @@ commented out because other drop-down was preferred.
 	<section class="p-5 bg-light">
 		<div class="container">
 			<h2>Countywide Surveys</h2>			
-			<p>short blurb about the countywide surveys.</p>
+			<p>Choose your county to take a short survey and provide us with information we can use to increase broadband access in your area</p>
 			<style>
                 .dropbtn {
                     padding: 16px;
