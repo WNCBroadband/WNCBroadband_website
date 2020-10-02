@@ -88,6 +88,17 @@ include('../../db.php');
 <body onLoad="createOnLoad()">
     <!-- main navigation -->
 	<?php include("http://wncbroadband.org/includes/nav_main_core.php");?>
+	
+		<section class="header bg-broad pt-5">  
+  		<div class="container pt-5">
+  			<div class="row">
+  				<div class="col-lg-7">
+  					<h1>Cherokee County</h1>
+  				</div>
+  			</div>
+  		</div>
+	</section>			
+	
    	<section class="p-3"></section>
  	<section class="showcase">
     	<div id="survey-bg" class="container-fluid p-5 row">
