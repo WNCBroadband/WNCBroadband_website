@@ -1,6 +1,11 @@
 <?PHP
 
 
+if(!array_key_exists ( "has_broadband", $_GET)){
+    $_GET['has_broadband']=1;    
+}
+
+echo "has_broadband=".$_GET['has_broadband'].";";
 echo "UUID=".$_GET['uuid']."; ";
 echo "name=".$_GET['name'].";  ";
 echo "survey_id=".$_GET['survey_id']."; ";
@@ -18,7 +23,6 @@ if($conn){
 }else{
     echo "NOT Connected to database.\n";
 }
-
 
 function get_response($survey_id){
     // Select
@@ -125,13 +129,13 @@ function update_response_address($response_id){
 
 function insert_response($survey_id){
     global $conn;
-    $sql1 = "insert into Responses (survey_id, ip_address, uuid, HTTP_USER_AGENT) values(?,?,?,?)";
+    $sql1 = "insert into Responses (survey_id, ip_address, uuid, HTTP_USER_AGENT, has_broadband) values(?,?,?,?,?)";
     $stmt = $conn->prepare($sql1);
     if(!$stmt){
         echo "insert_response(): DB Error inserting response: ".$conn->error."\n";
         return NULL;
     }
-    $stmt->bind_param("isss", $survey_id, $_SERVER['REMOTE_ADDR'],$_GET['uuid'], $_SERVER['HTTP_USER_AGENT'] );
+    $stmt->bind_param("isssi", $survey_id, $_SERVER['REMOTE_ADDR'],$_GET['uuid'], $_SERVER['HTTP_USER_AGENT'], $_GET['has_broadband'] );
     $stmt->execute();
     if ($conn->error) {
         echo "DB Error inserting response: ".$conn->error."\n";
