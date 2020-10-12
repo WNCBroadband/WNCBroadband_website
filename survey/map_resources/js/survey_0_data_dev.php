@@ -23,7 +23,8 @@ $sql = "SELECT
     COALESCE(max(d.`download_speed`),max(rsd.`download_speed`),'undefined') as `download_speed`, 
     COALESCE(max(d.`upload_speed`),max(rsd.`upload_speed`),'undefined') as `upload_speed`, 
     r.geoip_latitude as `latitude`,
-    r.geoip_longitude as `longitude`
+    r.geoip_longitude as `longitude`,
+    r.has_broadband as `has_broadband`
 FROM `Responses` r
 LEFT JOIN `Responses_speed_data` rsd
        ON rsd.response_id = r.id
@@ -68,7 +69,7 @@ echo 'survey_result_points = {
 if ($success && $result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
         echo '{ "type": "Feature", ';
-        echo '"properties": { "download_speed":'.$row['download_speed'].', "upload_speed":'.$row['upload_speed'].'},';
+        echo '"properties": { "download_speed":'.$row['download_speed'].', "upload_speed":'.$row['upload_speed'].', "has_broadband":'.$row['has_broadband'].'},';
         echo '"geometry": { "type": "Point", "coordinates": [ '.$row["longitude"].', '.$row['latitude'].' ] } },'."\n";
     }
 }
