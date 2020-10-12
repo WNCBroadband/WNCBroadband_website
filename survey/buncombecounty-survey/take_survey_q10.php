@@ -103,7 +103,7 @@ include('../../db.php');
         	<div class="mx-auto col-lg-8">
         	</div>
      		<div class="mx-auto col-lg-8">
-         		<h2>Please answer the following questions.</h2><br>
+<!--          		<h2>Please answer the following questions.</h2><br> -->
         		<div class="form-group">
           			<form id="fullsurvey" class="form" method="POST" action="save_survey.php"> 
           				<SCRIPT>
@@ -147,7 +147,7 @@ include('../../db.php');
                               			console.log(this.responseText);
                             		}
                           		};
-                         		 xhttp.open("GET", "../save_question.php?uuid="+uuid+"&survey_id=5&geoip_latitude="+position.coords.latitude+"&geoip_longitude="+position.coords.longitude,true);
+                         		 xhttp.open("GET", "../save_question.php?has_broadband=0&uuid="+uuid+"&survey_id=5&geoip_latitude="+position.coords.latitude+"&geoip_longitude="+position.coords.longitude,true);
                           		xhttp.send();
                         	}
                         </script>

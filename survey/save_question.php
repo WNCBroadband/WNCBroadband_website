@@ -2,7 +2,8 @@
 
 
 if(!array_key_exists ( "has_broadband", $_GET)){
-    $_GET['has_broadband']=1;    
+    $_GET['has_broadband']=1;   
+    echo "default has_broadband=1";
 }
 
 echo "has_broadband=".$_GET['has_broadband'].";";
