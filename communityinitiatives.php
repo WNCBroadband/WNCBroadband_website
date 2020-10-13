@@ -119,19 +119,19 @@ commented out because other drop-down was preferred.
 			<div class="dropdown">
   				<button onclick="showDrop()" class="dropbtn btn btn-primary mb-5">Select Your County ></button>
   				<div id="dropdownItems" class="dropdown-content">
-        			<a href="https://wncbroadband.org/survey/buncombecounty-survey/take_survey.php">Buncombe</a>
-                    <a href="https://wncbroadband.org/survey/cherokeecounty-survey/take_survey.php">Cherokee</a>
-                    <a href="https://wncbroadband.org/survey/claycounty-survey/take_survey.php">Clay</a>
-                    <a href="https://wncbroadband.org/survey/grahamcounty-survey/take_survey.php">Graham</a>
-                    <a href="https://wncbroadband.org/survey/haywoodcounty-survey/take_survey.php">Haywood</a>
-                    <a href="https://wncbroadband.org/survey/hendersoncounty-survey/take_survey.php">Henderson</a>
-                    <a href="https://wncbroadband.org/survey/jacksoncounty-survey/take_survey.php">Jackson</a>
-                    <a href="https://wncbroadband.org/survey/maconcounty-survey/take_survey.php">Macon</a>
-                    <a href="https://wncbroadband.org/survey/madisoncounty-survey/take_survey.php">Madison</a>
-                    <a href="https://wncbroadband.org/survey/mcdowellcounty-survey/take_survey.php">McDowell</a>
-                    <a href="https://wncbroadband.org/survey/polkcounty-survey/take_survey.php">Polk</a>
-                    <a href="https://wncbroadband.org/survey/swaincounty-survey/take_survey.php">Swain</a>
-                    <a href="https://wncbroadband.org/survey/transylvaniacounty-survey/take_survey.php">Transylvania</a>    			
+        			<a href="https://wncbroadband.org/survey/buncombecounty-survey/q1.php">Buncombe</a>
+                    <a href="https://wncbroadband.org/survey/cherokeecounty-survey/q1.php">Cherokee</a>
+                    <a href="https://wncbroadband.org/survey/claycounty-survey/q1.php">Clay</a>
+                    <a href="https://wncbroadband.org/survey/grahamcounty-survey/q1.php">Graham</a>
+                    <a href="https://wncbroadband.org/survey/haywoodcounty-survey/q1.php">Haywood</a>
+                    <a href="https://wncbroadband.org/survey/hendersoncounty-survey/q1.php">Henderson</a>
+                    <a href="https://wncbroadband.org/survey/jacksoncounty-survey/q1.php">Jackson</a>
+                    <a href="https://wncbroadband.org/survey/maconcounty-survey/q1.php">Macon</a>
+                    <a href="https://wncbroadband.org/survey/madisoncounty-survey/q1.php">Madison</a>
+                    <a href="https://wncbroadband.org/survey/mcdowellcounty-survey/q1.php">McDowell</a>
+                    <a href="https://wncbroadband.org/survey/polkcounty-survey/q1.php">Polk</a>
+                    <a href="https://wncbroadband.org/survey/swaincounty-survey/q1.php">Swain</a>
+                    <a href="https://wncbroadband.org/survey/transylvaniacounty-survey/q1.php">Transylvania</a>    			
       			</div>
 			</div>       
             <script>
