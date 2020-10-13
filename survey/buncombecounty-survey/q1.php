@@ -20,17 +20,14 @@
 	<script src="https://wncbroadband.org/vendor/jquery/jquery.slim.min.js"></script>
 	<script src="https://wncbroadband.org/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </head>
-
 <body>
 	<!-- Navigation -->
 	<?php include("http://www.wncbroadband.org/includes/nav_main_core.php");?>
-
-
 	<section class="header bg-broad pt-5">  
   		<div class="container pt-5">
   			<div class="row">
   				<div class="col-lg-7">
-  					<h1>Buncombe County</h1>
+  					<h1>Cherokee County</h1>
   				</div>
   			</div>
   		</div>
