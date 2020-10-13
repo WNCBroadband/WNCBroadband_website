@@ -38,7 +38,7 @@
 			<div class="col-lg-6 mx-auto">
 				<div class="form-group">
 			    	<form class="form">
-			      		<h3>Does your household currently subscribe to a non-cellular broadband internet service provider (cable, DLS, satellite)?</h3>
+			      		<h3>Does your household currently subscribe to a non-cellular broadband internet service provider (cable, DSL, satellite)?</h3>
 			      		<br>
 			      		<a class="btn btn-primary btn-lg mt-auto mb-5" href="take_survey.php">Yes</a>
 			      		<br>
