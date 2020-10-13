@@ -27,7 +27,7 @@
   		<div class="container pt-5">
   			<div class="row">
   				<div class="col-lg-7">
-  					<h1>Buncombe County</h1>
+  					<h1>Cherokee County</h1>
   				</div>
   			</div>
   		</div>
