@@ -92,7 +92,7 @@ include('../../db.php');
   		<div class="container pt-5">
   			<div class="row">
   				<div class="col-lg-7">
-  					<h1>Macon County</h1>
+  					<h1>Test County</h1>
   				</div>
   			</div>
   		</div>
