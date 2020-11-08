@@ -51,13 +51,13 @@
       <div class="mapkey">
       <button type="button" class="mapkeycollapsible"><h3>Map Key</h3></button>
       <div class="mapkeycontent"> 
-        <h5>Download Speed:</h5>
+        <h5>Download Speed:</h5> testing
         <ul>
-      <li><js/img src="js/img/pin_gray.png" height="20px" width="20px">   Gray: Unknown Speed</li>
-      <li><js/img src="js/img/pin_red.png" height="20px" width="20px">    Red: Less than 5 Mpbs</li>
-      <li><js/img src="js/img/pin_orange.png" height="20px" width="20px"> Orange: Between 5 and 25 Mbps </li>
-      <li><js/img src="js/img/pin_yellow.png" height="20px" width="20px"> Yellow: Between 25 and 90 Mbps</li>
-      <li><js/img src="js/img/pin_green.png" height="20px" width="20px">  Green: Greater than 90 Mbps</li>
+      <li><img src="js/img/pin_gray.png" height="20px" width="20px">   Gray: Unknown Speed</li>
+      <li><img src="js/img/pin_red.png" height="20px" width="20px">    Red: Less than 5 Mpbs</li>
+      <li><img src="js/img/pin_orange.png" height="20px" width="20px"> Orange: Between 5 and 25 Mbps </li>
+      <li><img src="js/img/pin_yellow.png" height="20px" width="20px"> Yellow: Between 25 and 90 Mbps</li>
+      <li><img src="js/img/pin_green.png" height="20px" width="20px">  Green: Greater than 90 Mbps</li>
         </ul>
       </div>
       </div>
