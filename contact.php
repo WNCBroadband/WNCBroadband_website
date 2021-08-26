@@ -129,7 +129,7 @@
           			<p class="font-weight-light mb-0">Land of Sky Planner<br>
             		Leader of Four County Survey Project<br>
             		<a href="mailto:sara@landofsky.org">sara@landofsky.org</a></p>
-      			</div>
+      			</div> 
     		</div>
   		</div>
 	</section>
