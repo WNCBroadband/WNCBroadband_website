@@ -50,9 +50,10 @@
 		        	<img src="img/billsederburg.jpg" class="img-fluid rounded-circle mb-3 mx-auto d-block contact-photo"/>
 		        	<h5>Dr. William Sederburg</h5>
 		          	<p class="font-weight-light mb-0">Retired College President<br>
-		            Chair, WestNGN<br>
+		            Chair<!--, WestNGN--><br>
 		            <a href="mailto:wsederburg@gmail.com">wsederburg@gmail.com</a>
 		      	</div>
+                <!--
 		      	<div class="col-lg-4 col-md-6 mb-4">
 		        	<img src="img/staggnewman.jpg" class="img-fluid rounded-circle mb-3 mx-auto d-block  contact-photo"/>
 		        	<h5>Mr. Stagg Newman</h5>
@@ -68,45 +69,51 @@
 		            University Project Coordinator<br>
 		            <a href="mailto:ekatz@unca.edu">ekatz@unca.edu</a></p>
 		      	</div>
+                -->
 		      	<div class="col-lg-4 col-md-6 mb-4">
 		        	<img src="img/briandrawert.jpg" class="img-fluid rounded-circle mb-3 mx-auto d-block contact-photo"/>
 		       		<h5>Dr. Brian Drawert</h5>
-		          	<p class="font-weight-light mb-0">UNCA Faculty<br>
-		            Assistant Professor of Computer Science<br>
-		            Technical Advisor<br>
+		          	<p class="font-weight-light mb-0">UNCA Faculty - Asst. Prof. of Computer Science<br>
+		            University Project Coordinator and Director Undergraduate Research<br>
 		            <a href="mailto:bdrawert@unca.edu">bdrawert@unca.edu</a></p>
 		        </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-              <img src="img/FrankDiPalma.jpg" class="img-fluid rounded-circle mb-3 mx-auto d-block contact-photo"/>
-            <h5>Frank DiPalma</h5>
-               <p class="font-weight-light mb-0"> Retired Utility Executive and Consultant<br>
-               <br>
-                 <br>
-                 <a href="mailto:fdipalma2000@gmail.com">fdipalma2000@gmail.com</a></p>
-             </div>
-           <div class="col-lg-4 col-md-6 mb-4">
-             <img src="img/marc-czarnecki.png" class="img-fluid rounded-circle mb-3 mx-auto d-block contact-photo"/>
-            <h5>Marc Czarnecki</h5>
-               <p class="font-weight-light mb-0"><br>
-               <br>
-                Social Media Coordinator<br>
-                 <a href="mailto:marc@wncbroadband.org">marc@wncbroadband.org</a></p>
-             </div>
-           <div class="col-lg-4 col-md-6 mb-4">
-             <img src="img/Anitra-Griffin.jpg" class="img-fluid rounded-circle mb-3 mx-auto d-block contact-photo"/>
-            <h5>Anitra Griffin</h5>
-               <p class="font-weight-light mb-0">UNCA Student<br>
-                 Web Design Intern<br>
-                 <a href="mailto:agriffi@unca.edu">agriffi1@unca.edu</a></p>
-             </div>
-             <div class="col-lg-4 col-md-6 mb-4">
-               <img src="img/Elias.jpg" class="img-fluid rounded-circle mb-3 mx-auto d-block contact-photo"/>
-              <h5>Elias Landsman</h5>
-                 <p class="font-weight-light mb-0">UNCA Student<br>
-                   <br>
-                   Web Development Intern<br>
-                   <a href="mailto:elandsma@unca.edu">elandsma@unca.edu</a></p>
-               </div>
+        		<div class="col-lg-4 col-md-6 mb-4">
+             		<img src="img/marc-czarnecki.png" class="img-fluid rounded-circle mb-3 mx-auto d-block contact-photo"/>
+            		<h5>Marc Czarnecki</h5>
+               		<p class="font-weight-light mb-0">
+                		Social Media Coordinator<br>
+                 		<a href="mailto:marc@wncbroadband.org">marc@wncbroadband.org</a></p>
+             	</div>
+           		<div class="col-lg-4 col-md-6 mb-4">
+             		<img src="img/Anitra-Griffin.jpg" class="img-fluid rounded-circle mb-3 mx-auto d-block contact-photo"/>
+            		<h5>Anitra Griffin</h5>
+               		<p class="font-weight-light mb-0">UNCA Student<br>
+                 		Web Design Intern<br>
+                 		<a href="mailto:agriffi@unca.edu">agriffi1@unca.edu</a>
+                 	</p>
+             	</div>
+             	<div class="col-lg-4 col-md-6 mb-4">
+             		<img src="img/Elias.jpg" class="img-fluid rounded-circle mb-3 mx-auto d-block contact-photo"/>
+             		<h5>Elias Landsman</h5>
+                	<p class="font-weight-light mb-0">UNCA Student<br>
+                		Web Development Intern<br>
+                   		<a href="mailto:elandsma@unca.edu">elandsma@unca.edu</a>
+                	</p>
+            	</div>
+            	<div class="col-lg-4 col-md-6 mb-4">
+              		<img src="img/FrankDiPalma.jpg" class="img-fluid rounded-circle mb-3 mx-auto d-block contact-photo"/>
+            		<h5>Frank DiPalma</h5>
+               		<p class="font-weight-light mb-0"> Retired Utility Executive and Consultant<br>
+                 		<a href="mailto:fdipalma2000@gmail.com">fdipalma2000@gmail.com</a>
+                 	</p>
+            	</div>
+            	<div class="col-lg-4 col-md-6 mb-4">
+              		<img src="img/SDiPalmaHeadshot.jpg" class="img-fluid rounded-circle mb-3 mx-auto d-block contact-photo"/>
+            		<h5>Dr. Sonya DiPalma</h5>
+               		<p class="font-weight-light mb-0"> Ph.D, APR, Associate Professor of Mass Communication at UNC Asheville<br>
+                 		<a href="mailto:sidipalma@unca.edu">sidipalma@unca.edu</a>
+                 	</p>
+            	</div>
     		</div>
   		</div>
 	</section>
