@@ -84,18 +84,18 @@
                 		Social Media Coordinator<br>
                  		<a href="mailto:marc@wncbroadband.org">marc@wncbroadband.org</a></p>
              	</div>
-           		<div class="col-lg-4 col-md-6 mb-4">
-             		<img src="img/Anitra-Griffin.jpg" class="img-fluid rounded-circle mb-3 mx-auto d-block contact-photo"/>
-            		<h5>Anitra Griffin</h5>
-               		<p class="font-weight-light mb-0">UNCA Student<br>
-                 		Web Design Intern<br>
-                 		<a href="mailto:agriffi@unca.edu">agriffi1@unca.edu</a>
-                 	</p>
-             	</div>
+<!--            		<div class="col-lg-4 col-md-6 mb-4"> -->
+<!--              		<img src="img/Anitra-Griffin.jpg" class="img-fluid rounded-circle mb-3 mx-auto d-block contact-photo"/> -->
+<!--             		<h5>Anitra Griffin</h5> -->
+<!--                		<p class="font-weight-light mb-0">UNCA Student<br> -->
+<!--                  		Web Design Intern<br> -->
+<!--                  		<a href="mailto:agriffi@unca.edu">agriffi1@unca.edu</a> -->
+<!--                  	</p> -->
+<!--              	</div> -->
              	<div class="col-lg-4 col-md-6 mb-4">
              		<img src="img/Elias.jpg" class="img-fluid rounded-circle mb-3 mx-auto d-block contact-photo"/>
              		<h5>Elias Landsman</h5>
-                	<p class="font-weight-light mb-0">UNCA Student<br>
+                	<p class="font-weight-light mb-0">UNCA Student, Computer Science<br>
                 		Web Development Intern<br>
                    		<a href="mailto:elandsma@unca.edu">elandsma@unca.edu</a>
                 	</p>
@@ -114,6 +114,14 @@
                  		<a href="mailto:sidipalma@unca.edu">sidipalma@unca.edu</a>
                  	</p>
             	</div>
+   				<div class="col-lg-4 col-md-6 mb-4">
+              		<img src="img/moraguez.jpg" class="img-fluid rounded-circle mb-3 mx-auto d-block contact-photo"/>
+            		<h5>Dr. Ashley Moraguez</h5>
+               		<p class="font-weight-light mb-0"> Associate Professor of Political Science, UNCA<br>
+               		Project Coordinator & Director of Undergraduate Research<br>
+                 		<a href="mailto:amorague@unca.edu">amorague@unca.edu</a>
+                 	</p>
+            	</div>         	
     		</div>
   		</div>
 	</section>
@@ -129,7 +137,7 @@
           			<p class="font-weight-light mb-0">Land of Sky Planner<br>
             		Leader of Four County Survey Project<br>
             		<a href="mailto:sara@landofsky.org">sara@landofsky.org</a></p>
-      			</div> 
+      			</div>
     		</div>
   		</div>
 	</section>
