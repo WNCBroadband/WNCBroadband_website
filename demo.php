@@ -19,6 +19,8 @@
 	<!-- Bootstrap core JavaScript -->
 	<script src="https://wncbroadband.org/vendor/jquery/jquery.slim.min.js"></script>
 	<script src="https://wncbroadband.org/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	
+
 </head>
 <body>
 
@@ -56,25 +58,51 @@
 	</section>
 	<section class="p-5 bg-light">
   		<div class="container">
-  			<h2>Another Section</h2>
-  			<h4>Smaller Header</h4>
+  			<h2>State of Broadband in WNC</h2>
+  			<h4>WNC Broadband Summit 2021</h4>
   			<p>Invent the universe billions upon billions circumnavigated the carbon in our apple pies quis nostrum exercitationem ullam corporis suscipit laboriosam tendrils of gossamer clouds? Preserve and cherish that pale blue dot citizens of distant epochs something incredible is waiting to be known citizens of distant epochs Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium radio telescope. Descended from astronomers the only home we've ever known take root and flourish at the edge of forever Ut enim ad minima veniam star stuff harvesting star light and billions upon billions upon billions upon billions upon billions upon billions upon billions.</p>  			
-  			<h5 class="mt-3">H5 header.</h5>
+  			<h5 class="mt-3">Topics of relevancy</h5>
+  			
+            <!--   jquery accordion dependencies -->
+  			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  			<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css">
+			<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  			
   			<script>  
   				$( function() {
-    				$( "#accordion" ).accordion();
+    				$( "#accordion" ).accordion({
+						"collapsible":true
+    				});
   				} );
   			</script>  				
   			<div id="accordion">
   				<h3>I. Availability & Affordability of Broadband</h3>
-  				<div>first content panel</div>
-  				<h3>II. </h3>
-  				<div>second content panel</div>
-  				<h3>III. </h3>
-  				<div>Third content panel</div>
-  				<h3>IV. </h3>
-  				<div>Fourth content panel</div>
-  				
+  				<div>
+<!--   					<p>first content panel</p> -->
+  					<ol type="A">
+  						<li>The Mapping Challenge</li>
+  							<ol type="1">
+  								<li>Federal Maps</li>
+  								<li>State Maps</li>
+  								<li>Local Maps & NEMAC Project for Buncombe</li>
+  							</ol>
+  						<li>Cost of Broadband by Carrier</li>
+  						<li>Digital "Redlining" and Inclusivity</li>
+  						<li>Rescue Mission Story</li>
+  					</ol> 					
+  				</div>
+  				<h3>II. Local Initiatives </h3>
+  				<div>
+  					<p>second content panel</p>
+  				</div>
+  				<h3>III. State, Federal and ARC Grants</h3>
+  				<div>
+  					<p>etc</p>	
+  				</div>
+  				<h3>IV. "Hot" Technology Issues</h3>
+  				<div>
+  					<p>5g, spacex, etc</p>
+  				</div>			
   			</div>
   		</div>
   		
