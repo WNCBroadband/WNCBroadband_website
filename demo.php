@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<title>WNC Broadband Project | WNC Summit</title>
+	<title>WNC Broadband Project | UNCA MassComm Project Placeholder</title>
 	<!-- Bootstrap core CSS -->
 	<link href="https://wncbroadband.org/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<!-- JQuery -->
@@ -36,7 +36,7 @@
   		<div class="container pt-5">
   			<div class="row">
   				<div class="col-lg-7">
-  					<h1>WNC Broadband Summit Materials</h1>
+  					<h1>UNCA Student MassComm Project Materials</h1>
   				</div>
   			</div>
   		</div>
@@ -58,12 +58,13 @@
 	</section>
 	<section class="p-5 bg-light">
   		<div class="container">
-  			<h2>State of Broadband in WNC</h2>
-  			<h4>WNC Broadband Summit 2021</h4>
+  			<h2>Project Details</h2>
+  			<h4>Spring 2022</h4>
   			<p>Invent the universe billions upon billions circumnavigated the carbon in our apple pies quis nostrum exercitationem ullam corporis suscipit laboriosam tendrils of gossamer clouds? Preserve and cherish that pale blue dot citizens of distant epochs something incredible is waiting to be known citizens of distant epochs Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium radio telescope. Descended from astronomers the only home we've ever known take root and flourish at the edge of forever Ut enim ad minima veniam star stuff harvesting star light and billions upon billions upon billions upon billions upon billions upon billions upon billions.</p>  			
-  			<h5 class="mt-3">Topics of relevancy</h5>
+  			<!--
+			  <h5 class="mt-3">Topics of relevancy</h5>
   			
-            <!--   jquery accordion dependencies -->
+        
   			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   			<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css">
 			<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
@@ -78,7 +79,6 @@
   			<div id="accordion">
   				<h3>I. Availability & Affordability of Broadband</h3>
   				<div>
-<!--   					<p>first content panel</p> -->
   					<ol type="A">
   						<li>The Mapping Challenge</li>
   							<ol type="1">
@@ -104,15 +104,16 @@
   					<p>5g, spacex, etc</p>
   				</div>			
   			</div>
+			-->
   		</div>
   		
 	</section>
 	<section class="p-5">
 		<div class=container>
 			<h2>Additional Information:</h2>
-    	     <p>Land of Sky and WestNGN Broadband (Visit <a href="http://www.landofsky.org/westngnbroadband.html" target="_blank">landofsky.org/westngnbroadband</a>)</p>
-    	     <p>Broadband 101 -- update on WestNGN April 2019 Summit (View <a href="files/LandofSky_April_2019.pdf" target="_blank">slideshow</a>).</p>
-    	     <p>"Accelerating Opportunities' &mdash; a report on future broadband needs &mdash; Aug. 2017" (View <a href="files/AcceleratingOpportunities.pdf" target="_blank">PDF</a>)</p>
+    	     <p>More info</p>
+    	     <p>Double more info</p>
+    	     <p>Triple more info</p>
 		</div>
 	</section>
 	<?php include("http://www.wncbroadband.org/includes/footer.php");?>
