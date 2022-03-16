@@ -121,6 +121,14 @@
                		Project Coordinator & Director of Undergraduate Research<br>
                  		<a href="mailto:amorague@unca.edu">amorague@unca.edu</a>
                  	</p>
+            	</div> 
+            	<div class="col-lg-4 col-md-6 mb-4">
+              		<img src="img/WesHeadshot.jpg" class="img-fluid rounded-circle mb-3 mx-auto d-block contact-photo"/>
+            		<h5>Wesley Bryant</h5>
+               		<p class="font-weight-light mb-0"> UNCA Student, Computer Science<br>
+               		Web Development Intern<br>
+                 		<a href="mailto:wbryant1@unca.edu">wbryant1@unca.edu</a>
+                 	</p>
             	</div>         	
     		</div>
   		</div>
